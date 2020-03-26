@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.14
 
+import WorkArea 1.0
+
 ApplicationWindow {
     visible: true
     id: page
@@ -78,5 +80,7 @@ ApplicationWindow {
     Rectangle {
         anchors.fill: parent
         color: "#6b6b6b"
+
+        WorkArea {}
     }
 }
