@@ -43,6 +43,27 @@ ApplicationWindow {
         }
 
         Menu {
+            title: qsTr("Edit")
+
+            MenuItem {
+                text: qsTr("Undo")
+
+                action: Action {
+                    shortcut: "Ctrl+z"
+                    onTriggered: console.log("Action 'Undo'");
+                }
+            }
+            MenuItem {
+                text: qsTr("Redo")
+
+                action: Action {
+                    shortcut: "Ctrl+r"
+                    onTriggered: console.log("Action 'Redo'");
+                }
+            }
+        }
+
+        Menu {
             title: qsTr("Help")
 
             MenuItem {
