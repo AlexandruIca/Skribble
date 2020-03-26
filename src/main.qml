@@ -47,6 +47,7 @@ ApplicationWindow {
 
             MenuItem {
                 text: qsTr("Undo")
+                icon.source: "icons/undo.png"
 
                 action: Action {
                     shortcut: "Ctrl+z"
@@ -55,6 +56,7 @@ ApplicationWindow {
             }
             MenuItem {
                 text: qsTr("Redo")
+                icon.source: "icons/redo.png"
 
                 action: Action {
                     shortcut: "Ctrl+r"
