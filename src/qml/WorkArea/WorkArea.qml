@@ -8,8 +8,8 @@ Rectangle {
 
     transform: Scale {
         id: tform
-        origin.x: parent.x + 10
-        origin.y: parent.y + 10
+        origin.x: parent.x
+        origin.y: parent.y
     }
 
     MouseArea {
@@ -42,10 +42,7 @@ Rectangle {
                 }
                 parent.scale += parent.scale * wheel.angleDelta.y / 120 / 10;*/
 
-                tform.origin.x = wheel.x;
-                tform.origin.y = wheel.y;
-
-                const factor = 1.15;
+                const factor = 1.05;
 
                 if(wheel.angleDelta.y > 0) {
                     var zoomFactor = factor;
@@ -53,6 +50,10 @@ Rectangle {
                 else {
                     var zoomFactor = 1 / factor;
                 }
+
+                const origin = mapToItem(parent.parent, wheel.x, wheel.y);
+                tform.origin.x = origin.x;
+                tform.origin.y = origin.y;
 
                 const realX = wheel.x * tform.xScale;
                 const realY = wheel.y * tform.yScale;
