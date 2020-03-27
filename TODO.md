@@ -1,4 +1,5 @@
 # Features:
+* [ ] Make the zoom less weird and add scrollbar(See: Flickable)
 * [ ] Add a toolbar
 * [ ] Add a status bar for showing established connection(s)
 * [ ] Implement Undo/Redo
