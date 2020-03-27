@@ -12,8 +12,20 @@ Rectangle {
         onWheel: {
             if(wheel.modifiers & Qt.ControlModifier) {
                 parent.rotation += wheel.angleDelta.y / 120 * 5;
-                if(Math.abs(parent.rotation) < 4) {
+                const absRotation = Math.abs(Math.floor(parent.rotation)) % 360;
+                const sign = parent.rotation < 0 ? -1 : 1;
+
+                if(absRotation < 4) {
                     parent.rotation = 0;
+                }
+                else if(Math.abs(absRotation - 90) < 4) {
+                    parent.rotation = 90 * sign;
+                }
+                else if(Math.abs(absRotation - 180) < 4) {
+                    parent.rotation = 180 * sign;
+                }
+                else if(Math.abs(absRotation - 270) < 4) {
+                    parent.rotation = 270 * sign;
                 }
             }
             else {
@@ -25,7 +37,7 @@ Rectangle {
             }
         }
         onPositionChanged: {
-            var pnt = Qt.point(Math.floor(mouseX), Math.floor(mouseY));
+            const pnt = Qt.point(Math.floor(mouseX), Math.floor(mouseY));
             if(parent.contains(pnt)) {
                 console.log(pnt)
             }
