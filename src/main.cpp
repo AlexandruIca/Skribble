@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
     QQmlApplicationEngine engine{};
 
     engine.addImportPath("qrc:/qml");
-    engine.load(QUrl{ QStringLiteral("qrc:/main.qml") });
+    engine.load(QUrl{ QStringLiteral("qrc:/qml/main.qml") });
 
     return QGuiApplication::exec();
 }
