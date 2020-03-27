@@ -1,15 +1,44 @@
-import QtQuick 2.12
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 
 Rectangle {
     width: 400
     height: 600
     color: "white"
     anchors.centerIn: parent
+    focus: true
 
-    transform: Scale {
-        id: tform
-        origin.x: parent.x
-        origin.y: parent.y
+    transform: [
+        Scale {
+            id: tform
+            origin.x: parent.x
+            origin.y: parent.y
+        },
+        Translate {
+            id: translate
+            x: 0
+            y: 0
+        }
+    ]
+
+    Keys.onPressed: {
+        const offset = 10;
+        if(event.key == Qt.Key_Left) {
+            translate.x += offset;
+            event.accepted = true;
+        }
+        else if(event.key == Qt.Key_Right) {
+            translate.x -= offset;
+            event.accepted = true;
+        }
+        else if(event.key == Qt.Key_Up) {
+            translate.y += offset;
+            event.accepted = true;
+        }
+        else if(event.key == Qt.Key_Down) {
+            translate.y -= offset;
+            event.accepted = true;
+        }
     }
 
     MouseArea {
@@ -52,8 +81,8 @@ Rectangle {
                 }
 
                 const origin = mapToItem(parent.parent, wheel.x, wheel.y);
-                tform.origin.x = origin.x;
-                tform.origin.y = origin.y;
+                tform.origin.x = origin.x - translate.x;
+                tform.origin.y = origin.y - translate.y;
 
                 const realX = wheel.x * tform.xScale;
                 const realY = wheel.y * tform.yScale;
