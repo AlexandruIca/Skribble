@@ -6,6 +6,12 @@ Rectangle {
     color: "white"
     anchors.centerIn: parent
 
+    transform: Scale {
+        id: tform
+        origin.x: parent.x + 10
+        origin.y: parent.y + 10
+    }
+
     MouseArea {
         id: dragArea
         anchors.fill: parent
@@ -29,11 +35,31 @@ Rectangle {
                 }
             }
             else {
+                /*
                 parent.rotation += wheel.angleDelta.x / 120;
                 if(Math.abs(parent.rotation) < 0.6) {
                     parent.rotation = 0;
                 }
-                parent.scale += parent.scale * wheel.angleDelta.y / 120 / 10;
+                parent.scale += parent.scale * wheel.angleDelta.y / 120 / 10;*/
+
+                tform.origin.x = wheel.x;
+                tform.origin.y = wheel.y;
+
+                const factor = 1.15;
+
+                if(wheel.angleDelta.y > 0) {
+                    var zoomFactor = factor;
+                }
+                else {
+                    var zoomFactor = 1 / factor;
+                }
+
+                const realX = wheel.x * tform.xScale;
+                const realY = wheel.y * tform.yScale;
+                parent.x += (1 - zoomFactor) * realX;
+                parent.y += (1 - zoomFactor) * realY;
+                tform.xScale *= zoomFactor;
+                tform.yScale *= zoomFactor;
             }
         }
         onPositionChanged: {
