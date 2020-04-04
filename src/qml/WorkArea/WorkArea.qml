@@ -39,6 +39,16 @@ Rectangle {
             translate.y -= offset;
             event.accepted = true;
         }
+        else if(event.key == Qt.Key_C) {
+            translate.y = 0;
+            translate.x = 0;
+            rotation = 0;
+            x = parent.width / 2 - x / 2;
+            y = parent.height / 2 - y / 2;
+            tform.xScale = 1;
+            tform.yScale = 1;
+            event.accepted = true;
+        }
     }
 
     MouseArea {
