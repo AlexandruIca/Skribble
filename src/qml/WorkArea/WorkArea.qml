@@ -4,11 +4,15 @@ import QtQuick.Controls 2.14
 import Backend.Canvas 1.0
 
 Rectangle {
+    anchors.centerIn: parent
     width: 400
     height: 600
-    color: "white"
-    anchors.centerIn: parent
     focus: true
+
+    SkCanvas {
+        id: canvas
+        anchors.fill: parent
+    }
 
     transform: [
         Scale {
@@ -22,10 +26,6 @@ Rectangle {
             y: 0
         }
     ]
-
-    SkCanvas {
-        id: canvas
-    }
 
     Keys.onPressed: {
         const offset = 10;
