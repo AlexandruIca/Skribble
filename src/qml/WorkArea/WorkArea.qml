@@ -114,5 +114,8 @@ Rectangle {
                 canvas.mousePositionChanged(pnt);
             }
         }
+        onReleased: {
+            canvas.mouseReleased();
+        }
     }
 }

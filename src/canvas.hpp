@@ -15,7 +15,10 @@ class Canvas : public QQuickPaintedItem
 private:
     Q_OBJECT
 
-    std::vector<QPoint> m_points{};
+    std::vector<std::vector<QPoint>> m_points{};
+    QPen m_pen{
+        QColor{ "black" }, 10.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin
+    };
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);
@@ -30,6 +33,7 @@ public:
 
 public slots:
     void mousePositionChanged(QPoint const& pos);
+    void mouseReleased();
 };
 
 } // namespace sk
