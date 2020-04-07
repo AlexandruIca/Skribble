@@ -1,6 +1,8 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 
+import Backend.Canvas 1.0
+
 Rectangle {
     width: 400
     height: 600
@@ -20,6 +22,10 @@ Rectangle {
             y: 0
         }
     ]
+
+    SkCanvas {
+        id: canvas
+    }
 
     Keys.onPressed: {
         const offset = 10;
@@ -105,7 +111,7 @@ Rectangle {
         onPositionChanged: {
             const pnt = Qt.point(Math.floor(mouseX), Math.floor(mouseY));
             if(parent.contains(pnt)) {
-                console.log(pnt)
+                canvas.mousePositionChanged(pnt);
             }
         }
     }
