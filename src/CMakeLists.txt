@@ -2,7 +2,11 @@ qt5_add_resources(QT_RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/icons.qrc
                   ${CMAKE_CURRENT_SOURCE_DIR}/qml.qrc)
 
 set(SOURCE_FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/canvas.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/canvas.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/canvas_config.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/cached_resource.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/draw_history.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/canvas.cpp)
 
 add_executable(

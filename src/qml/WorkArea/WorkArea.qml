@@ -55,6 +55,14 @@ Rectangle {
             tform.yScale = 1;
             event.accepted = true;
         }
+        else if(event.key == Qt.Key_U) {
+            canvas.undo();
+            event.accepted = true;
+        }
+        else if(event.key == Qt.Key_R) {
+            canvas.redo();
+            event.accepted = true;
+        }
     }
 
     MouseArea {

@@ -2,6 +2,8 @@
 #define CANVAS_HPP
 #pragma once
 
+#include "draw_history.hpp"
+
 #include <QPainter>
 #include <QPoint>
 #include <QQuickPaintedItem>
@@ -15,7 +17,7 @@ class Canvas : public QQuickPaintedItem
 private:
     Q_OBJECT
 
-    std::vector<std::vector<QPoint>> m_points{};
+    DrawHistory m_history{};
     QPen m_pen{
         QColor{ "black" }, 10.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin
     };
@@ -34,6 +36,8 @@ public:
 public slots:
     void mousePositionChanged(QPoint const& pos);
     void mouseReleased();
+    void undo();
+    void redo();
 };
 
 } // namespace sk
