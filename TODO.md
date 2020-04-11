@@ -6,6 +6,7 @@
 * [ ] Make the zoom less weird and add scrollbar(See: Flickable)
 * [ ] Add a toolbar
 * [ ] Add a status bar for showing established connection(s)
+* [ ] Document the code and generate the documentation using Doxygen
 * [x] Implement Undo/Redo
 * [x] Get the correct mouse position when clicked inside WorkArea(even when zoomed)
 * [x] Zoom in on current position
