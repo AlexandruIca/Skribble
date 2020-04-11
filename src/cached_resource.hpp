@@ -29,8 +29,8 @@ private:
     static constexpr auto m_cacheGap = Traits::cacheGap;
     static constexpr auto m_maxCount = Traits::maxCount;
 
-    static_assert(m_cacheGap >= 0, "The cache gap should be bigger than 0!");
-    static_assert(m_maxCount >= 0, "The cache gap should be bigger than 0!");
+    static_assert(m_cacheGap > 0, "The cache gap should be bigger than 0!");
+    static_assert(m_maxCount > 1, "The cache limit should be bigger than 1!");
 
     ContainerType m_data{};
     ContainerType m_cache{};

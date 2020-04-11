@@ -13,7 +13,6 @@
 #include <algorithm>
 #include <cstddef>
 #include <deque>
-#include <iostream>
 #include <iterator>
 #include <optional>
 
@@ -120,8 +119,7 @@ private:
         static constexpr int maxCount = 50;
     };
 
-    // std::deque<impl::CachedLayers> m_layers{};
-    sk::CachedResource<impl::CachedLayers, Traits> m_layers2{ &CachedDrawer };
+    sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
     std::optional<QPoint> m_lastPoint{ std::nullopt };
 
     [[nodiscard]] auto getLastLayer(bool const foreign = false) -> QPixmap&
@@ -132,9 +130,9 @@ private:
     [[nodiscard]] auto getLastLayerIter(bool const foreign = false)
         -> impl::CachedLayers&
     {
-        auto it = m_layers2.getUnderlying().rbegin();
+        auto it = m_layers.getUnderlying().rbegin();
 
-        while(it != m_layers2.getUnderlying().rend() &&
+        while(it != m_layers.getUnderlying().rend() &&
               it->foreign() != foreign) {
             ++it;
         }
@@ -149,7 +147,7 @@ private:
 public:
     DrawHistory()
     {
-        m_layers2.emplaceBack();
+        m_layers.emplaceBack();
     }
     DrawHistory(DrawHistory const&) = default;
     DrawHistory(DrawHistory&&) = default;
@@ -160,26 +158,18 @@ public:
 
     auto pushNewLayer(bool const foreign = false) -> void
     {
-        /*
-        if(m_layers.back().foreign() != foreign) {
-            m_layers.emplace_back(foreign);
+        if(m_layers.getUnderlying().back().foreign() != foreign) {
+            m_layers.emplaceBack(foreign);
         }
         else {
-            m_layers.back().pushNewLayer();
-        }*/
-
-        if(m_layers2.getUnderlying().back().foreign() != foreign) {
-            m_layers2.emplaceBack(foreign);
-        }
-        else {
-            m_layers2.getUnderlying().back().pushNewLayer();
+            m_layers.getUnderlying().back().pushNewLayer();
         }
         m_lastPoint = std::nullopt;
     }
 
     auto paintCanvas(QPainter* const painter) -> void
     {
-        m_layers2.reduceTo([&painter](impl::CachedLayers& src) -> void {
+        m_layers.reduceTo([&painter](impl::CachedLayers& src) -> void {
             src.paintBlock(*painter);
         });
     }
