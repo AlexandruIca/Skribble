@@ -2,14 +2,14 @@
 * `std::deque` used by default in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
 * `std::optional` used by [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) to remember where the last drawn point was
 * C++17's `emplace_back` returning a reference to the emplaced object used in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
-* Helpers from `<iterator>` used int [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp):
+* Helpers from `<iterator>` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp):
     - `std::advance`
     - `std::distance`
 
 ## Language
-* Lambdas used for `reduceTo` in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
+* Lambdas used for `reduceTo` in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.cpp)
 * Trailing return types used basically everywhere
-* Init statments in `if` used in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) in `drawAt`
+* Init statments in `if` used in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.cpp) in `drawAt`
 * C++17's `[[nodiscard]]` used almost everywhere
 * `explicit` used for most constructors
 * `noexcept` move constructors and assignment operators whenever appropiate
