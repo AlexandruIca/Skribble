@@ -96,6 +96,7 @@ public:
     } while(false)
 
 #define TEST(name)                                                             \
+    namespace {                                                                \
     class RAND : public TestBase                                               \
     {                                                                          \
     public:                                                                    \
@@ -114,6 +115,7 @@ public:
     };                                                                         \
                                                                                \
     static RAND RAND2;                                                         \
+    }                                                                          \
                                                                                \
     auto RAND::run(std::atomic<int>& successful)->void
 
