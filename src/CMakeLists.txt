@@ -7,6 +7,7 @@ set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/canvas_config.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/cached_resource.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_history.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/draw_history.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/canvas.cpp)
 
 add_executable(
