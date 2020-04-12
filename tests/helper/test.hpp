@@ -119,7 +119,7 @@ public:
 
 auto getTests() -> std::vector<TestBase*>&;
 
-#define MAIN_EXECUTABLE
+// #define MAIN_EXECUTABLE
 #ifdef MAIN_EXECUTABLE
 
 #include <atomic>
