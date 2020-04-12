@@ -217,8 +217,8 @@ public:
     }
 
     ///
-    /// \returns true If redo was successful.
-    ///          false If already at newest change.
+    /// \returns true If redo can be done still.
+    ///          false If got to the newest change.
     ///
     [[nodiscard]] auto redo() -> bool
     {
