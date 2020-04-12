@@ -1,28 +1,28 @@
 ## STL
-* `std::deque` used by default in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
-* `std::optional` used by [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp) to remember where the last drawn point was
-* C++17's `emplace_back` returning a reference to the emplaced object used in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp)
-* Helpers from `<iterator>` used int [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp):
+* `std::deque` used by default in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
+* `std::optional` used by [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) to remember where the last drawn point was
+* C++17's `emplace_back` returning a reference to the emplaced object used in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
+* Helpers from `<iterator>` used int [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp):
     - `std::advance`
     - `std::distance`
 
 ## Language
-* Lambdas used for `reduceTo` in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp)
+* Lambdas used for `reduceTo` in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
 * Trailing return types used basically everywhere
-* Init statments in `if` used in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp) in `drawAt`
+* Init statments in `if` used in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) in `drawAt`
 * C++17's `[[nodiscard]]` used almost everywhere
 * `explicit` used for most constructors
 * `noexcept` move constructors and assignment operators whenever appropiate
-* C++17's nested namespace definition used for [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp)
-* `constexpr` used for configuration in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp) and [config](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas_config.hpp)
-* C++17's `inline` variables used in [config](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas_config.hpp)
-* Templates used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
-* `static_assert` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
-* Variadic templates + fold expressions + perfect forwarding used to implement `emplaceBack` in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
+* C++17's nested namespace definition used for [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
+* `constexpr` used for configuration in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) and [config](https://github.com/AlexandruIca/Skribble/blob/master/src/canvas_config.hpp)
+* C++17's `inline` variables used in [config](https://github.com/AlexandruIca/Skribble/blob/master/src/canvas_config.hpp)
+* Templates used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
+* `static_assert` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
+* Variadic templates + fold expressions + perfect forwarding used to implement `emplaceBack` in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
 
 ## Extra
-* A variation of the command pattern is used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp). The standard way was not used because it was not suited for storing layers of 'paint'. Each new layer is immutable
-* Observer pattern using Qt's slots mechanism in [Canvas](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas.hpp)
+* A variation of the command pattern is used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp). The standard way was not used because it was not suited for storing layers of 'paint'. Each new layer is immutable
+* Observer pattern using Qt's slots mechanism in [Canvas](https://github.com/AlexandruIca/Skribble/blob/master/src/canvas.hpp)
 * QML used for declaring the user interface. All zooming/scrolling is implemented in QML, thus the UI and implementation are independent
 * Clang-Tidy used to check for mistakes/improvements in code using [scripts/run-clang-tidy.py](https://github.com/AlexandruIca/Skribble/blob/master/scripts/run-clang-tidy.py)
 * Clang-Format used to format the code (and verify that the code is formatted according to `.clang-format` using [scripts/run-clang-format.py](https://github.com/AlexandruIca/Skribble/blob/master/scripts/run-clang-format.py))
