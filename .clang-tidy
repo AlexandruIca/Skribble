@@ -1,5 +1,5 @@
 ---
-Checks: '*,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*,-readability-avoid-const-params-in-decls,-readability-convert-member-functions-to-static,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-avoid-goto,-readability-magic-numbers,-hicpp-avoid-goto'
+Checks: '*,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*,-readability-avoid-const-params-in-decls,-readability-convert-member-functions-to-static,-readability-named-parameter,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-avoid-goto,-readability-magic-numbers,-hicpp-avoid-goto,-hicpp-avoid-c-arrays,-modernize-avoid-c-arrays,-cppcoreguidelines-avoid-c-arrays,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-hicpp-no-array-decay,-cert-err58-cpp,-cppcoreguidelines-macro-usage,-misc-non-private-member-variables-in-classes,-cppcoreguidelines-non-private-member-variables-in-classes,-hicpp-braces-around-statements,-bugprone-suspicious-semicolon,-readability-braces-around-statements,-misc-definitions-in-headers'
 WarningsAsErrors: '1'
 HeaderFilterRegex: ''
 FormatStyle: none
