@@ -32,33 +32,40 @@ TEST("[CachedResource] Undo/Redo")
 
     ASSERT(undo == true);
     ASSERT((*res.getLastCache()) == 45);
+    ASSERT(res.underUndo());
 
     undo = res.undo();
 
     ASSERT(undo == true);
     ASSERT((*res.getLastCache()) == 21);
+    ASSERT(res.underUndo());
 
     bool redo = res.redo();
 
     ASSERT(redo == true);
     ASSERT(*(res.getLastCache()) == 45);
+    ASSERT(res.underUndo());
 
     redo = res.redo();
 
     ASSERT(redo == false);
     ASSERT(*(res.getLastCache()) == 45);
+    ASSERT(res.underUndo() == false);
 
     for(int i = 0; i < 9; ++i) {
         undo = res.undo();
+        ASSERT(res.underUndo());
     }
 
     ASSERT(undo == true);
     ASSERT(res.getLastCache() == nullptr);
     ASSERT(res.getLast() == 1);
+    ASSERT(res.underUndo());
 
     undo = res.undo();
 
     ASSERT(undo == true);
+    ASSERT(res.underUndo());
 
     sum = 0;
     res.reduceTo(sum);
@@ -68,14 +75,17 @@ TEST("[CachedResource] Undo/Redo")
     undo = res.undo();
 
     ASSERT(undo == false);
+    ASSERT(res.underUndo());
 
     for(int i = 0; i < 9; ++i) {
         redo = res.redo();
     }
 
     ASSERT(redo == true);
+    ASSERT(res.underUndo());
 
     redo = res.redo();
 
     ASSERT(redo == false);
+    ASSERT(res.underUndo() == false);
 }
