@@ -1,5 +1,5 @@
 ---
-Checks: '*,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*,-readability-convert-member-functions-to-static,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-avoid-goto,-readability-magic-numbers,-hicpp-avoid-goto'
+Checks: '*,-fuchsia-*,-google-*,-zircon-*,-abseil-*,-modernize-use-trailing-return-type,-llvm-*,-readability-avoid-const-params-in-decls,-readability-convert-member-functions-to-static,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-avoid-goto,-readability-magic-numbers,-hicpp-avoid-goto'
 WarningsAsErrors: '1'
 HeaderFilterRegex: ''
 FormatStyle: none
