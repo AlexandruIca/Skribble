@@ -29,3 +29,10 @@ find_package(
   REQUIRED)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/)
+
+option(ENABLE_TESTS "Build Skribble's tests" ON)
+
+if(ENABLE_TESTS)
+  enable_testing()
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests/)
+endif()
