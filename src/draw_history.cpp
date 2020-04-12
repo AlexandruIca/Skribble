@@ -1,5 +1,11 @@
 #include "draw_history.hpp"
 
+#include <algorithm>
+#include <cstddef>
+#include <deque>
+#include <iterator>
+#include <optional>
+
 namespace sk::impl {
 
 auto CachedLayers::PixmapDrawer(QPixmap& dest, QPixmap& src) -> void

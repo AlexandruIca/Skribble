@@ -10,11 +10,7 @@
 #include <QPixmap>
 #include <QPoint>
 
-#include <algorithm>
-#include <cstddef>
 #include <deque>
-#include <iterator>
-#include <optional>
 
 namespace sk::impl {
 
