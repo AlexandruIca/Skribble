@@ -11,6 +11,7 @@
 #include "format.hpp"
 
 #include <atomic>
+#include <cstdlib>
 #include <fstream>
 #include <string>
 #include <type_traits>
@@ -32,7 +33,12 @@ protected:
         std::string str{};
 
         Proxy() = default;
+        Proxy(Proxy const&) = delete;
+        Proxy(Proxy&&) = delete;
         ~Proxy() = default;
+
+        auto operator=(Proxy const&) = delete;
+        auto operator=(Proxy&&) = delete;
 
         template<typename T>
         auto operator+(T const& arg) -> Proxy&
@@ -60,21 +66,18 @@ protected:
         }
     };
 
-    TestBase() noexcept = delete;
-
 public:
+    TestBase() = delete;
     TestBase(TestBase const&) = delete;
     TestBase(TestBase&&) noexcept = default;
     virtual ~TestBase() noexcept = default;
 
-    TestBase(std::string const testName,
-             std::string const file,
-             int const line);
+    TestBase(std::string testName, std::string file, int const line);
 
     auto operator=(TestBase const&) -> TestBase& = delete;
     auto operator=(TestBase&&) noexcept -> TestBase& = default;
 
-    virtual auto run(bool& successful) -> void = 0;
+    virtual auto run(std::atomic<int>& successful) -> void = 0;
 };
 
 #define ASSERT(...)                                                            \
@@ -87,7 +90,7 @@ public:
                 __LINE__,                                                      \
                 #__VA_ARGS__,                                                  \
                 (Proxy{} + __VA_ARGS__).str);                                  \
-            successful = false;                                                \
+            successful.store(EXIT_FAILURE);                                    \
             return;                                                            \
         }                                                                      \
     } while(false)
@@ -100,21 +103,122 @@ public:
             : TestBase{ name, __FILE__, __LINE__ }                             \
         {                                                                      \
         }                                                                      \
+        RAND(RAND const&) = delete;                                            \
+        RAND(RAND&&) = delete;                                                 \
         ~RAND() noexcept override = default;                                   \
                                                                                \
-        auto run(bool& successful) -> void override;                           \
+        auto operator=(RAND const&) -> RAND& = delete;                         \
+        auto operator=(RAND &&) -> RAND& = delete;                             \
+                                                                               \
+        auto run(std::atomic<int>& successful) -> void override;               \
     };                                                                         \
                                                                                \
     static RAND RAND2;                                                         \
                                                                                \
-    auto RAND::run(bool& successful)->void
+    auto RAND::run(std::atomic<int>& successful)->void
 
 auto getTests() -> std::vector<TestBase*>&;
 
+#define MAIN_EXECUTABLE
 #ifdef MAIN_EXECUTABLE
 
+#include <atomic>
+#include <condition_variable>
 #include <cstdlib>
 #include <filesystem>
+#include <functional>
+#include <future>
+#include <memory>
+#include <queue>
+#include <stdexcept>
+#include <thread>
+#include <utility>
+
+class ThreadPool
+{
+private:
+    std::vector<std::thread> m_workers{};
+    std::queue<std::function<void()>> m_tasks{};
+    std::mutex m_mutex{};
+    std::condition_variable m_cv{};
+
+    bool m_stop{ false };
+
+public:
+    ThreadPool(ThreadPool const&) = delete;
+    ThreadPool(ThreadPool&&) = delete;
+    ~ThreadPool() noexcept
+    {
+        {
+            std::unique_lock<std::mutex> lock{ m_mutex };
+            m_stop = true;
+        }
+
+        m_cv.notify_all();
+
+        for(auto& thread : m_workers) {
+            thread.join();
+        }
+    }
+
+    explicit ThreadPool(
+        std::size_t const numThreads = std::thread::hardware_concurrency())
+    {
+        m_workers.reserve(numThreads);
+
+        for(std::size_t i = 0; i < numThreads; ++i) {
+            m_workers.emplace_back([this]() -> void {
+                for(;;) {
+                    std::function<void()> task{};
+                    {
+                        std::unique_lock<std::mutex> lock{ m_mutex };
+                        m_cv.wait(lock, [this] {
+                            return m_stop || !m_tasks.empty();
+                        });
+
+                        if(m_stop && m_tasks.empty()) {
+                            return;
+                        }
+
+                        task = std::move(m_tasks.front());
+                        m_tasks.pop();
+                    }
+
+                    task();
+                }
+            });
+        }
+    }
+
+    auto operator=(ThreadPool const&) -> ThreadPool& = delete;
+    auto operator=(ThreadPool &&) -> ThreadPool& = delete;
+
+    template<typename F, typename... Args>
+    auto push(F&& f, Args&&... args)
+        -> std::future<std::invoke_result_t<F, Args...>>
+    {
+        using T = std::invoke_result_t<F, Args...>;
+
+        auto task = std::make_shared<std::packaged_task<T()>>(
+            std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+
+        std::future<T> result = task->get_future();
+        {
+            std::unique_lock<std::mutex> lock{ m_mutex };
+
+            if(m_stop) {
+                throw std::runtime_error{
+                    "Attempted to push a thread to a terminated thread pool!"
+                };
+            }
+
+            m_tasks.emplace([task] { (*task)(); });
+        }
+
+        m_cv.notify_one();
+        return result;
+    }
+};
 
 auto getTestId() -> int
 {
@@ -129,17 +233,15 @@ auto getTests() -> std::vector<TestBase*>&
     return tests;
 }
 
-TestBase::TestBase(std::string const testName,
-                   std::string const file,
-                   int const line)
-    : m_name{ testName }
-    , m_file{ file }
+TestBase::TestBase(std::string testName, std::string file, int const line)
+    : m_name{ std::move(testName) }
+    , m_file{ std::move(file) }
     , m_line{ line }
 {
     getTests().push_back(this);
     m_testId = getTestId();
     m_output.open(sk::format("test_%1", m_testId));
-    sk::printlnTo(m_output, "%1\n%2\n%3\n", m_name, m_file, m_line);
+    sk::printlnTo(m_output, "%1\n%2\n%3", m_name, m_file, m_line);
 }
 
 auto startsWith(std::string const& str, std::string const& pattern) -> bool
@@ -160,16 +262,30 @@ auto startsWith(std::string const& str, std::string const& pattern) -> bool
 auto main(int, char*[]) noexcept -> int
 {
     int ret = EXIT_SUCCESS;
+    std::atomic<int> successful{ EXIT_SUCCESS };
+    {
+        ThreadPool pool{};
+        std::vector<std::future<void>> workers{};
 
-    for(auto& test : getTests()) {
-        bool successful{ true };
+        for(auto& test : getTests()) {
 
-        test->run(successful);
+            try {
+                workers.emplace_back(
+                    pool.push([&]() -> void { test->run(successful); }));
+            }
+            catch(std::exception const& e) {
+                sk::println("%1", e.what());
+            }
+            catch(...) {
+                sk::println("Uncaught exception!");
+            }
+        }
 
-        if(!successful) {
-            ret = EXIT_FAILURE;
+        for(auto& worker : workers) {
+            worker.get();
         }
     }
+    ret = successful.load();
 
     namespace fs = std::filesystem;
 
