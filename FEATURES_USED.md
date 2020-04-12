@@ -15,7 +15,7 @@
 * `noexcept` move constructors and assignment operators whenever appropiate
 * C++17's nested namespace definition used for [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp)
 * `constexpr` used for configuration in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/draw_history.hpp) and [config](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas_config.hpp)
-* C++17's `inlince` variables used in [config](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas_config.hpp)
+* C++17's `inline` variables used in [config](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/canvas_config.hpp)
 * Templates used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
 * `static_assert` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
 * Variadic templates + fold expressions + perfect forwarding used to implement `emplaceBack` in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/cached-layers/src/cached_resource.hpp)
