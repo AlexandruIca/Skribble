@@ -5,6 +5,18 @@
 * Helpers from `<iterator>` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp):
     - `std::advance`
     - `std::distance`
+* C++17's `std::is_same_v` type trait used in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
+* C++14's `_v` type traits used in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
+* Multithreading utilities used in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp) to run tests in parallel:
+    - `std::atomic`
+    - `std::thread`
+    - `std::condition_variable`
+    - `std::mutex`
+    - `std::unique_lock`
+    - `std::future`
+    - `std::packaged_task`
+* C++17's `std::filesystem` used to iterate over test reports in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
+* C++17's `std::invoke` and `std::invoke_result_t` used to return the correct type in [ThreadPool::push](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp) and to pass correct function call to thread pool workers
 
 ## Language
 * Lambdas used for `reduceTo` in [DrawHistory](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.cpp)
@@ -14,11 +26,17 @@
 * `explicit` used for most constructors
 * `noexcept` move constructors and assignment operators whenever appropiate
 * C++17's nested namespace definition used for [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp)
+* Anonymous namespaces used to define tests that do not conflict with other tests defined in different files but at the same line in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
 * `constexpr` used for configuration in [CachedLayers](https://github.com/AlexandruIca/Skribble/blob/master/src/draw_history.hpp) and [config](https://github.com/AlexandruIca/Skribble/blob/master/src/canvas_config.hpp)
 * C++17's `inline` variables used in [config](https://github.com/AlexandruIca/Skribble/blob/master/src/canvas_config.hpp)
 * Templates used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
 * `static_assert` used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
-* Variadic templates + fold expressions + perfect forwarding used to implement `emplaceBack` in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
+* Variadic templates + fold expressions + perfect forwarding used to implement:
+    - `emplaceBack` in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp)
+    - `sk::format` in [Format](https://github.com/AlexandruIca/Skribble/blob/develop/src/format.hpp)
+    - `ThreadPool::push` in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
+* Abstract class `TestBase` in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp)
+* Exceptions used in [Tests](https://github.com/AlexandruIca/Skribble/blob/develop/tests/helper/test.hpp) to check if a test is being pushed after termination
 
 ## Extra
 * A variation of the command pattern is used in [CachedResource](https://github.com/AlexandruIca/Skribble/blob/master/src/cached_resource.hpp). The standard way was not used because it was not suited for storing layers of 'paint'. Each new layer is immutable
