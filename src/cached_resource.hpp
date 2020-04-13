@@ -43,6 +43,12 @@ private:
     using Function = void (*)(T&, T&);
     Function m_function;
 
+    [[nodiscard]] auto plus(Iterator it, int const count) const
+    {
+        std::advance(it, count);
+        return it;
+    }
+
     [[nodiscard]] auto getNumCaches() noexcept -> int
     {
         return m_cache.empty() ? 0
@@ -111,8 +117,9 @@ public:
 
         if(m_data.size() == m_cacheGap) {
             m_cache.emplace_back(*(m_data.begin()));
+            auto begin = this->plus(m_data.begin(), 1);
 
-            for(auto it = m_data.begin() + 1; it != m_data.end(); ++it) {
+            for(auto it = begin; it != m_data.end(); ++it) {
                 m_function(m_cache.back(), *it);
             }
 
@@ -141,7 +148,7 @@ public:
             return nullptr;
         }
 
-        return &(*(m_cacheLimit - 1));
+        return &(*(this->plus(m_cacheLimit, -1)));
     }
 
     auto reduceTo(T& value) -> void
@@ -181,11 +188,11 @@ public:
 
     [[nodiscard]] auto getLast() noexcept -> T&
     {
-        return *(m_dataLimit - 1);
+        return *(this->plus(m_dataLimit, -1));
     }
     [[nodiscard]] auto getLast() const noexcept -> T const&
     {
-        return *(m_dataLimit - 1);
+        return *(this->plus(m_dataLimit, -1));
     }
 
     [[nodiscard]] constexpr auto underUndo() const noexcept -> bool
@@ -226,7 +233,7 @@ public:
             return false;
         }
         bool val = true;
-        if(m_dataLimit + 1 == m_data.end()) {
+        if(this->plus(m_dataLimit, 1) == m_data.end()) {
             m_underUndo = false;
             val = false;
         }
