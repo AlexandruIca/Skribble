@@ -16,7 +16,7 @@ struct ResourceTraits
 {
     using ContainerType = std::deque<T>;
     static constexpr int cacheGap = 5;
-    static constexpr int maxCount = std::numeric_limits<int>::max();
+    static constexpr int maxCount = 20; // std::numeric_limits<int>::max();
 };
 
 template<typename T, typename Traits = ResourceTraits<T>>
@@ -135,6 +135,17 @@ public:
 
             m_cacheLimit = m_cache.end();
         }
+        if(m_cache.size() > m_maxCount) {
+            m_function(m_cache.front(),
+                       *(this->plus(m_data.begin(), m_cacheGap)));
+
+            for(int i = 0; i <= m_cacheGap; ++i) {
+                m_data.pop_front();
+            }
+
+            m_data.emplace_front(m_cache.front());
+            m_cache.pop_front();
+        }
 
     skip_cache:
         m_data.emplace_back(std::forward<Ts>(ts)...);
@@ -242,8 +253,12 @@ public:
 
         auto const distance = std::distance(m_data.begin(), m_dataLimit);
 
-        if(!m_cache.empty() && distance % m_cacheGap == 0) {
-            ++m_cacheLimit;
+        if(!m_cache.empty()) {
+            auto const availableCaches =
+                std::distance(m_cacheLimit, m_cache.end()) > 0;
+            if(availableCaches && distance % m_cacheGap == 0) {
+                ++m_cacheLimit;
+            }
         }
 
         return val;

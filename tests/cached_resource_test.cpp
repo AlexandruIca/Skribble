@@ -146,3 +146,124 @@ TEST("[CachedResource] emplaceBack")
 
     ASSERT(sum == 115);
 }
+
+template<typename T>
+struct Traits3
+{
+    using ContainerType = std::deque<T>;
+    static constexpr int maxCount = 2;
+    static constexpr int cacheGap = 3;
+};
+
+TEST("[CachedResource] maxCount")
+{
+    sk::CachedResource<int, Traits3<int>> res{ adder };
+
+    for(int i = 0; i < 10; ++i) {
+        res.emplaceBack(i + 1);
+    }
+
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 45);
+    ASSERT(res.getUnderlying().size() == 7);
+    ASSERT(res.getUnderlying().front() == 10);
+
+    res.emplaceBack(11);
+    res.emplaceBack(12);
+
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 45);
+
+    res.emplaceBack(13);
+
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 78);
+
+    bool undo{ true };
+
+    for(int i = 0; i < 3; ++i) {
+        undo = res.undo();
+        ASSERT(undo == true);
+        ASSERT(res.underUndo() == true);
+    }
+
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 45);
+
+    int sum{ 0 };
+    res.reduceTo(sum);
+
+    ASSERT(sum == 55);
+
+    undo = res.undo();
+
+    ASSERT(undo == true);
+
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(sum == 45);
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 45);
+
+    bool redo{ true };
+
+    for(int i = 0; i < 3; ++i) {
+        redo = res.redo();
+        ASSERT(res.underUndo() == true);
+        ASSERT(redo == true);
+    }
+
+    redo = res.redo();
+
+    ASSERT(redo == false);
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 78);
+
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(sum == 91);
+    ASSERT(res.getUnderlying().front() == 28);
+    ASSERT(res.getUnderlying().size() == 7);
+
+    for(int i = 0; i < 7; ++i) {
+        undo = res.undo();
+        ASSERT(res.underUndo() == true);
+        ASSERT(undo == true);
+    }
+
+    undo = res.undo();
+
+    ASSERT(undo == false);
+
+    redo = res.redo();
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(res.getLastCache() == nullptr);
+    ASSERT(res.underUndo() == true);
+    ASSERT(sum == 28);
+
+    redo = res.redo();
+    redo = res.redo();
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(res.getLastCache() != nullptr);
+    ASSERT(*(res.getLastCache()) == 45);
+    ASSERT(res.underUndo() == true);
+    ASSERT(sum == 45);
+
+    res.emplaceBack(10);
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(res.underUndo() == false);
+    ASSERT(sum == 55);
+
+    sum = 0;
+    res.reduceTo(sum);
+
+    ASSERT(sum == 55);
+}
