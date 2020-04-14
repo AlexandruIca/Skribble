@@ -74,7 +74,7 @@ private:
     {
         using ContainerType = std::deque<impl::CachedLayers>;
         static constexpr int cacheGap = 3;
-        static constexpr int maxCount = 50;
+        static constexpr int maxCount = 10;
     };
 
     sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
