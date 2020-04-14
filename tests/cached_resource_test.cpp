@@ -241,6 +241,7 @@ TEST("[CachedResource] maxCount")
     sum = 0;
     res.reduceTo(sum);
 
+    ASSERT(redo == true);
     ASSERT(res.getLastCache() == nullptr);
     ASSERT(res.underUndo() == true);
     ASSERT(sum == 28);
