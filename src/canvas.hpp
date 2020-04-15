@@ -3,11 +3,13 @@
 #pragma once
 
 #include "draw_history.hpp"
+#include "draw_mode.hpp"
 
 #include <QPainter>
 #include <QPoint>
 #include <QQuickPaintedItem>
 
+#include <memory>
 #include <vector>
 
 namespace sk {
@@ -18,9 +20,7 @@ private:
     Q_OBJECT
 
     DrawHistory m_history{};
-    QPen m_pen{
-        QColor{ "black" }, 10.0, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin
-    };
+    std::unique_ptr<DrawMode> m_drawMode{};
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);

@@ -4,6 +4,7 @@
 
 #include "cached_resource.hpp"
 #include "canvas_config.hpp"
+#include "draw_mode.hpp"
 
 #include <QColor>
 #include <QPainter>
@@ -11,7 +12,9 @@
 #include <QPoint>
 
 #include <deque>
+#include <memory>
 #include <optional>
+#include <vector>
 
 namespace sk::impl {
 
@@ -78,6 +81,8 @@ private:
         static constexpr int maxCount = 10;
     };
 
+    using LayersPtr = std::shared_ptr<impl::CachedLayers>;
+
     sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
     std::optional<QPoint> m_lastPoint{ std::nullopt };
 
@@ -87,17 +92,17 @@ private:
 
 public:
     DrawHistory();
-    DrawHistory(DrawHistory const&) = default;
+    DrawHistory(DrawHistory const&) = delete;
     DrawHistory(DrawHistory&&) = default;
     ~DrawHistory() noexcept = default;
 
-    auto operator=(DrawHistory const&) -> DrawHistory& = default;
+    auto operator=(DrawHistory const&) -> DrawHistory& = delete;
     auto operator=(DrawHistory &&) -> DrawHistory& = default;
 
     auto pushNewLayer(bool const foreign = false) -> void;
     auto paintCanvas(QPainter* const painter) -> void;
 
-    auto drawAt(QPoint const& pos, QPen const& pen, bool const foreign = false)
+    auto drawAt(QPoint const& pos, DrawMode& mode, bool const foreign = false)
         -> void;
     auto undo(bool const foreign = false) -> void;
     auto redo(bool const foreign = false) -> void;

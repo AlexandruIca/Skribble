@@ -109,7 +109,7 @@ auto DrawHistory::paintCanvas(QPainter* const painter) -> void
     });
 }
 
-auto DrawHistory::drawAt(QPoint const& pos, QPen const& pen, bool const foreign)
+auto DrawHistory::drawAt(QPoint const& pos, DrawMode& mode, bool const foreign)
     -> void
 {
     if(auto& last = this->getLastLayerIter(foreign); last.underUndo()) {
@@ -117,15 +117,7 @@ auto DrawHistory::drawAt(QPoint const& pos, QPen const& pen, bool const foreign)
     }
 
     QPainter painter{ &this->getLastLayer(foreign) };
-    painter.setPen(pen);
-
-    if(m_lastPoint.has_value()) {
-        painter.drawLine(m_lastPoint.value(), pos);
-    }
-    else {
-        painter.drawPoint(pos);
-    }
-
+    mode.draw(painter, pos, m_lastPoint);
     m_lastPoint = pos;
 }
 
