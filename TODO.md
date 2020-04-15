@@ -1,4 +1,5 @@
 # Features:
+* [ ] Fix bug where user can't draw while undoing
 * [ ] Implement Undo/Redo for two users working at the same time
 * [ ] Add controls for color picker, brush selector, pen selector, dimension selector etc.
 * [ ] Implement something like `removeIf` for `CachedResource`
