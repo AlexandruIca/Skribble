@@ -4,7 +4,6 @@
 #include <cstddef>
 #include <deque>
 #include <iterator>
-#include <optional>
 
 namespace sk::impl {
 

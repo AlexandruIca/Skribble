@@ -11,6 +11,7 @@
 #include <QPoint>
 
 #include <deque>
+#include <optional>
 
 namespace sk::impl {
 
