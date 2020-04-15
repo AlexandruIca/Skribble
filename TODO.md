@@ -1,5 +1,4 @@
 # Features:
-* [ ] Fix bug where user can't draw while undoing
 * [ ] Implement Undo/Redo for two users working at the same time
 * [ ] Add controls for color picker, brush selector, pen selector, dimension selector etc.
 * [ ] Implement something like `removeIf` for `CachedResource`
@@ -13,3 +12,4 @@
 * [x] Zoom in on current position
 * [x] Enable zooming in the WorkArea
 * [x] Set stable rotation at 90/270 degrees for easier positioning
+* [x] Fix bug where user can't draw while undoing
