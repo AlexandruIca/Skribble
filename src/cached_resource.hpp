@@ -75,17 +75,23 @@ private:
 
     auto clearUndo() -> void
     {
-        while(m_dataLimit != m_data.end()) {
+        auto const dist = std::distance(m_dataLimit, m_data.end());
+
+        for(int i = 0; i < dist; ++i) {
             m_data.pop_back();
         }
+        m_dataLimit = m_data.end();
 
         if(this->noCaches()) {
             m_cache.clear();
         }
         else {
-            while(m_cacheLimit != m_cache.end()) {
+            auto const cacheDist = std::distance(m_cacheLimit, m_cache.end());
+
+            for(int i = 0; i < cacheDist; ++i) {
                 m_cache.pop_back();
             }
+            m_cacheLimit = m_cache.end();
         }
 
         m_underUndo = false;
