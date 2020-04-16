@@ -68,14 +68,8 @@ public:
     PenMode(PenMode&&) noexcept = default;
     ~PenMode() noexcept override = default;
 
-    PenMode(QPen const& pen)
-        : m_pen{ pen }
-    {
-    }
-    PenMode(QPen&& pen)
-        : m_pen{ std::move(pen) }
-    {
-    }
+    explicit PenMode(QPen const& pen);
+    explicit PenMode(QPen&& pen);
 
     auto operator=(PenMode const&) noexcept -> PenMode& = default;
     auto operator=(PenMode&&) noexcept -> PenMode& = default;
@@ -96,14 +90,8 @@ public:
     BrushMode(BrushMode&&) noexcept = default;
     ~BrushMode() noexcept override = default;
 
-    BrushMode(QBrush const& brush)
-        : m_brush{ brush }
-    {
-    }
-    BrushMode(QBrush&& brush)
-        : m_brush{ std::move(brush) }
-    {
-    }
+    explicit BrushMode(QBrush const& brush);
+    explicit BrushMode(QBrush&& brush);
 
     auto operator=(BrushMode const&) noexcept -> BrushMode& = default;
     auto operator=(BrushMode&&) noexcept -> BrushMode& = default;

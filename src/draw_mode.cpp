@@ -5,6 +5,16 @@ namespace sk {
 int DrawMode::m_width = DrawMode::m_defaultWidth;
 QColor DrawMode::m_color = DrawMode::m_defaultColor;
 
+PenMode::PenMode(QPen const& pen)
+    : m_pen{ pen }
+{
+}
+
+PenMode::PenMode(QPen&& pen)
+    : m_pen{ std::move(pen) }
+{
+}
+
 auto PenMode::draw(QPainter& painter,
                    QPoint const& pos,
                    std::optional<QPoint> const& lastPoint) -> void
@@ -19,6 +29,16 @@ auto PenMode::draw(QPainter& painter,
     else {
         painter.drawPoint(pos);
     }
+}
+
+BrushMode::BrushMode(QBrush const& brush)
+    : m_brush{ brush }
+{
+}
+
+BrushMode::BrushMode(QBrush&& brush)
+    : m_brush{ std::move(brush) }
+{
 }
 
 auto BrushMode::draw(QPainter& painter,
