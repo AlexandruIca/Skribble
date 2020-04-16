@@ -5,6 +5,7 @@
 #include "cached_resource.hpp"
 #include "canvas_config.hpp"
 #include "draw_mode.hpp"
+#include "fixed_cached_resource.hpp"
 
 #include <QColor>
 #include <QPainter>
@@ -24,8 +25,9 @@ private:
     bool const m_foreign{ false };
 
     static auto PixmapDrawer(QPixmap& dest, QPixmap& src) -> void;
+    static auto PixmapInit(QPixmap& pixmap) noexcept -> void;
 
-    sk::CachedResource<QPixmap> m_layers{ &PixmapDrawer };
+    sk::FCachedResource<QPixmap> m_layers{ &PixmapDrawer, &PixmapInit };
 
     static constexpr QColor m_transparent{ 0, 0, 0, 0 };
     static constexpr QRect m_canvasRect{
@@ -80,8 +82,6 @@ private:
         static constexpr int cacheGap = 3;
         static constexpr int maxCount = 10;
     };
-
-    using LayersPtr = std::shared_ptr<impl::CachedLayers>;
 
     sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
     std::optional<QPoint> m_lastPoint{ std::nullopt };

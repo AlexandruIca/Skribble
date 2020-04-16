@@ -11,7 +11,8 @@ set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/canvas.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/format.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.hpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/fixed_cached_resource.hpp)
 
 add_executable(
   ${CMAKE_PROJECT_NAME}

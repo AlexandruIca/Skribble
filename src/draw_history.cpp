@@ -14,34 +14,35 @@ auto CachedLayers::PixmapDrawer(QPixmap& dest, QPixmap& src) -> void
         CachedLayers::m_canvasRect, src, CachedLayers::m_canvasRect);
 }
 
+auto CachedLayers::PixmapInit(QPixmap& pixmap) noexcept -> void
+{
+    pixmap.fill(m_transparent);
+}
+
 CachedLayers::CachedLayers(bool const foreign)
     : m_foreign{ foreign }
 {
-    m_layers.emplaceBack(sk::config::width, sk::config::height)
-        .fill(m_transparent);
+    m_layers.emplaceBack(sk::config::width, sk::config::height);
 }
 
 auto CachedLayers::pushNewLayer() -> void
 {
-    m_layers.emplaceBack(sk::config::width, sk::config::height)
-        .fill(m_transparent);
+    m_layers.emplaceBack(sk::config::width, sk::config::height);
 }
 
 auto CachedLayers::paintBlock(QPainter& painter) -> void
 {
-    m_layers.reduceTo([&painter](QPixmap const& src) -> void {
-        painter.drawPixmap(m_canvasRect, src, m_canvasRect);
-    });
+    painter.drawPixmap(m_canvasRect, m_layers.get(), m_canvasRect);
 }
 
 [[nodiscard]] auto CachedLayers::getLastLayer() noexcept -> QPixmap&
 {
-    return m_layers.getLast();
+    return m_layers.get();
 }
 
 [[nodiscard]] auto CachedLayers::getLastLayer() const noexcept -> QPixmap const&
 {
-    return m_layers.getLast();
+    return m_layers.get();
 }
 
 [[nodiscard]] auto CachedLayers::undo() -> bool
