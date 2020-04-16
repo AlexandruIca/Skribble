@@ -3,10 +3,14 @@
 
 #include "cached_resource.hpp"
 
+namespace {
+
 auto adder = [](int& dest, int& src) -> void { dest += src; };
 
+}
+
 template<typename T>
-struct Traits
+struct FTraits
 {
     using ContainerType = std::deque<T>;
     static constexpr int cacheGap = 3;
@@ -15,7 +19,7 @@ struct Traits
 
 TEST("[CachedResource] Undo/Redo")
 {
-    sk::CachedResource<int, Traits<int>> res{ adder };
+    sk::CachedResource<int, FTraits<int>> res{ adder };
 
     for(int i = 0; i < 10; ++i) {
         res.emplaceBack(i + 1);
@@ -246,8 +250,8 @@ TEST("[CachedResource] maxCount")
     ASSERT(res.underUndo() == true);
     ASSERT(sum == 28);
 
-    redo = res.redo();
-    redo = res.redo();
+    static_cast<void>(res.redo());
+    static_cast<void>(res.redo());
     sum = 0;
     res.reduceTo(sum);
 
