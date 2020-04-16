@@ -53,7 +53,7 @@ public:
         return m_foreign;
     }
 
-    [[nodiscard]] constexpr auto underUndo() const noexcept -> bool
+    [[nodiscard]] inline auto underUndo() const noexcept -> bool
     {
         return m_layers.underUndo();
     }

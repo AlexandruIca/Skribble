@@ -63,7 +63,7 @@ private:
                 Qt::RoundJoin };
 
 public:
-    PenMode() noexcept = default;
+    PenMode() = default;
     PenMode(PenMode const&) noexcept = default;
     PenMode(PenMode&&) noexcept = default;
     ~PenMode() noexcept override = default;
@@ -87,7 +87,7 @@ private:
 public:
     BrushMode() noexcept = default;
     BrushMode(BrushMode const&) noexcept = default;
-    BrushMode(BrushMode&&) noexcept = default;
+    BrushMode(BrushMode&&) = default;
     ~BrushMode() noexcept override = default;
 
     explicit BrushMode(QBrush const& brush);

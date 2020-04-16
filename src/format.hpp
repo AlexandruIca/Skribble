@@ -3,6 +3,8 @@
 #pragma once
 
 #include <QString>
+
+#include <cstddef>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -10,7 +12,7 @@
 
 namespace sk {
 
-template<int N, typename... Ts>
+template<std::size_t N, typename... Ts>
 auto format(char const (&fmt)[N], Ts&&... args) -> std::string
 {
     static thread_local std::stringstream ss;
@@ -24,25 +26,25 @@ auto format(char const (&fmt)[N], Ts&&... args) -> std::string
     return result.toStdString();
 }
 
-template<int N, typename... Ts>
+template<std::size_t N, typename... Ts>
 auto printTo(std::ostream& os, char const (&fmt)[N], Ts&&... args) -> void
 {
     os << format(fmt, std::forward<Ts>(args)...);
 }
 
-template<int N, typename... Ts>
+template<std::size_t N, typename... Ts>
 auto printlnTo(std::ostream& os, char const (&fmt)[N], Ts&&... args) -> void
 {
     os << format(fmt, std::forward<Ts>(args)...) << std::endl;
 }
 
-template<int N, typename... Ts>
+template<std::size_t N, typename... Ts>
 auto print(char const (&fmt)[N], Ts&&... args) -> void
 {
     printTo(std::cout, fmt, std::forward<Ts>(args)...);
 }
 
-template<int N, typename... Ts>
+template<std::size_t N, typename... Ts>
 auto println(char const (&fmt)[N], Ts&&... args) -> void
 {
     printlnTo(std::cout, fmt, std::forward<Ts>(args)...);
