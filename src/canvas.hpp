@@ -21,6 +21,7 @@ private:
 
     DrawHistory m_history{};
     std::unique_ptr<DrawMode> m_drawMode{};
+    bool m_foreign{ false };
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);
@@ -38,6 +39,7 @@ public slots:
     void mouseReleased();
     void undo();
     void redo();
+    void toggleForeign();
 };
 
 } // namespace sk
