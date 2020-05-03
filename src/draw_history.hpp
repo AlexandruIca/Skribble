@@ -88,23 +88,18 @@ private:
         static constexpr int maxCount = 10;
     };
 
-    sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
+    std::list<impl::CachedLayers> m_layers{};
+    sk::CachedResource<impl::CachedLayers> m_cache{};
+
     std::optional<QPoint> m_lastPoint{ std::nullopt };
     std::optional<QPoint> m_lastExternalPoint{ std::nullopt };
 
-    // New implementation
-    std::list<impl::CachedLayers> m_layers2{};
-    impl::CachedLayers m_cache{};
     bool m_drawingLocally{ false };
     bool m_drawingExternally{ false };
 
     auto handleExternal(QPoint const& pos, DrawMode& mode) -> void;
     auto handleLocal(QPoint const& pos, DrawMode& mode) -> void;
     auto popFirst(bool const foreign) -> void;
-
-    [[nodiscard]] auto getLastLayer(bool const foreign = false) -> QPixmap&;
-    [[nodiscard]] auto getLastLayerIter(bool const foreign = false)
-        -> impl::CachedLayers&;
 
 public:
     DrawHistory();
