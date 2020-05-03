@@ -23,6 +23,14 @@ private:
     std::unique_ptr<DrawMode> m_drawMode{};
     bool m_foreign{ false };
 
+    // Those will be the defaults
+    // QColor m_foreignColor{ DrawMode::getDefaultColor() };
+    // int m_foreignWidth{ DrawMode::getDefaultWidth() };
+    //
+    // These are for the current implementation only
+    QColor m_foreignColor{ Qt::red };
+    int m_foreignWidth{ 20 };
+
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);
     Canvas(Canvas const&) = delete;

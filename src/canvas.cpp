@@ -18,8 +18,8 @@ auto Canvas::mousePositionChanged(QPoint const& pos) -> void
         auto const prevColor = m_drawMode->getColor();
         int const prevWidth = m_drawMode->getWidth();
 
-        m_drawMode->setColor(Qt::red);
-        m_drawMode->setWidth(20);
+        m_drawMode->setColor(m_foreignColor);
+        m_drawMode->setWidth(m_foreignWidth);
 
         m_history.drawAt(pos, *m_drawMode, m_foreign);
 
