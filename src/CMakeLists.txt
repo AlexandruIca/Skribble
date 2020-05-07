@@ -12,7 +12,8 @@ set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/format.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/fixed_cached_resource.hpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/fixed_cached_resource.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/network_config.hpp)
 
 add_executable(
   ${CMAKE_PROJECT_NAME}
@@ -21,4 +22,4 @@ add_executable(
 
 target_link_libraries(
   ${CMAKE_PROJECT_NAME} PRIVATE project_options project_warnings Qt5::Widgets
-                                Qt5::Qml Qt5::Quick)
+                                Qt5::Qml Qt5::Quick Qt5::Network)

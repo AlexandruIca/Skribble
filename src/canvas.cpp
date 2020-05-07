@@ -1,4 +1,5 @@
 #include "canvas.hpp"
+#include "network_config.hpp"
 
 #include <cstddef>
 #include <iostream>

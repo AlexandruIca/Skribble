@@ -8,6 +8,8 @@
 #include <QPainter>
 #include <QPoint>
 #include <QQuickPaintedItem>
+#include <QTcpServer>
+#include <QTcpSocket>
 
 #include <memory>
 #include <vector>
@@ -30,6 +32,9 @@ private:
     // These are for the current implementation only
     QColor m_foreignColor{ Qt::red };
     int m_foreignWidth{ 20 };
+
+    std::unique_ptr<QTcpServer> m_server{ nullptr };
+    std::unique_ptr<QTcpSocket> m_client{ nullptr };
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);
