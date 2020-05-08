@@ -2,7 +2,7 @@ function(set_project_warnings project_name)
   option(WARNINGS_AS_ERRORS "Treat compiler warnings as errors" TRUE)
 
   set(MSVC_WARNINGS
-      /W4 # /WX is mad
+      /W4 # /Wall is mad
       /we4289 # variable declared in loop is used outside the loop
       /analyze /permissive- # only standard C++
   )
