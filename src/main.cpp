@@ -43,6 +43,7 @@ int main(int argc, char* argv[])
     else if(parser.isSet(clientMode)) {
         qDebug() << "Client mode: " << parser.value(clientMode);
         sk::networkMode = sk::NetworkModes::CLIENT;
+        sk::host_ip = parser.value(clientMode);
     }
     else {
         sk::networkMode = sk::NetworkModes::SINGLE_USER;
@@ -51,7 +52,7 @@ int main(int argc, char* argv[])
     qmlRegisterType<sk::Canvas>("Backend.Canvas", 1, 0, "SkCanvas");
 
     engine.addImportPath("qrc:/qml");
-    engine.load(QUrl{ QStringLiteral("qrc:/qml/main.qml") });
+    engine.load(QUrl{ "qrc:/qml/main.qml" });
 
     return QGuiApplication::exec();
 }
