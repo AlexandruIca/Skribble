@@ -55,14 +55,12 @@ auto Canvas::paint(QPainter* painter) -> void
 auto Canvas::mouseReleased() -> void
 {
     m_history.pushNewLayer(m_foreign);
-    // m_network->doSomething();
     m_network->sendMouseReleased();
 }
 
 auto Canvas::undo() -> void
 {
     m_history.undo(m_foreign);
-    // m_network->doSomething();
     m_network->sendUndo();
     this->update();
 }
@@ -70,7 +68,6 @@ auto Canvas::undo() -> void
 auto Canvas::redo() -> void
 {
     m_history.redo(m_foreign);
-    // m_network->doSomething();
     m_network->sendRedo();
     this->update();
 }

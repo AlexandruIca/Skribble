@@ -27,16 +27,8 @@ private:
     std::unique_ptr<AbstractNetwork> m_network{ nullptr };
     bool m_foreign{ false };
 
-    // Those will be the defaults
     QColor m_foreignColor{ DrawMode::getDefaultColor() };
     int m_foreignWidth{ DrawMode::getDefaultWidth() };
-    //
-    // These are for the current implementation only
-    // QColor m_foreignColor{ Qt::red };
-    // int m_foreignWidth{ 20 };
-
-    std::unique_ptr<QTcpServer> m_server{ nullptr };
-    std::unique_ptr<QTcpSocket> m_client{ nullptr };
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);

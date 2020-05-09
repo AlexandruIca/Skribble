@@ -16,7 +16,7 @@ struct ResourceTraits
 {
     using ContainerType = std::deque<T>;
     static constexpr int cacheGap = 5;
-    static constexpr int maxCount = 20; // std::numeric_limits<int>::max();
+    static constexpr int maxCount = 20;
 };
 
 template<typename T, typename Traits = ResourceTraits<T>>

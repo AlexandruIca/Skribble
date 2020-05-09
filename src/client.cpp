@@ -28,7 +28,6 @@ Client::Client(QString const& ip)
         QGuiApplication::quit();
     });
 
-    // m_server->disconnect();
     m_server->write("Hello");
 }
 
