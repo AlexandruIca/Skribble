@@ -25,7 +25,6 @@ private:
     DrawHistory m_history{};
     std::unique_ptr<DrawMode> m_drawMode{};
     std::unique_ptr<AbstractNetwork> m_network{ nullptr };
-    bool m_foreign{ false };
 
     QColor m_foreignColor{ DrawMode::getDefaultColor() };
     int m_foreignWidth{ DrawMode::getDefaultWidth() };
@@ -46,7 +45,6 @@ public slots:
     void mouseReleased();
     void undo();
     void redo();
-    void toggleForeign();
     void onReceivedMessage(QString const& msg);
 };
 

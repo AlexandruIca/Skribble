@@ -25,22 +25,8 @@ Canvas::Canvas(QQuickPaintedItem* parent)
 
 auto Canvas::mousePositionChanged(QPoint const& pos) -> void
 {
-    if(m_foreign) {
-        auto const prevColor = m_drawMode->getColor();
-        int const prevWidth = m_drawMode->getWidth();
-
-        m_drawMode->setColor(m_foreignColor);
-        m_drawMode->setWidth(m_foreignWidth);
-
-        m_history.drawAt(pos, *m_drawMode, m_foreign);
-
-        m_drawMode->setColor(prevColor);
-        m_drawMode->setWidth(prevWidth);
-    }
-    else {
-        m_history.drawAt(pos, *m_drawMode, m_foreign);
-        m_network->sendDrawAt(pos);
-    }
+    m_history.drawAt(pos, *m_drawMode, false);
+    m_network->sendDrawAt(pos);
     this->update();
 }
 
@@ -53,27 +39,22 @@ auto Canvas::paint(QPainter* painter) -> void
 
 auto Canvas::mouseReleased() -> void
 {
-    m_history.pushNewLayer(m_foreign);
+    m_history.pushNewLayer(false);
     m_network->sendMouseReleased();
 }
 
 auto Canvas::undo() -> void
 {
-    m_history.undo(m_foreign);
+    m_history.undo(false);
     m_network->sendUndo();
     this->update();
 }
 
 auto Canvas::redo() -> void
 {
-    m_history.redo(m_foreign);
+    m_history.redo(false);
     m_network->sendRedo();
     this->update();
-}
-
-auto Canvas::toggleForeign() -> void
-{
-    m_foreign = !m_foreign;
 }
 
 auto Canvas::onReceivedMessage(QString const& msg) -> void

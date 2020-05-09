@@ -63,10 +63,6 @@ Rectangle {
             canvas.redo();
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_M) {
-            canvas.toggleForeign();
-            event.accepted = true;
-        }
     }
 
     MouseArea {

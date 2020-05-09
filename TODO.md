@@ -4,6 +4,7 @@
 * [ ] Add a toolbar
 * [ ] Add a status bar for showing established connection(s)
 * [ ] Document the code and generate the documentation using Doxygen
+* [x] Remove use of toggleForeign
 * [x] Make the test helper a true singleton
 * [x] Remove uses of functions meant only for testing
 * [x] Refactor by deleting useless comments
