@@ -1,4 +1,5 @@
 # Features:
+* [ ] Remove uses of functions meant only for testing
 * [ ] Make the test helper a true singleton
 * [ ] Add controls for color picker, brush selector, pen selector, dimension selector etc.
 * [ ] Make the zoom less weird and add scrollbar(See: Flickable)
