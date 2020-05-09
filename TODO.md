@@ -1,5 +1,5 @@
 # Features:
-* [ ] Make the test helper a true singleton
+* [x] Make the test helper a true singleton
 * [ ] Add controls for color picker, brush selector, pen selector, dimension selector etc.
 * [ ] Make the zoom less weird and add scrollbar(See: Flickable)
 * [ ] Add a toolbar
