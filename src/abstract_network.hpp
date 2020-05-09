@@ -23,7 +23,6 @@ public:
     auto operator=(AbstractNetwork const&) -> AbstractNetwork& = delete;
     auto operator=(AbstractNetwork&&) noexcept -> AbstractNetwork& = delete;
 
-    virtual auto doSomething() -> void = 0;
     virtual auto getSocket() -> QTcpSocket* = 0;
 
     auto sendDrawAt(QPoint const& pos) -> void;

@@ -39,7 +39,6 @@ auto Canvas::mousePositionChanged(QPoint const& pos) -> void
     }
     else {
         m_history.drawAt(pos, *m_drawMode, m_foreign);
-        // m_network->doSomething();
         m_network->sendDrawAt(pos);
     }
     this->update();

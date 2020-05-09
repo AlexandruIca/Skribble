@@ -20,7 +20,6 @@ public:
     auto operator=(DummyNetwork const&) -> DummyNetwork& = delete;
     auto operator=(DummyNetwork&&) noexcept -> DummyNetwork& = delete;
 
-    auto doSomething() -> void override;
     auto getSocket() -> QTcpSocket* override;
 };
 

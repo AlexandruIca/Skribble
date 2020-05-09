@@ -36,15 +36,6 @@ Server::~Server() noexcept
     m_server->disconnect();
 }
 
-auto Server::doSomething() -> void
-{
-    qDebug() << "Hello from server!";
-
-    if(m_socket != nullptr) {
-        m_socket->write("Hello from Server::doSomething!");
-    }
-}
-
 auto Server::getSocket() -> QTcpSocket*
 {
     return m_socket;

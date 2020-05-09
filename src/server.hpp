@@ -26,7 +26,6 @@ public:
     auto operator=(Server const&) -> Server& = delete;
     auto operator=(Server &&) -> Server& = delete;
 
-    auto doSomething() -> void override;
     auto getSocket() -> QTcpSocket* override;
 };
 

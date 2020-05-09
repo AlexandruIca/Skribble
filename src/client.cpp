@@ -36,12 +36,6 @@ Client::~Client() noexcept
     m_server->disconnectFromHost();
 }
 
-auto Client::doSomething() -> void
-{
-    qDebug() << "Hello from Client!";
-    m_server->write("Hello from Client::DoSomething");
-}
-
 auto Client::getSocket() -> QTcpSocket*
 {
     return m_server.get();
