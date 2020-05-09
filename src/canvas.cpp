@@ -2,6 +2,7 @@
 #include "client.hpp"
 #include "dummy_network.hpp"
 #include "network_config.hpp"
+#include "network_factory.hpp"
 #include "server.hpp"
 
 #include <cstddef>
@@ -14,29 +15,34 @@ Canvas::Canvas(QQuickPaintedItem* parent)
     : QQuickPaintedItem{ parent }
 {
     m_drawMode = makeDrawMode(PenMode{});
-
-    switch(sk::networkMode) {
-    case sk::NetworkModes::SINGLE_USER: {
-        m_network = std::make_unique<DummyNetwork>();
-        connect(m_network.get(),
-                &AbstractNetwork::receivedMessage,
-                this,
-                &Canvas::onReceivedMessage);
-        break;
-    }
-    case sk::NetworkModes::CLIENT: {
-        m_network = std::make_unique<Client>(sk::host_ip);
-        connect(m_network.get(),
-                &AbstractNetwork::receivedMessage,
-                this,
-                &Canvas::onReceivedMessage);
-        break;
-    }
-    case sk::NetworkModes::SERVER: {
-        m_network = std::make_unique<Server>();
-        break;
-    }
-    }
+    m_network = NetworkFactory::create(sk::networkMode);
+    connect(m_network.get(),
+            &AbstractNetwork::receivedMessage,
+            this,
+            &Canvas::onReceivedMessage);
+    /*
+        switch(sk::networkMode) {
+        case sk::NetworkModes::SINGLE_USER: {
+            m_network = std::make_unique<DummyNetwork>();
+            connect(m_network.get(),
+                    &AbstractNetwork::receivedMessage,
+                    this,
+                    &Canvas::onReceivedMessage);
+            break;
+        }
+        case sk::NetworkModes::CLIENT: {
+            m_network = std::make_unique<Client>(sk::host_ip);
+            connect(m_network.get(),
+                    &AbstractNetwork::receivedMessage,
+                    this,
+                    &Canvas::onReceivedMessage);
+            break;
+        }
+        case sk::NetworkModes::SERVER: {
+            m_network = std::make_unique<Server>();
+            break;
+        }
+        }*/
 }
 
 auto Canvas::mousePositionChanged(QPoint const& pos) -> void
