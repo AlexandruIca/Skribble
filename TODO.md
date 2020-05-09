@@ -1,10 +1,10 @@
 # Features:
-* [x] Make the test helper a true singleton
 * [ ] Add controls for color picker, brush selector, pen selector, dimension selector etc.
 * [ ] Make the zoom less weird and add scrollbar(See: Flickable)
 * [ ] Add a toolbar
 * [ ] Add a status bar for showing established connection(s)
 * [ ] Document the code and generate the documentation using Doxygen
+* [x] Make the test helper a true singleton
 * [x] Remove uses of functions meant only for testing
 * [x] Refactor by deleting useless comments
 * [x] Implement Undo/Redo for two users working at the same time
