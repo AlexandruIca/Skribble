@@ -2,6 +2,7 @@
 #define CANVAS_HPP
 #pragma once
 
+#include "abstract_network.hpp"
 #include "draw_history.hpp"
 #include "draw_mode.hpp"
 
@@ -23,6 +24,7 @@ private:
 
     DrawHistory m_history{};
     std::unique_ptr<DrawMode> m_drawMode{};
+    std::unique_ptr<AbstractNetwork> m_network{ nullptr };
     bool m_foreign{ false };
 
     // Those will be the defaults
@@ -53,6 +55,7 @@ public slots:
     void undo();
     void redo();
     void toggleForeign();
+    void onReceivedMessage(QString const& msg);
 };
 
 } // namespace sk

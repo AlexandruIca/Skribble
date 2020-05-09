@@ -1,5 +1,8 @@
 #include "canvas.hpp"
+#include "client.hpp"
+#include "dummy_network.hpp"
 #include "network_config.hpp"
+#include "server.hpp"
 
 #include <cstddef>
 #include <iostream>
@@ -11,6 +14,29 @@ Canvas::Canvas(QQuickPaintedItem* parent)
     : QQuickPaintedItem{ parent }
 {
     m_drawMode = makeDrawMode(PenMode{});
+
+    switch(sk::networkMode) {
+    case sk::NetworkModes::SINGLE_USER: {
+        m_network = std::make_unique<DummyNetwork>();
+        connect(m_network.get(),
+                &AbstractNetwork::receivedMessage,
+                this,
+                &Canvas::onReceivedMessage);
+        break;
+    }
+    case sk::NetworkModes::CLIENT: {
+        m_network = std::make_unique<Client>(sk::host_ip);
+        connect(m_network.get(),
+                &AbstractNetwork::receivedMessage,
+                this,
+                &Canvas::onReceivedMessage);
+        break;
+    }
+    case sk::NetworkModes::SERVER: {
+        m_network = std::make_unique<Server>();
+        break;
+    }
+    }
 }
 
 auto Canvas::mousePositionChanged(QPoint const& pos) -> void
@@ -29,6 +55,7 @@ auto Canvas::mousePositionChanged(QPoint const& pos) -> void
     }
     else {
         m_history.drawAt(pos, *m_drawMode, m_foreign);
+        m_network->doSomething();
     }
     this->update();
 }
@@ -43,23 +70,31 @@ auto Canvas::paint(QPainter* painter) -> void
 auto Canvas::mouseReleased() -> void
 {
     m_history.pushNewLayer(m_foreign);
+    m_network->doSomething();
 }
 
 auto Canvas::undo() -> void
 {
     m_history.undo(m_foreign);
+    m_network->doSomething();
     this->update();
 }
 
 auto Canvas::redo() -> void
 {
     m_history.redo(m_foreign);
+    m_network->doSomething();
     this->update();
 }
 
 auto Canvas::toggleForeign() -> void
 {
     m_foreign = !m_foreign;
+}
+
+auto Canvas::onReceivedMessage(QString const& msg) -> void
+{
+    qDebug() << "[Canvas] Received: " << msg;
 }
 
 } // namespace sk

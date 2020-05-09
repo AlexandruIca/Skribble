@@ -13,7 +13,15 @@ set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/draw_mode.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/fixed_cached_resource.hpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/network_config.hpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/network_config.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/abstract_network.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/abstract_network.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/client.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/client.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/server.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/server.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/dummy_network.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/dummy_network.cpp)
 
 add_executable(
   ${CMAKE_PROJECT_NAME}
