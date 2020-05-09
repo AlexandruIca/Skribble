@@ -2,8 +2,11 @@
 #define ABSTRACT_NETWORK_HPP
 #pragma once
 
+#include <QColor>
 #include <QObject>
+#include <QPoint>
 #include <QString>
+#include <QTcpSocket>
 
 namespace sk {
 
@@ -21,6 +24,16 @@ public:
     auto operator=(AbstractNetwork&&) noexcept -> AbstractNetwork& = delete;
 
     virtual auto doSomething() -> void = 0;
+    virtual auto getSocket() -> QTcpSocket* = 0;
+
+    auto sendDrawAt(QPoint const& pos) -> void;
+    auto sendMouseReleased() -> void;
+    auto sendUndo() -> void;
+    auto sendRedo() -> void;
+    auto sendChangeColor(QColor const& color) -> void;
+    auto sendChangeWidth(int const width) -> void;
+    auto sendToPen() -> void;
+    auto sendToBrush() -> void;
 
 signals:
     void receivedMessage(QString const& msg);

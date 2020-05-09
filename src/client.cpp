@@ -43,4 +43,9 @@ auto Client::doSomething() -> void
     m_server->write("Hello from Client::DoSomething");
 }
 
+auto Client::getSocket() -> QTcpSocket*
+{
+    return m_server.get();
+}
+
 } // namespace sk

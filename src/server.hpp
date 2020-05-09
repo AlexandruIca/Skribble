@@ -27,6 +27,7 @@ public:
     auto operator=(Server &&) -> Server& = delete;
 
     auto doSomething() -> void override;
+    auto getSocket() -> QTcpSocket* override;
 };
 
 } // namespace sk

@@ -45,4 +45,9 @@ auto Server::doSomething() -> void
     }
 }
 
+auto Server::getSocket() -> QTcpSocket*
+{
+    return m_socket;
+}
+
 } // namespace sk

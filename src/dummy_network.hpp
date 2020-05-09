@@ -4,6 +4,8 @@
 
 #include "abstract_network.hpp"
 
+#include <QTcpSocket>
+
 namespace sk {
 
 class DummyNetwork final : public AbstractNetwork
@@ -19,6 +21,7 @@ public:
     auto operator=(DummyNetwork&&) noexcept -> DummyNetwork& = delete;
 
     auto doSomething() -> void override;
+    auto getSocket() -> QTcpSocket* override;
 };
 
 } // namespace sk
