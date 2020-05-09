@@ -23,7 +23,9 @@ set(SOURCE_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/dummy_network.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/dummy_network.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/network_factory.hpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/network_factory.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/network_factory.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/message_parser.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/message_parser.cpp)
 
 add_executable(
   ${CMAKE_PROJECT_NAME}
