@@ -33,10 +33,11 @@ jobs:
           run: |
               sudo apt install -y ninja-build cmake
 
-        - name: Install compilers and linters
-          uses: actions/setup-python@v2
+        - uses: actions/setup-python@v2
           with:
               python-version: '3.x'
+
+        - name: Install compilers and linters
           run: |
               sudo pip3 install cmake-format
               sudo apt install -y clang clang++ clang-format clang-tidy
