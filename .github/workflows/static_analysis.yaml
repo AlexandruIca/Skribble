@@ -39,7 +39,7 @@ jobs:
 
         - name: Install compilers and linters
           run: |
-              sudo pip3 install cmake-format
+              pip3 install cmake-format
               sudo apt install -y clang clang++ clang-format clang-tidy
         - name: Build project and tests
           run: |
