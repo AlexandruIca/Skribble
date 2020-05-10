@@ -40,13 +40,13 @@ jobs:
         - name: Install compilers and linters
           run: |
               pip3 install cmake-format
-              sudo apt install -y clang clang++ clang-format clang-tidy
+              sudo apt install -y clang-9 clang++-9 clang-format-9 clang-tidy-9
         - name: Build project and tests
           run: |
               mkdir build && cd build
 
-              export CC=clang
-              export CXX=clang++
+              export CC=clang-9
+              export CXX=clang++-9
 
               cmake \
                 -G"Ninja" \
