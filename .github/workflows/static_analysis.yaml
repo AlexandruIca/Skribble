@@ -68,18 +68,10 @@ jobs:
               cd build
               ctest -V
 
-        - name: Run cmake-format
-          run: |
-              ./scripts/check-cmake-format.sh
-
         - name: Run clang-format
           run: |
-              ./scripts/run-clang-format.py --clang-format-executable=/usr/bin/clang-format -r src/ tests/
+              ./scripts/run-clang-format.py --clang-format-executable=/usr/bin/clang-format-9 -r src/ tests/
 
         - name: Run clang-tidy
           run: |
-              ./scripts/run-clang-tidy.py -clang-tidy-binary=/usr/bin/clang-tidy
-
-        - name: Run clazy
-          run: |
-              ./scripts/run-clazy.sh || true
+              ./scripts/run-clang-tidy.py -clang-tidy-binary=/usr/bin/clang-tidy-9
