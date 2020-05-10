@@ -10,4 +10,3 @@ auto DummyNetwork::getSocket() -> QTcpSocket*
 }
 
 } // namespace sk
-
