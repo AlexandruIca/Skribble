@@ -1,0 +1,78 @@
+name: CI
+
+on:
+    push:
+        branches: [ master, develop, ci ]
+    pull_request:
+        branches: [ master, develop, ci ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v2
+
+        - name: Cache Qt
+          id: cache-qt
+          uses: actions/cache@v1
+          with:
+              path: ../Qt
+              key: QtCache
+
+        - name: Install Qt
+          uses: jurplel/install-qt-action@v2
+          with:
+              version: '5.14.2'
+              host: 'linux'
+              target: 'desktop'
+              modules: 'qtscript qtquick2 qtquickcontrols2'
+              cached: ${{ steps.cache-qt.outputs.cache-hit }}
+
+        - name: Install build tools
+          run: |
+              sudo apt install -y ninja-build cmake
+
+        - uses: actions/setup-python@v2
+          with:
+              python-version: '3.x'
+
+        - name: Install compilers and linters
+          run: |
+              pip3 install cmake-format
+              python3 -m pip install pyyaml
+              sudo apt install -y clang-9 clang++-9 clang-format-9 clang-tidy-9
+        - name: Build project and tests
+          run: |
+              mkdir build && cd build
+
+              export CC=clang-9
+              export CXX=clang++-9
+
+              cmake \
+                -G"Ninja" \
+                -DCMAKE_PREFIX_PATH=../../Qt/5.14.2/gcc_64/ \
+                -DENABLE_SANITIZER_ADDRESS=ON \
+                -DENABLE_SANITIZER_UNDEFINED=ON \
+                -DENABLE_COVERAGE=OFF \
+                ..
+
+              ../scripts/commands_parse.py > tmp.json
+              rm compile_commands.json
+              mv tmp.json compile_commands.json
+              mv compile_commands.json ..
+
+              cmake --build .
+
+        - name: Run tests
+          run: |
+              cd build
+              ctest -V
+
+        - name: Run clang-format
+          run: |
+              ./scripts/run-clang-format.py --clang-format-executable=/usr/bin/clang-format-9 -r src/ tests/
+
+        - name: Run clang-tidy
+          run: |
+              ./scripts/run-clang-tidy.py -clang-tidy-binary=/usr/bin/clang-tidy-9
