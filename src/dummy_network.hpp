@@ -12,7 +12,7 @@ class DummyNetwork final : public AbstractNetwork
 {
 private:
 public:
-    DummyNetwork() noexcept = default;
+    DummyNetwork() = default;
     DummyNetwork(DummyNetwork const&) = delete;
     DummyNetwork(DummyNetwork&&) noexcept = delete;
     ~DummyNetwork() noexcept override = default;
