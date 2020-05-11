@@ -1,5 +1,7 @@
 #include "draw_history.hpp"
 
+#include <QDebug>
+
 #include <algorithm>
 #include <cstddef>
 #include <deque>
@@ -66,81 +68,152 @@ auto DrawHistory::CachedDrawer(impl::CachedLayers& dest,
     src.paintBlock(painter);
 }
 
-[[nodiscard]] auto DrawHistory::getLastLayer(bool const foreign) -> QPixmap&
-{
-    return this->getLastLayerIter(foreign).getLastLayer();
-}
-
-[[nodiscard]] auto DrawHistory::getLastLayerIter(bool const foreign)
-    -> impl::CachedLayers&
-{
-    auto it = m_layers.getUnderlying().rbegin();
-
-    while(it != m_layers.getUnderlying().rend() && it->foreign() != foreign) {
-        ++it;
-    }
-
-    if(it->foreign() != foreign) {
-        // ERROR
-    }
-
-    return *it;
-}
-
 DrawHistory::DrawHistory()
 {
-    m_layers.emplaceBack();
+    m_layers.emplace_back();
+    m_cache.emplaceBack();
 }
 
 auto DrawHistory::pushNewLayer(bool const foreign) -> void
 {
-    if(m_layers.getUnderlying().back().foreign() != foreign) {
-        m_layers.emplaceBack(foreign);
+    if(foreign) {
+        m_drawingExternally = false;
+        m_lastExternalPoint = std::nullopt;
     }
     else {
-        m_layers.getUnderlying().back().pushNewLayer();
+        m_drawingLocally = false;
+        m_lastPoint = std::nullopt;
     }
-    m_lastPoint = std::nullopt;
+
+    for(auto& layer : m_layers) {
+        if(layer.foreign() == foreign) {
+            layer.pushNewLayer();
+        }
+    }
 }
 
 auto DrawHistory::paintCanvas(QPainter* const painter) -> void
 {
-    m_layers.reduceTo([&painter](impl::CachedLayers& src) -> void {
-        src.paintBlock(*painter);
-    });
+    painter->drawPixmap(impl::CachedLayers::getCanvasRect(),
+                        m_cache.getLast().getLastLayer(),
+                        impl::CachedLayers::getCanvasRect());
+    for(auto& layer : m_layers) {
+        layer.paintBlock(*painter);
+    }
+}
+
+auto DrawHistory::popFirst(bool const foreign) -> void
+{
+    if(m_layers.empty()) {
+        return;
+    }
+    if(m_layers.front().foreign() != foreign) {
+        return;
+    }
+
+    QPainter painter{ &(m_cache.getLast().getLastLayer()) };
+    painter.drawPixmap(impl::CachedLayers::getCanvasRect(),
+                       m_layers.front().getLastLayer(),
+                       impl::CachedLayers::getCanvasRect());
+
+    m_layers.pop_front();
+}
+
+auto DrawHistory::handleExternal(QPoint const& pos, DrawMode& mode) -> void
+{
+    if(auto& last = m_layers.back(); last.foreign()) {
+        if(last.underUndo()) {
+            last.pushNewLayer();
+        }
+
+        QPainter painter{ &last.getLastLayer() };
+        mode.draw(painter, pos, m_lastExternalPoint);
+    }
+    else {
+        if(!m_drawingExternally) {
+            this->popFirst(true);
+
+            QPainter painter{ &m_layers.emplace_back(true).getLastLayer() };
+            mode.draw(painter, pos, m_lastExternalPoint);
+        }
+        else {
+            for(auto& layer : m_layers) {
+                if(layer.foreign()) {
+                    QPainter painter{ &layer.getLastLayer() };
+                    mode.draw(painter, pos, m_lastExternalPoint);
+                    break;
+                }
+            }
+        }
+    }
+
+    m_drawingExternally = true;
+    m_lastExternalPoint = pos;
+}
+
+auto DrawHistory::handleLocal(QPoint const& pos, DrawMode& mode) -> void
+{
+    if(auto& last = m_layers.back(); !last.foreign()) {
+        if(last.underUndo()) {
+            last.pushNewLayer();
+        }
+
+        QPainter painter{ &last.getLastLayer() };
+        mode.draw(painter, pos, m_lastPoint);
+        m_drawingLocally = true;
+    }
+    else {
+        if(!m_drawingLocally) {
+            this->popFirst(false);
+            m_layers.emplace_back(false);
+            m_drawingLocally = true;
+
+            QPainter painter{ &m_layers.back().getLastLayer() };
+            mode.draw(painter, pos, m_lastPoint);
+        }
+        else {
+            for(auto& layer : m_layers) {
+                if(!layer.foreign()) {
+                    QPainter painter{ &layer.getLastLayer() };
+                    mode.draw(painter, pos, m_lastPoint);
+                    break;
+                }
+            }
+        }
+    }
+
+    m_lastPoint = pos;
 }
 
 auto DrawHistory::drawAt(QPoint const& pos, DrawMode& mode, bool const foreign)
     -> void
 {
-    if(auto& last = this->getLastLayerIter(foreign); last.underUndo()) {
-        last.pushNewLayer();
+    if(foreign) {
+        this->handleExternal(pos, mode);
     }
-
-    QPainter painter{ &this->getLastLayer(foreign) };
-    mode.draw(painter, pos, m_lastPoint);
-    m_lastPoint = pos;
+    else {
+        this->handleLocal(pos, mode);
+    }
 }
 
 auto DrawHistory::undo(bool const foreign) -> void
 {
-    // We undo two times here if undo is hit for the 'first' time
-    // because remember: when the user releases the left click
-    // we create a new layer which is an empty layer.
-    // If we delete this if then the user has to press 'Ctrl-z' two times
-    // to see the undo take effect because the firsst time it only skips
-    // the empty layer.
-    auto& last = this->getLastLayerIter(foreign);
-    /*
-    if(!last.underUndo()) {
-        static_cast<void>(last.undo());
-    }*/
-    static_cast<void>(last.undo());
+    for(auto& layer : m_layers) {
+        if(layer.foreign() == foreign) {
+            static_cast<void>(layer.undo());
+            break;
+        }
+    }
 }
 
 auto DrawHistory::redo(bool const foreign) -> void
 {
-    static_cast<void>(this->getLastLayerIter(foreign).redo());
+    for(auto& layer : m_layers) {
+        if(layer.foreign() == foreign) {
+            static_cast<void>(layer.redo());
+            break;
+        }
+    }
 }
 
 } // namespace sk

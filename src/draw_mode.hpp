@@ -53,6 +53,15 @@ public:
     {
         m_color = color;
     }
+
+    [[nodiscard]] static constexpr auto getDefaultColor() noexcept -> QColor
+    {
+        return m_defaultColor;
+    }
+    [[nodiscard]] static constexpr auto getDefaultWidth() noexcept -> int
+    {
+        return m_defaultWidth;
+    }
 };
 
 class PenMode : public DrawMode

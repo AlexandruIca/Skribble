@@ -1,0 +1,70 @@
+name: WinDeploy
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    build:
+        name: Publish binaries
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Cache Qt
+              id: cache-qt
+              uses: actions/cache@v1
+              with:
+                  path: ../Qt
+                  key: QtCache
+
+            - name: Install Qt
+              uses: jurplel/install-qt-action@v2
+              with:
+                  version: '5.14.2'
+                  host: 'windows'
+                  target: 'desktop'
+                  modules: 'qtscript qtquick2 qtquickcontrols2'
+                  cached: ${ steps.cache-qt.outputs.cache-hit }}
+
+            - name: Build Skribble
+              run: |
+                  mkdir build && cd build
+
+                  cmake -G"Visual Studio 16 2019" -Ax64 -DCMAKE_PREFIX_PATH=../../Qt/5.14.2/msvc2017_64/lib/cmake/ -DCMAKE_BUILD_TYPE=Release ..
+                  cmake --build .
+
+            - name: Run windeployqt
+              run: |
+                  cd build/src/Debug/
+
+                  ../../../../Qt/5.14.2/msvc2017_64/bin/windeployqt --qmldir ../../../src/qml Skribble.exe
+
+            - name: Archive
+              run: |
+                  7z a -tzip Skribble.zip build/src/Debug/
+
+            - name: Create Release
+              id: create_release
+              uses: actions/create-release@latest
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  tag_name: ${{ github.ref }}
+                  release_name: Release ${{ github.ref }}
+                  body: |
+                      New release
+                  draft: false
+                  prerelease: false
+
+            - name: Upload Release Assets
+              id: upload-release-asset
+              uses: actions/upload-release-asset@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  upload_url: ${{ steps.create_release.outputs.upload_url }}
+                  asset_path: ./Skribble.zip
+                  asset_name: Skribble.zip
+                  asset_content_type: application/zip

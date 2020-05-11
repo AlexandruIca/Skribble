@@ -2,12 +2,15 @@
 #define CANVAS_HPP
 #pragma once
 
+#include "abstract_network.hpp"
 #include "draw_history.hpp"
 #include "draw_mode.hpp"
 
 #include <QPainter>
 #include <QPoint>
 #include <QQuickPaintedItem>
+#include <QTcpServer>
+#include <QTcpSocket>
 
 #include <memory>
 #include <vector>
@@ -21,6 +24,10 @@ private:
 
     DrawHistory m_history{};
     std::unique_ptr<DrawMode> m_drawMode{};
+    std::unique_ptr<AbstractNetwork> m_network{ nullptr };
+
+    QColor m_foreignColor{ DrawMode::getDefaultColor() };
+    int m_foreignWidth{ DrawMode::getDefaultWidth() };
 
 public:
     explicit Canvas(QQuickPaintedItem* parent = nullptr);
@@ -38,6 +45,7 @@ public slots:
     void mouseReleased();
     void undo();
     void redo();
+    void onReceivedMessage(QString const& msg);
 };
 
 } // namespace sk

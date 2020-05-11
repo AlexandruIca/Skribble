@@ -43,6 +43,11 @@ public:
     auto operator=(CachedLayers const&) -> CachedLayers& = delete;
     auto operator=(CachedLayers &&) -> CachedLayers& = delete;
 
+    static constexpr auto getCanvasRect() -> QRect
+    {
+        return m_canvasRect;
+    }
+
     auto pushNewLayer() -> void;
     auto paintBlock(QPainter& painter) -> void;
     [[nodiscard]] auto getLastLayer() noexcept -> QPixmap&;
@@ -83,12 +88,18 @@ private:
         static constexpr int maxCount = 10;
     };
 
-    sk::CachedResource<impl::CachedLayers, Traits> m_layers{ &CachedDrawer };
-    std::optional<QPoint> m_lastPoint{ std::nullopt };
+    std::list<impl::CachedLayers> m_layers{};
+    sk::CachedResource<impl::CachedLayers> m_cache{};
 
-    [[nodiscard]] auto getLastLayer(bool const foreign = false) -> QPixmap&;
-    [[nodiscard]] auto getLastLayerIter(bool const foreign = false)
-        -> impl::CachedLayers&;
+    std::optional<QPoint> m_lastPoint{ std::nullopt };
+    std::optional<QPoint> m_lastExternalPoint{ std::nullopt };
+
+    bool m_drawingLocally{ false };
+    bool m_drawingExternally{ false };
+
+    auto handleExternal(QPoint const& pos, DrawMode& mode) -> void;
+    auto handleLocal(QPoint const& pos, DrawMode& mode) -> void;
+    auto popFirst(bool const foreign) -> void;
 
 public:
     DrawHistory();
@@ -97,7 +108,7 @@ public:
     ~DrawHistory() noexcept = default;
 
     auto operator=(DrawHistory const&) -> DrawHistory& = delete;
-    auto operator=(DrawHistory &&) -> DrawHistory& = default;
+    auto operator=(DrawHistory &&) -> DrawHistory& = delete;
 
     auto pushNewLayer(bool const foreign = false) -> void;
     auto paintCanvas(QPainter* const painter) -> void;

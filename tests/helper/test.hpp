@@ -121,7 +121,7 @@ public:
 
 auto getTests() -> std::vector<TestBase*>&;
 
-// #define MAIN_EXECUTABLE
+//#define MAIN_EXECUTABLE
 #ifdef MAIN_EXECUTABLE
 
 #include <atomic>
@@ -229,10 +229,34 @@ auto getTestId() -> int
     return id.load();
 }
 
+class TestSingleton
+{
+private:
+    TestSingleton() noexcept = default;
+
+public:
+    TestSingleton(TestSingleton const&) = delete;
+    TestSingleton(TestSingleton&&) = delete;
+    ~TestSingleton() noexcept = default;
+
+    auto operator=(TestSingleton const&) -> TestSingleton& = delete;
+    auto operator=(TestSingleton&&) noexcept -> TestSingleton& = delete;
+
+    static auto getInstance() -> std::vector<TestBase*>&
+    {
+        static std::vector<TestBase*> tests{};
+        return tests;
+    }
+};
+
+auto operator+=(std::vector<TestBase*> tests, TestBase* test) -> void
+{
+    tests.push_back(test);
+}
+
 auto getTests() -> std::vector<TestBase*>&
 {
-    static std::vector<TestBase*> tests{};
-    return tests;
+    return TestSingleton::getInstance();
 }
 
 TestBase::TestBase(std::string testName, std::string file, int const line)
@@ -240,7 +264,7 @@ TestBase::TestBase(std::string testName, std::string file, int const line)
     , m_file{ std::move(file) }
     , m_line{ line }
 {
-    getTests().push_back(this);
+    getTests() += this;
     m_testId = getTestId();
     m_output.open(sk::format("test_%1", m_testId));
     sk::printlnTo(m_output, "%1\n%2\n%3", m_name, m_file, m_line);
