@@ -14,8 +14,8 @@ private:
 public:
     DummyNetwork() = default;
     DummyNetwork(DummyNetwork const&) = delete;
-    DummyNetwork(DummyNetwork&&) noexcept = delete;
-    ~DummyNetwork() noexcept override = default;
+    DummyNetwork(DummyNetwork&&) = delete;
+    ~DummyNetwork() = default;
 
     auto operator=(DummyNetwork const&) -> DummyNetwork& = delete;
     auto operator=(DummyNetwork&&) noexcept -> DummyNetwork& = delete;
