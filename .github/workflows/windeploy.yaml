@@ -1,0 +1,36 @@
+name: WinDeploy
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    build:
+        name: Publish binaries
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Cache Qt
+              id: cache-qt
+              uses: actions/cache@v1
+              with:
+                  path: ../Qt
+                  key: QtCache
+
+            - name: Install Qt
+              uses: jurplel/install-qt-action@v2
+              with:
+                  version: '5.14.2'
+                  host: 'windows'
+                  target: 'desktop'
+                  modules: 'qtscript qtquick2 qtquickcontrols2'
+                  cached: ${ steps.cache-qt.outputs.cache-hit }}
+
+            - name: Build Skribble
+              run: |
+                  mkdir build && cd build
+
+                  cmake -G"Visual Studio 16 2019" -Ax64 -DCMAKE_PREFIX_PATH=../../Qt/5.14.2/msvc2017_64/lib/cmake/ ..
+                  cmake --build .
