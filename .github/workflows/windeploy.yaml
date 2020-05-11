@@ -41,6 +41,6 @@ jobs:
 
                   ../../../../Qt/5.14.2/msvc2017_64/bin/windeployqt --qmldir ../../../src/qml Skribble.exe
 
-            - uses: edgarrc/action-7z@v1.0.4
-              with:
-                  args: 7z a -tzip -mx=9 Skribble.zip ./build/
+            - name: Archive
+              run: |
+                  7z a -tzip Skribble.zip build/src/Debug/
