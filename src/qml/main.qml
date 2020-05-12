@@ -94,14 +94,14 @@ ApplicationWindow {
     Rectangle {
         id: colorPickerBar
         color: "#f5f5f5"
-        width: parent.width / 15
+        width: parent.width / 10
         height: parent.height
         anchors.right: parent.right
 
         GridLayout {
             id: gridColors
             anchors.top: parent.top
-            columns: 2
+            columns: 4
             columnSpacing: 10
             rowSpacing: 10
             Rectangle {
@@ -110,8 +110,8 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#000000"
                 MouseArea {
                     anchors.fill: parent
@@ -127,12 +127,11 @@ ApplicationWindow {
             Rectangle {
                 id: color2
                 Layout.topMargin: 10
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#ffffff"
+                width: 20
+                height: 20
+                color: "#696969"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -146,12 +145,12 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color3
-                Layout.leftMargin: 10
+                Layout.topMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#696969"
+                width: 20
+                height: 20
+                color: "#dcdcdc"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -165,12 +164,12 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color4
-                Layout.rightMargin: 10
+                Layout.topMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#dcdcdc"
+                width: 20
+                height: 20
+                color: "#ffffff"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -187,9 +186,9 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#ff0000"
+                width: 20
+                height: 20
+                color: "#a20005"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -203,12 +202,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color6
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#a20005"
+                width: 20
+                height: 20
+                color: "#ff0000"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -222,11 +220,10 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color7
-                Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ff9ecb"
                 MouseArea {
                     anchors.fill: parent
@@ -241,12 +238,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color8
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#ff7d00"
+                width: 20
+                height: 20
+                color: "#ffff00"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -263,9 +259,9 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#ffff00"
+                width: 20
+                height: 20
+                color: "#ff7d00"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -279,11 +275,10 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color10
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ffc200"
                 MouseArea {
                     anchors.fill: parent
@@ -298,12 +293,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color11
-                Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#008000"
+                width: 20
+                height: 20
+                color: "#76e523"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -317,12 +311,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color12
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#76e523"
+                width: 20
+                height: 20
+                color: "#008000"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -339,8 +332,8 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#0d33ff"
                 MouseArea {
                     anchors.fill: parent
@@ -355,11 +348,10 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color14
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#61daff"
                 MouseArea {
                     anchors.fill: parent
@@ -374,12 +366,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color15
-                Layout.leftMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#800080"
+                width: 20
+                height: 20
+                color: "#c597e8"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -393,12 +384,11 @@ ApplicationWindow {
             }
             Rectangle {
                 id: color16
-                Layout.rightMargin: 10
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
-                color: "#c597e8"
+                width: 20
+                height: 20
+                color: "#800080"
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
@@ -415,8 +405,8 @@ ApplicationWindow {
                 id: customColor1
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ffffff"
                 MouseArea {
                     anchors.fill: parent
@@ -430,12 +420,11 @@ ApplicationWindow {
                 }
             }
             Rectangle {
-                Layout.leftMargin: 5
                 id: customColor2
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ffffff"
                 MouseArea {
                     anchors.fill: parent
@@ -449,12 +438,11 @@ ApplicationWindow {
                 }
             }
             Rectangle {
-                Layout.leftMargin: 10
                 id: customColor3
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ffffff"
                 MouseArea {
                     anchors.fill: parent
@@ -468,12 +456,11 @@ ApplicationWindow {
                 }
             }
             Rectangle {
-                Layout.leftMargin: 5
                 id: customColor4
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
                 color: "#ffffff"
                 MouseArea {
                     anchors.fill: parent
@@ -491,8 +478,8 @@ ApplicationWindow {
                 id: colorPicker
                 border.color: "black"
                 radius: 8
-                width: 40
-                height: 40
+                width: 20
+                height: 20
 
                 gradient: Gradient {
                     GradientStop { position: 0.0; color: "red" }
@@ -517,7 +504,7 @@ ApplicationWindow {
 
         Label {
             id: customLabel
-            text: "Current color"
+            text: "Current color:"
             font.pixelSize: 15/100 * parent.width
             color: "black"
             anchors.top: gridColors.bottom
@@ -528,8 +515,8 @@ ApplicationWindow {
 
         Rectangle {
             id: currentColor
-            width: 80
-            height: 80
+            width: 40
+            height: 40
             color: "black"
             border.color: "black"
             radius: 8
@@ -542,34 +529,29 @@ ApplicationWindow {
 
     }
 
-
     ColorDialog {
         id: colorDialog
         title: "Choose a color"
-
+        property int nr : 1;
         onAccepted: {
-            console.log("You chose: " + colorDialog.color)
+            console.log("You chose: " + colorDialog.color);
 
-            //if (nr === 1) {
+            if (nr === 1) {
                 customColor1.color = colorDialog.color
-//                nr = 2
-//                console.log(nr)
-//            }
-//            else if (nr === 2) {
-//                customColor2.color = colorDialog.color
-//                nr = 3
-//                console.log(nr)
-//            }
-//            else if (nr === 3) {
-//                customColor3.color = colorDialog.color
-//                nr = 4
-//                console.log(nr)
-//            }
-//            else if (nr === 4) {
-//                customColor4.color = colorDialog.color
-//                nr = 1
-//                console.log(nr)
-//            }
+                nr = 2
+            }
+            else if (nr === 2) {
+                customColor2.color = colorDialog.color
+                nr = 3
+            }
+            else if (nr === 3) {
+                customColor3.color = colorDialog.color
+                nr = 4
+            }
+            else if (nr === 4) {
+                customColor4.color = colorDialog.color
+                nr = 1
+            }
 
             warea.callChangeColor(colorDialog.color)
             currentColor.color = colorDialog.color
