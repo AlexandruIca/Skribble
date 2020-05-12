@@ -79,7 +79,6 @@ auto Canvas::onReceivedMessage(QString const& msg) -> void
     }
     case sk::Operation::MOUSE_RELEASED: {
         m_history.pushNewLayer(true);
-        this->update();
         return;
     }
     case sk::Operation::CHANGE_COLOR: {
