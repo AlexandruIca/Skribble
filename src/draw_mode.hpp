@@ -135,9 +135,6 @@ public:
     return std::make_unique<BrushMode>(std::forward<BrushMode>(brush));
 }
 
-
-
-
 } // namespace sk
 
 #endif // !DRAW_MODE_HPP
