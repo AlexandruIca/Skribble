@@ -79,7 +79,6 @@ auto Canvas::onReceivedMessage(QString const& msg) -> void
     }
     case sk::Operation::MOUSE_RELEASED: {
         m_history.pushNewLayer(true);
-        this->update();
         return;
     }
     case sk::Operation::CHANGE_COLOR: {
@@ -114,6 +113,12 @@ auto Canvas::onReceivedMessage(QString const& msg) -> void
         return;
     }
     }
+}
+
+auto Canvas::changeColor(QColor const& color) -> void
+{
+    m_drawMode->setColor(color);
+    m_network->sendChangeColor(color);
 }
 
 } // namespace sk

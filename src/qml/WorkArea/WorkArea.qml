@@ -9,6 +9,10 @@ Rectangle {
     height: 600
     focus: true
 
+    function callChangeColor(color) {
+        canvas.changeColor(color)
+    }
+
     SkCanvas {
         id: canvas
         anchors.fill: parent
@@ -29,23 +33,23 @@ Rectangle {
 
     Keys.onPressed: {
         const offset = 10;
-        if(event.key == Qt.Key_Left) {
+        if(event.key === Qt.Key_Left) {
             translate.x += offset;
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_Right) {
+        else if(event.key === Qt.Key_Right) {
             translate.x -= offset;
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_Up) {
+        else if(event.key === Qt.Key_Up) {
             translate.y += offset;
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_Down) {
+        else if(event.key === Qt.Key_Down) {
             translate.y -= offset;
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_C) {
+        else if(event.key === Qt.Key_C) {
             translate.y = 0;
             translate.x = 0;
             rotation = 0;
@@ -55,11 +59,11 @@ Rectangle {
             tform.yScale = 1;
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_U) {
+        else if(event.key === Qt.Key_U) {
             canvas.undo();
             event.accepted = true;
         }
-        else if(event.key == Qt.Key_R) {
+        else if(event.key === Qt.Key_R) {
             canvas.redo();
             event.accepted = true;
         }
@@ -96,12 +100,12 @@ Rectangle {
                 parent.scale += parent.scale * wheel.angleDelta.y / 120 / 10;*/
 
                 const factor = 1.05;
-
+                var zoomFactor;
                 if(wheel.angleDelta.y > 0) {
-                    var zoomFactor = factor;
+                    zoomFactor = factor;
                 }
                 else {
-                    var zoomFactor = 1 / factor;
+                    zoomFactor = 1 / factor;
                 }
 
                 const origin = mapToItem(parent.parent, wheel.x, wheel.y);

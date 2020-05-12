@@ -10,12 +10,14 @@
 #include <optional>
 #include <utility>
 
+#include <QToolBar>
+
 namespace sk {
 
 class DrawMode
 {
 protected:
-    static constexpr int m_defaultWidth = 10;
+    static constexpr int m_defaultWidth = 5;
     static constexpr QColor m_defaultColor{ 0, 0, 0 };
 
     static int m_width;
