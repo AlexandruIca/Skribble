@@ -133,8 +133,37 @@ auto getTests() -> std::vector<TestBase*>&;
 #include <memory>
 #include <queue>
 #include <stdexcept>
+#include <string>
 #include <thread>
 #include <utility>
+
+class TestException final : public std::exception
+{
+private:
+    std::string m_msg{};
+
+public:
+    TestException(TestException const&) = delete;
+    TestException(TestException&&) = delete;
+    ~TestException() noexcept override = default;
+
+    auto operator=(TestException const&) -> TestException& = delete;
+    auto operator=(TestException&&) noexcept -> TestException& = delete;
+
+    TestException()
+        : TestException{ "[TestHelper] Error in tests!" }
+    {
+    }
+    explicit TestException(std::string const& msg)
+        : m_msg{ "[TestHelper] " + msg }
+    {
+    }
+
+    [[nodiscard]] auto what() const noexcept -> char const* override
+    {
+        return m_msg.c_str();
+    }
+};
 
 class ThreadPool
 {
@@ -209,7 +238,10 @@ public:
             std::unique_lock<std::mutex> lock{ m_mutex };
 
             if(m_stop) {
-                throw std::runtime_error{
+                // throw std::runtime_error{
+                //"Attempted to push a thread to a terminated thread pool!"
+                //};
+                throw TestException{
                     "Attempted to push a thread to a terminated thread pool!"
                 };
             }
