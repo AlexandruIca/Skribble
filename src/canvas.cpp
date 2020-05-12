@@ -116,4 +116,10 @@ auto Canvas::onReceivedMessage(QString const& msg) -> void
     }
 }
 
+auto Canvas::changeColor(QColor const& color) -> void
+{
+    m_drawMode->setColor(color);
+    m_network->sendChangeColor(color);
+}
+
 } // namespace sk
