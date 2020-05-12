@@ -9,6 +9,10 @@ Rectangle {
     height: 600
     focus: true
 
+    function callChangeColor(color) {
+        canvas.changeColor(color)
+    }
+
     SkCanvas {
         id: canvas
         anchors.fill: parent
