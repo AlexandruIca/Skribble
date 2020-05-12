@@ -66,6 +66,7 @@
 * Made use of Qt's helpers for TCP sockets/servers:
     - `QTcpServer` in [Server][server_hpp]
     - `QTcpSocket` in [Server][server_hpp] and [Client][client_hpp]
+
 Qt's signals and slots allowed for a very clean implementation.
 
 ## Design Patterns
