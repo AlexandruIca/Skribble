@@ -18,6 +18,10 @@
     - `std::packaged_task`
 * C++17's `std::filesystem` used to iterate over test reports in [Tests][test_helper]
 * C++17's `std::invoke` and `std::invoke_result_t` used to return the correct type in [ThreadPool::push][test_helper] and to pass correct function call to thread pool workers
+* `std::unique_ptr` used in:
+    - [Canvas][canvas_hpp]
+    - [Server][server_hpp]
+    - [Client][client_hpp]
 * `std::shared_ptr` used in [ThreadPool::push][test_helper] to correctly store the result of the given function
 
 ## Language
