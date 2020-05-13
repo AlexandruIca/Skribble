@@ -56,7 +56,7 @@ ApplicationWindow {
 
                 action: Action {
                     shortcut: "Ctrl+z"
-                    onTriggered: console.log("Action 'Undo'");
+                    onTriggered: warea.callUndo()
                 }
             }
             MenuItem {
@@ -64,8 +64,8 @@ ApplicationWindow {
                 icon.source: "icons/redo.png"
 
                 action: Action {
-                    shortcut: "Ctrl+r"
-                    onTriggered: console.log("Action 'Redo'");
+                    shortcut: "Ctrl+y"
+                    onTriggered: warea.callRedo()
                 }
             }
         }
