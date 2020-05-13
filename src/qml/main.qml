@@ -6,7 +6,6 @@ import QtQuick.Layouts 1.2
 import WorkArea 1.0
 
 
-
 ApplicationWindow {
     visible: true
     id: page
@@ -109,7 +108,6 @@ ApplicationWindow {
                 Layout.topMargin: 10
                 Layout.leftMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#000000"
@@ -128,7 +126,6 @@ ApplicationWindow {
                 id: color2
                 Layout.topMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#696969"
@@ -147,7 +144,6 @@ ApplicationWindow {
                 id: color3
                 Layout.topMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#dcdcdc"
@@ -166,7 +162,6 @@ ApplicationWindow {
                 id: color4
                 Layout.topMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffffff"
@@ -185,7 +180,6 @@ ApplicationWindow {
                 id: color5
                 Layout.leftMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#a20005"
@@ -203,7 +197,6 @@ ApplicationWindow {
             Rectangle {
                 id: color6
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ff0000"
@@ -221,7 +214,6 @@ ApplicationWindow {
             Rectangle {
                 id: color7
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ff9ecb"
@@ -239,7 +231,6 @@ ApplicationWindow {
             Rectangle {
                 id: color8
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffff00"
@@ -258,7 +249,6 @@ ApplicationWindow {
                 id: color9
                 Layout.leftMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ff7d00"
@@ -276,7 +266,6 @@ ApplicationWindow {
             Rectangle {
                 id: color10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffc200"
@@ -294,7 +283,6 @@ ApplicationWindow {
             Rectangle {
                 id: color11
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#76e523"
@@ -312,7 +300,6 @@ ApplicationWindow {
             Rectangle {
                 id: color12
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#008000"
@@ -331,7 +318,6 @@ ApplicationWindow {
                 id: color13
                 Layout.leftMargin: 10
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#0d33ff"
@@ -349,7 +335,6 @@ ApplicationWindow {
             Rectangle {
                 id: color14
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#61daff"
@@ -367,7 +352,6 @@ ApplicationWindow {
             Rectangle {
                 id: color15
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#c597e8"
@@ -385,7 +369,6 @@ ApplicationWindow {
             Rectangle {
                 id: color16
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#800080"
@@ -404,7 +387,6 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 id: customColor1
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffffff"
@@ -422,7 +404,6 @@ ApplicationWindow {
             Rectangle {
                 id: customColor2
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffffff"
@@ -440,7 +421,6 @@ ApplicationWindow {
             Rectangle {
                 id: customColor3
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffffff"
@@ -458,7 +438,6 @@ ApplicationWindow {
             Rectangle {
                 id: customColor4
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
                 color: "#ffffff"
@@ -477,7 +456,6 @@ ApplicationWindow {
                 Layout.leftMargin: 10
                 id: colorPicker
                 border.color: "black"
-                radius: 8
                 width: 20
                 height: 20
 
@@ -525,6 +503,72 @@ ApplicationWindow {
             anchors.left: colorPickerBar.left
             anchors.leftMargin: 10
 
+        }
+
+        Label {
+            id: chooseW
+            text: "Choose pen width:"
+            color: "black"
+            width: parent.width
+            height: 10
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            anchors.top: currentColor.bottom
+            anchors.topMargin: 10
+        }
+
+        Slider {
+            id: widthControl
+            value: 0.1
+            anchors.top: chooseW.bottom
+            anchors.topMargin: 30
+            anchors.left: parent.left
+            anchors.leftMargin: 50
+            orientation: Qt.Vertical
+
+            background: Rectangle {
+                implicitWidth: 4
+                implicitHeight: 200
+                width: implicitWidth
+                height: implicitHeight
+                radius: 2
+                color: "#003823"
+
+                Rectangle {
+                    width: parent.width
+                    height: widthControl.visualPosition * parent.height
+                    color: "#bdbebf"
+                    radius: 2
+                }
+            }
+
+            handle: Rectangle {
+                id: handle
+                x: widthControl.leftPadding + widthControl.availableWidth / 2 - width / 0.9
+                y: widthControl.visualPosition * widthControl.availableHeight
+                implicitWidth: 26
+                implicitHeight: 26
+                radius: 13
+                color: widthControl.pressed ? "#f0f0f0" : "#f6f6f6"
+                border.color: "#bdbebf"
+
+            }
+
+        }
+
+        Label {
+            id: widthLabel
+            anchors.top: widthControl.bottom
+            anchors.topMargin: 20
+            anchors.left: colorPickerBar.left
+            anchors.leftMargin: 45
+            text:  String(Math.max(Math.floor(Number((widthControl.value).toFixed(5))*50),1))
+            onTextChanged: {
+                warea.callChangeWidth(Number(widthLabel.text))
+            }
+            color: "black"
+            width: 20
+            height: 20
         }
 
     }

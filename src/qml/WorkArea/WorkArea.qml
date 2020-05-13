@@ -13,6 +13,10 @@ Rectangle {
         canvas.changeColor(color)
     }
 
+    function callChangeWidth(width) {
+        canvas.changeWidth(width)
+    }
+
     SkCanvas {
         id: canvas
         anchors.fill: parent
