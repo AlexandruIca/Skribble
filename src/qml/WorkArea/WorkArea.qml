@@ -13,6 +13,18 @@ Rectangle {
         canvas.changeColor(color)
     }
 
+    function callChangeWidth(width) {
+        canvas.changeWidth(width)
+    }
+
+    function callUndo() {
+        canvas.undo()
+    }
+
+    function callRedo() {
+        canvas.redo()
+    }
+
     SkCanvas {
         id: canvas
         anchors.fill: parent
@@ -57,14 +69,6 @@ Rectangle {
             y = parent.height / 2 - y / 2;
             tform.xScale = 1;
             tform.yScale = 1;
-            event.accepted = true;
-        }
-        else if(event.key === Qt.Key_U) {
-            canvas.undo();
-            event.accepted = true;
-        }
-        else if(event.key === Qt.Key_R) {
-            canvas.redo();
             event.accepted = true;
         }
     }

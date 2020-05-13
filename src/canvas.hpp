@@ -47,6 +47,7 @@ public slots:
     void redo();
     void onReceivedMessage(QString const& msg);
     void changeColor(QColor const& color);
+    void changeWidth(const int width);
 };
 
 } // namespace sk
