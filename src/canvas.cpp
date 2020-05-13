@@ -121,4 +121,10 @@ auto Canvas::changeColor(QColor const& color) -> void
     m_network->sendChangeColor(color);
 }
 
+auto Canvas::changeWidth(const int width) -> void
+{
+    m_drawMode->setWidth(width);
+    m_network->sendChangeWidth(width);
+}
+
 } // namespace sk
