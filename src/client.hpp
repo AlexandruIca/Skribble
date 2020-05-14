@@ -2,6 +2,10 @@
 #define CLIENT_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "abstract_network.hpp"
 
 #include <QString>
@@ -11,6 +15,9 @@
 
 namespace sk {
 
+///
+/// \brief Implements \ref AbstractNetwork for a client.
+///
 class Client final : public AbstractNetwork
 {
 private:

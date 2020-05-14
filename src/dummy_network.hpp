@@ -2,12 +2,19 @@
 #define DUMMY_NETWORK_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "abstract_network.hpp"
 
 #include <QTcpSocket>
 
 namespace sk {
 
+///
+/// \brief Implement \ref AbstractNetwork for single-user mode.
+///
 class DummyNetwork final : public AbstractNetwork
 {
 private:

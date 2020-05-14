@@ -2,6 +2,10 @@
 #define DRAW_MODE_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include <QBrush>
 #include <QColor>
 #include <QPainter>
@@ -14,6 +18,11 @@
 
 namespace sk {
 
+///
+/// \brief Defines methods for drawing with different instruments.
+///
+/// Currently: \ref BrushMode and \ref PenMode.
+///
 class DrawMode
 {
 protected:
@@ -36,34 +45,55 @@ public:
                       QPoint const& pos,
                       std::optional<QPoint> const& lastPoint) -> void = 0;
 
+    ///
+    /// \brief Gets size of tool.
+    ///
     [[nodiscard]] inline auto getWidth() const noexcept -> int
     {
         return m_width;
     }
+    ///
+    /// \brief Changes size of tool.
+    ///
     inline auto setWidth(int const width) noexcept -> void
     {
         m_width = width;
     }
 
+    ///
+    /// \brief Gets color of tool.
+    ///
     [[nodiscard]] inline auto getColor() const noexcept -> QColor
     {
         return m_color;
     }
+    ///
+    /// \brief Sets color of tool.
+    ///
     inline auto setColor(QColor const& color) noexcept -> void
     {
         m_color = color;
     }
 
+    ///
+    /// \brief Tools start out with this color.
+    ///
     [[nodiscard]] static constexpr auto getDefaultColor() noexcept -> QColor
     {
         return m_defaultColor;
     }
+    ///
+    /// \brief Tools start out with this size.
+    ///
     [[nodiscard]] static constexpr auto getDefaultWidth() noexcept -> int
     {
         return m_defaultWidth;
     }
 };
 
+///
+/// \brief Implements drawing with a pen.
+///
 class PenMode : public DrawMode
 {
 private:
@@ -90,6 +120,9 @@ public:
               std::optional<QPoint> const& lastPoint) -> void override;
 };
 
+///
+/// \brief Implements drawing with a brush.
+///
 class BrushMode : public DrawMode
 {
 private:

@@ -2,6 +2,10 @@
 #define NETWORK_FACTORY_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "client.hpp"
 #include "dummy_network.hpp"
 #include "network_config.hpp"
@@ -11,6 +15,9 @@
 
 namespace sk {
 
+///
+/// \brief Helper implementing Factory design pattern.
+///
 class NetworkFactory
 {
 public:

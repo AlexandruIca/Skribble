@@ -2,6 +2,10 @@
 #define CACHED_RESOURCE_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include <algorithm>
 #include <deque>
 #include <functional>
@@ -11,14 +15,32 @@
 
 namespace sk {
 
+///
+/// \brief Parameters for \ref CachedResource.
+///
 template<typename T>
 struct ResourceTraits
 {
     using ContainerType = std::deque<T>;
+    ///
+    /// When to store a new cache.
+    ///
     static constexpr int cacheGap = 5;
+    ///
+    /// History limit.
+    ///
     static constexpr int maxCount = 20;
 };
 
+///
+/// \brief Another utility that can manage undo/redo.
+///
+/// This was actually supposed to be \ref FCachedResource. It turned out we were
+/// overcomplicating ourselves with the `store cache after n layers`. It was
+/// incredibly tedious to implement(address sanitizer found some iterator
+/// invalidations) and didn't provide much benefit. This is only used when
+/// multiple users are connected to store local cache for each of them.
+///
 template<typename T, typename Traits = ResourceTraits<T>>
 class CachedResource
 {
@@ -110,6 +132,9 @@ public:
     auto operator=(CachedResource const&) -> CachedResource& = default;
     auto operator=(CachedResource&&) noexcept -> CachedResource& = default;
 
+    ///
+    /// Similar to \ref FCachedResource::emplaceBack.
+    ///
     template<typename... Ts>
     auto emplaceBack(Ts&&... ts) -> T&
     {
@@ -159,6 +184,9 @@ public:
         return m_data.back();
     }
 
+    ///
+    /// \brief Get tha last stored cache or nullptr if no cache was built yet.
+    ///
     [[nodiscard]] auto getLastCache() noexcept -> T*
     {
         if(this->noCaches()) {
@@ -168,6 +196,9 @@ public:
         return &(*(this->plus(m_cacheLimit, -1)));
     }
 
+    ///
+    /// Called for the last built cache + all remaining layers.
+    ///
     auto reduceTo(T& value) -> void
     {
         if(this->noCaches()) {
@@ -185,6 +216,9 @@ public:
         }
     }
 
+    ///
+    /// Same as \ref reduceTo but can take a callback to know what to do.
+    ///
     template<typename F2>
     auto reduceTo(F2 f) -> void
     {
@@ -212,6 +246,9 @@ public:
         return *(this->plus(m_dataLimit, -1));
     }
 
+    ///
+    /// Similar to \ref FCachedResource::underUndo.
+    ///
     [[nodiscard]] constexpr auto underUndo() const noexcept -> bool
     {
         return m_underUndo;

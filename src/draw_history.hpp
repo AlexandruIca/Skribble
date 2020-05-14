@@ -2,6 +2,10 @@
 #define DRAW_HISTORY_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "cached_resource.hpp"
 #include "canvas_config.hpp"
 #include "draw_mode.hpp"
@@ -17,8 +21,18 @@
 #include <optional>
 #include <vector>
 
+///
+/// \brief Implementation details in this namespace.
+///
 namespace sk::impl {
 
+///
+/// \brief A helper class that wraps \ref FCachedResource and represents
+///        modifications to a batch of layers.
+///
+/// It also stores a bool that remembers whether or not the layer batch
+/// is local or 'foreign'.
+///
 class CachedLayers
 {
 private:
@@ -63,10 +77,6 @@ public:
         return m_layers.underUndo();
     }
 
-    ///
-    /// \returns true If undo was successful.
-    ///          false If already at oldest change
-    ///
     [[nodiscard]] auto undo() -> bool;
     auto redo() -> bool;
 };
@@ -75,6 +85,10 @@ public:
 
 namespace sk {
 
+///
+/// \brief A manager that correctly stores history about modifications to a
+///        canvas, even if multiple users are drawing.
+///
 class DrawHistory
 {
 private:
@@ -110,9 +124,25 @@ public:
     auto operator=(DrawHistory const&) -> DrawHistory& = delete;
     auto operator=(DrawHistory &&) -> DrawHistory& = delete;
 
+    ///
+    /// Creates a new layer that copies the image of the previous one, being
+    /// able to draw over it next time. This is how history tracking works.
+    ///
+    /// When multiple users are drawing, there is at most one \ref CachedLayers
+    /// for each one, limiting the history on frequent alternative drawings,
+    /// but works well with many consecutive modifications made by one user.
+    /// This is a tradeoff we've taken since keeping two drawings in sync
+    /// over the network proved to be way out of our league.
+    ///
     auto pushNewLayer(bool const foreign = false) -> void;
+    ///
+    /// \brief Draws the last layer for each user.
+    ///
     auto paintCanvas(QPainter* const painter) -> void;
 
+    ///
+    /// Just draws with current pen/brush on the canvas on given position.
+    ///
     auto drawAt(QPoint const& pos, DrawMode& mode, bool const foreign = false)
         -> void;
     auto undo(bool const foreign = false) -> void;

@@ -2,6 +2,10 @@
 #define SERVER_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "abstract_network.hpp"
 
 #include <QTcpServer>
@@ -11,6 +15,9 @@
 
 namespace sk {
 
+///
+/// \brief Implements \ref AbstractNetwork for a server.
+///
 class Server final : public AbstractNetwork
 {
 private:

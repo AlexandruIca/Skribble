@@ -2,6 +2,10 @@
 #define FIXED_CACHED_RESOURCE_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include "format.hpp"
 
 #include <deque>
@@ -11,13 +15,25 @@
 
 namespace sk {
 
+///
+/// \brief Parameters for \ref FCachedResource.
+///
 template<typename T>
 struct FResTraits
 {
+    ///
+    /// With what to store the layers with, by default `std::list`.
+    ///
     using ContainerType = std::list<T>;
+    ///
+    /// History limit.
+    ///
     static constexpr int maxCount = 100;
 };
 
+///
+/// \brief Class that manages undo/redo.
+///
 template<typename T, typename Traits = FResTraits<T>>
 class FCachedResource
 {
@@ -52,6 +68,10 @@ public:
     auto operator=(FCachedResource const&) -> FCachedResource& = default;
     auto operator=(FCachedResource&&) noexcept -> FCachedResource& = default;
 
+    ///
+    /// Pushes a new layer in the list of layers, deleting layers at the front
+    /// if history limit has been reached.
+    ///
     template<typename... Ts>
     auto emplaceBack(Ts&&... args) -> T&
     {
@@ -75,20 +95,34 @@ public:
         return *m_iterator;
     }
 
+    ///
+    /// \returns true If \ref undo was called more times than \ref redo.
+    ///
     [[nodiscard]] inline auto underUndo() const noexcept -> bool
     {
         return m_underUndo;
     }
 
+    ///
+    /// \brief Gets the current layer.
+    ///
     [[nodiscard]] auto get() noexcept -> T&
     {
         return *m_iterator;
     }
+    ///
+    /// \brief Gets the current layer as constant.
+    ///
     [[nodiscard]] auto get() const noexcept -> T const&
     {
         return *m_iterator;
     }
 
+    ///
+    /// Current layer becomes `std::prev(current_layer_iterator)`.
+    ///
+    /// \returns false If undo is no longer possible.
+    ///
     [[nodiscard]] auto undo() -> bool
     {
         if(m_data.size() <= 1) {
@@ -105,6 +139,11 @@ public:
         return true;
     }
 
+    ///
+    /// Current layer becomes `std::next(current_layer_iterator)`.
+    ///
+    /// \returns false If redo is no longer possible.
+    ///
     [[nodiscard]] auto redo() -> bool
     {
         if(!m_underUndo) {

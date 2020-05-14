@@ -2,6 +2,10 @@
 #define FORMAT_HPP
 #pragma once
 
+///
+/// \file
+///
+
 #include <QString>
 
 #include <cstddef>
@@ -12,6 +16,22 @@
 
 namespace sk {
 
+///
+/// \brief Helper to format strings sanely.
+///
+/// Inspired by python's `print("{} {} {}", ...)`.
+///
+/// You can use it like this:
+/// ```cpp
+/// sk::format("%1 %2 %1", "abra", "cad"); // returns "abracadabra"
+/// ```
+/// Being equivalent to:
+/// ```python
+/// "{0} {1} {0}".format("abra", "cad")
+/// ```
+///
+/// This function is quite an abuse of templates and fold expressions :D
+///
 template<std::size_t N, typename... Ts>
 auto format(char const (&fmt)[N], Ts&&... args) -> std::string
 {
