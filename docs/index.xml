@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classsk_1_1AbstractNetwork" kind="class"><name>sk::AbstractNetwork</name>
+    <member refid="classsk_1_1AbstractNetwork_1a06590ab1a7ac31342053470779950fc3" kind="function"><name>AbstractNetwork</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1af6084afe4ec81c032314ed535ec1d278" kind="function"><name>AbstractNetwork</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1ab47775aaf5b658bfab4b21c82027eb65" kind="function"><name>AbstractNetwork</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1aaa2948b36b6294ba458599e8e16c25be" kind="function"><name>~AbstractNetwork</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a3c0471fe9960cd1f17fe97545e83e37b" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1abe3063c7d02d0b7effcbd5bd9636623e" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1acbe68d2bf6f60867debb0a88b52f86f2" kind="function"><name>getSocket</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a564a4e0b753e90a611ad0eb1fc4f2183" kind="function"><name>sendDrawAt</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1afb343f19c09e59903a94227bcc3633b9" kind="function"><name>sendMouseReleased</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a9fb587a700c2c0a984371b980b1a4c85" kind="function"><name>sendUndo</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a10dd052c2fc4a9f2186e61564f7ab96b" kind="function"><name>sendRedo</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a08724481a31f19c2a0d9a3f2b6f28949" kind="function"><name>sendChangeColor</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1acc252fcb7296f122996aabfcc65e4f08" kind="function"><name>sendChangeWidth</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1ace7f8649f35152cbd614d5726c6a65b1" kind="function"><name>sendToPen</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1a6ace5669328450589d8599eaf65fe3a6" kind="function"><name>sendToBrush</name></member>
+    <member refid="classsk_1_1AbstractNetwork_1aa67072651a63d579edfb7dd37ed7706e" kind="signal"><name>receivedMessage</name></member>
+  </compound>
+  <compound refid="classsk_1_1BrushMode" kind="class"><name>sk::BrushMode</name>
+    <member refid="classsk_1_1BrushMode_1a14b1ee85a38672df8207aa676fdcf3ff" kind="variable"><name>m_brush</name></member>
+    <member refid="classsk_1_1BrushMode_1ae0c02044a3c95903013bcd16aba0e4ca" kind="function"><name>BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1a1afaba181c1d51b2ff6fd067e7f99090" kind="function"><name>BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1ac5437682aa1ae30b48e36048994b8ef0" kind="function"><name>BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1a274ac1dc0f366b18add4d423571ce33d" kind="function"><name>~BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1a460098a735002d1bd5f411ebb653849d" kind="function"><name>BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1a9941ed6565e6992dd029784eb2cf0a7f" kind="function"><name>BrushMode</name></member>
+    <member refid="classsk_1_1BrushMode_1ac5fa1f881647da5c8a73e2bc925d59fa" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1BrushMode_1abbd05488a0502f742f1fa2d8da29b411" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1BrushMode_1a49538a9124750deedd0cbea36ba8cc76" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="classsk_1_1impl_1_1CachedLayers" kind="class"><name>sk::impl::CachedLayers</name>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a431fad912f729ea956562773e8b3337b" kind="variable"><name>m_foreign</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1aa9fe90345d208c909792c4b2a433fee7" kind="variable"><name>m_layers</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1ae42a2222ed7d07b6dd6e0be7a9678463" kind="variable"><name>m_transparent</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a02730b96df53e6a19f33b05b023cf2a2" kind="variable"><name>m_canvasRect</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a8e79e600dfc69fdb807c6b516468c11b" kind="function"><name>PixmapDrawer</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1ab39b57a9eb582ec1c0a4de9e9b888b04" kind="function"><name>PixmapInit</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1afe6e132593c74249e6bcdfe5bbb498eb" kind="function"><name>CachedLayers</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a5ab55c36e9f2e41cc22f443f4554af2a" kind="function"><name>CachedLayers</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a0d0053d1dbd02399ec6c030ebf7e3cc6" kind="function"><name>CachedLayers</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a06c35da4a5b12aa3acfd6370bd0d682e" kind="function"><name>~CachedLayers</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a3552825ef774f7144a5a88d882781a64" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a1672c06d55802d63f4655216e6cd4c3a" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a8e35d86c8b06d49394bb023b37676b84" kind="function"><name>pushNewLayer</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1af0f8c6d0ef321ea53d54a878dfa864c4" kind="function"><name>paintBlock</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a1efd8ac4fe70e3d95a986a5673208fce" kind="function"><name>getLastLayer</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1a1848d3f407e342be54d6cca933a3d845" kind="function"><name>getLastLayer</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1ac3fb517c51b4b957516c336abfbf27f5" kind="function"><name>foreign</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1aa8019983b839ae01b27dd1f001e5784f" kind="function"><name>underUndo</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1abf3cc642d50ee9f80e6e2f1559494e77" kind="function"><name>undo</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1aecbfafb3e26fd0a4bcc45c053862d8f0" kind="function"><name>redo</name></member>
+    <member refid="classsk_1_1impl_1_1CachedLayers_1ab0dfafd614c3ac8ffd1ced179a16342f" kind="function"><name>getCanvasRect</name></member>
+  </compound>
+  <compound refid="classsk_1_1CachedResource" kind="class"><name>sk::CachedResource</name>
+    <member refid="classsk_1_1CachedResource_1a2366faed8f9c76f1bdae0e0eb705df37" kind="typedef"><name>ContainerType</name></member>
+    <member refid="classsk_1_1CachedResource_1a780a2a7a70e86be3cf15e5e64cbc868d" kind="typedef"><name>Iterator</name></member>
+    <member refid="classsk_1_1CachedResource_1aa840465aaea64d5a1c4e968079a9d04d" kind="typedef"><name>Function</name></member>
+    <member refid="classsk_1_1CachedResource_1aa12b0804515a9199dd38105f75e981ed" kind="variable"><name>m_cacheGap</name></member>
+    <member refid="classsk_1_1CachedResource_1a09a351093efdd8546d18959bd3148e79" kind="variable"><name>m_maxCount</name></member>
+    <member refid="classsk_1_1CachedResource_1a7736471b4b4efb332ffa8a825f8febe4" kind="variable"><name>m_data</name></member>
+    <member refid="classsk_1_1CachedResource_1a53aab879ca5d7672f1b14c62ec397372" kind="variable"><name>m_cache</name></member>
+    <member refid="classsk_1_1CachedResource_1a82d785c32cf731673d134f19c5b3703c" kind="variable"><name>m_dataLimit</name></member>
+    <member refid="classsk_1_1CachedResource_1a745ff001cb1cc3e48a957e74b9fab313" kind="variable"><name>m_cacheLimit</name></member>
+    <member refid="classsk_1_1CachedResource_1a1d5b01c901a25fd1583776bff9090b2c" kind="variable"><name>m_underUndo</name></member>
+    <member refid="classsk_1_1CachedResource_1aad258248f1941ba84f08bde1ad95a9a2" kind="variable"><name>m_function</name></member>
+    <member refid="classsk_1_1CachedResource_1acbf38c2b9300f12411c2eb0bb7832465" kind="function"><name>plus</name></member>
+    <member refid="classsk_1_1CachedResource_1a12cbcdab3752a4c840e81fa2f3446483" kind="function"><name>getNumCaches</name></member>
+    <member refid="classsk_1_1CachedResource_1ac833270746c19518893ef064ffba3474" kind="function"><name>noCaches</name></member>
+    <member refid="classsk_1_1CachedResource_1a6d6ceea88e712636972fe502092f3b4c" kind="function"><name>getIteratorPastCache</name></member>
+    <member refid="classsk_1_1CachedResource_1a757cc31613870814292627bbe7aae787" kind="function"><name>clearUndo</name></member>
+    <member refid="classsk_1_1CachedResource_1a394a2d82cebbf6fa2d41619df070879f" kind="function"><name>CachedResource</name></member>
+    <member refid="classsk_1_1CachedResource_1a2430b11f2b9ac24128551ea59b4a705c" kind="function"><name>CachedResource</name></member>
+    <member refid="classsk_1_1CachedResource_1a111885f2d267c4726ff351afb5e2884e" kind="function"><name>CachedResource</name></member>
+    <member refid="classsk_1_1CachedResource_1a7cd6c8fbd3e7dd370ac6d176f136098e" kind="function"><name>CachedResource</name></member>
+    <member refid="classsk_1_1CachedResource_1ac96c07a6eae545f5bac1c1f0545b6239" kind="function"><name>~CachedResource</name></member>
+    <member refid="classsk_1_1CachedResource_1a344a3e93f4fc48689d4ac185ef4851a6" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1CachedResource_1af4dcda7a57a25e326f5d3508203747b2" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1CachedResource_1a81f632bf40246d318768ec69ab8c0a6c" kind="function"><name>emplaceBack</name></member>
+    <member refid="classsk_1_1CachedResource_1a89be36063bb52640f13bd096a4d84ebf" kind="function"><name>getLastCache</name></member>
+    <member refid="classsk_1_1CachedResource_1a74181ebe4f5770e72646b24ef2f2d933" kind="function"><name>reduceTo</name></member>
+    <member refid="classsk_1_1CachedResource_1ae2d763374a5220487f0239a270180086" kind="function"><name>reduceTo</name></member>
+    <member refid="classsk_1_1CachedResource_1afa76066cfbb8542a1f688e266ccfb1a5" kind="function"><name>getLast</name></member>
+    <member refid="classsk_1_1CachedResource_1aeb861bc28a45531e75473db674a33904" kind="function"><name>getLast</name></member>
+    <member refid="classsk_1_1CachedResource_1aa5b247105403d3d0cfdd637ab28f7a8b" kind="function"><name>underUndo</name></member>
+    <member refid="classsk_1_1CachedResource_1a5170bedab3b28e24b51b6ac9092006d7" kind="function"><name>undo</name></member>
+    <member refid="classsk_1_1CachedResource_1aa0d083c1c8dead354f6d6576f533d84f" kind="function"><name>redo</name></member>
+    <member refid="classsk_1_1CachedResource_1a3146da90cdf856918f57da88de4127a6" kind="function"><name>getUnderlying</name></member>
+    <member refid="classsk_1_1CachedResource_1a21562dbc6684b2d3509bdf5153cf6a6f" kind="function"><name>getUnderlying</name></member>
+  </compound>
+  <compound refid="classsk_1_1Canvas" kind="class"><name>sk::Canvas</name>
+    <member refid="classsk_1_1Canvas_1a5141156d862b0680dbf33faaa49a85c3" kind="variable"><name>m_history</name></member>
+    <member refid="classsk_1_1Canvas_1a398606556a95b3b4f0ecfa3c36a729b3" kind="variable"><name>m_drawMode</name></member>
+    <member refid="classsk_1_1Canvas_1aff8b7769d24f1aa864cd3f59f62e026c" kind="variable"><name>m_network</name></member>
+    <member refid="classsk_1_1Canvas_1a7ac9d0a655870875679c523c7325201d" kind="variable"><name>m_foreignColor</name></member>
+    <member refid="classsk_1_1Canvas_1a60691ad5606cd03732e3d2657bcd2960" kind="variable"><name>m_foreignWidth</name></member>
+    <member refid="classsk_1_1Canvas_1a0ac0c1a6f3dcbe47b1eb9e9abcd2fcb3" kind="function"><name>Canvas</name></member>
+    <member refid="classsk_1_1Canvas_1a7dbda2861f2308d7459c89fcaa871ade" kind="function"><name>Canvas</name></member>
+    <member refid="classsk_1_1Canvas_1ad7043e7a829c3649710cabe2f3fcdec3" kind="function"><name>Canvas</name></member>
+    <member refid="classsk_1_1Canvas_1af53d8f2d5f2d1071227e317b746a786a" kind="function"><name>~Canvas</name></member>
+    <member refid="classsk_1_1Canvas_1a5ad0aac1ef4d57f21e2df0ae41aaf499" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Canvas_1a94178ad83d9c8513090cc780d9392bec" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Canvas_1ac71b58c38daf3758fb7a76e2c871b18c" kind="function"><name>paint</name></member>
+    <member refid="classsk_1_1Canvas_1a1be26e4b649b3aa4b5dcee4107dc1ff9" kind="slot"><name>mousePositionChanged</name></member>
+    <member refid="classsk_1_1Canvas_1a8674725f3dfb5dfc91fb7f5472648bb2" kind="slot"><name>mouseReleased</name></member>
+    <member refid="classsk_1_1Canvas_1ad48e61004869109d9c12461973e2b1b8" kind="slot"><name>undo</name></member>
+    <member refid="classsk_1_1Canvas_1ad4c3b4502ee515a39fa8a8b19a45956e" kind="slot"><name>redo</name></member>
+    <member refid="classsk_1_1Canvas_1aa3ee532a2d61666264f6ce66fcfc4cfb" kind="slot"><name>onReceivedMessage</name></member>
+    <member refid="classsk_1_1Canvas_1abf6491525faaec1e17054c33fc6eda5a" kind="slot"><name>changeColor</name></member>
+    <member refid="classsk_1_1Canvas_1a918baefaa1368fa49147c16e6e8cfa7d" kind="slot"><name>changeWidth</name></member>
+  </compound>
+  <compound refid="classsk_1_1Client" kind="class"><name>sk::Client</name>
+    <member refid="classsk_1_1Client_1a7ca4c7076aa22c3b60f0419336b1d6a7" kind="variable"><name>m_server</name></member>
+    <member refid="classsk_1_1Client_1adb0a0f76f0173fe2e9d19ee204d264c9" kind="function"><name>Client</name></member>
+    <member refid="classsk_1_1Client_1afceb1c6a7a4b2957f4a93d9dd8f38bc9" kind="function"><name>Client</name></member>
+    <member refid="classsk_1_1Client_1ac6be291e6b4ee6cfea72d8877a9993d5" kind="function"><name>Client</name></member>
+    <member refid="classsk_1_1Client_1ae4ec49e2086f3c7517591c405924bf2c" kind="function"><name>~Client</name></member>
+    <member refid="classsk_1_1Client_1ac1bf36e13ca33b8285ec7ba9dfaf9dff" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Client_1aa2185a8bf11f9163e05ab4430183fe1d" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Client_1ad918acd96507948c410d12494144c24e" kind="function"><name>getSocket</name></member>
+  </compound>
+  <compound refid="classsk_1_1DrawHistory" kind="class"><name>sk::DrawHistory</name>
+    <member refid="classsk_1_1DrawHistory_1a32ab68fe4146dd1cfd31e35cb46afe1f" kind="variable"><name>m_layers</name></member>
+    <member refid="classsk_1_1DrawHistory_1a97ac1bdb08b892abc4d80eb87a3f8336" kind="variable"><name>m_cache</name></member>
+    <member refid="classsk_1_1DrawHistory_1ac141a1cb2b4637147dc6de6c6f2270d0" kind="variable"><name>m_lastPoint</name></member>
+    <member refid="classsk_1_1DrawHistory_1a96fd40e682571596ab8a7253088a4ccc" kind="variable"><name>m_lastExternalPoint</name></member>
+    <member refid="classsk_1_1DrawHistory_1a01a92c3b5b3c6a7bed969b2ada1d7ac7" kind="variable"><name>m_drawingLocally</name></member>
+    <member refid="classsk_1_1DrawHistory_1a9aab8af514582d077d8a8a580f45e343" kind="variable"><name>m_drawingExternally</name></member>
+    <member refid="classsk_1_1DrawHistory_1a565a303d118d4e3cd1a51efe4b5e5ed5" kind="function"><name>CachedDrawer</name></member>
+    <member refid="classsk_1_1DrawHistory_1aab1a1f4a478cee842c331bb4b704bf03" kind="function"><name>handleExternal</name></member>
+    <member refid="classsk_1_1DrawHistory_1a8b5d449724cde47038db2301b04fd33a" kind="function"><name>handleLocal</name></member>
+    <member refid="classsk_1_1DrawHistory_1ac71e88fac74aa0e60af956a77d8f3efd" kind="function"><name>popFirst</name></member>
+    <member refid="classsk_1_1DrawHistory_1a16c5be246d23d66301e398c10bf23571" kind="function"><name>DrawHistory</name></member>
+    <member refid="classsk_1_1DrawHistory_1a82e227f23c1087f6e63b658c71dbd3fe" kind="function"><name>DrawHistory</name></member>
+    <member refid="classsk_1_1DrawHistory_1a8ad19a5dbaa7df219819ac5844ea9809" kind="function"><name>DrawHistory</name></member>
+    <member refid="classsk_1_1DrawHistory_1afc5b9056006c0558d41019de33738d60" kind="function"><name>~DrawHistory</name></member>
+    <member refid="classsk_1_1DrawHistory_1a554b2b529c2026dfa5b5e5bd2ae2e78f" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DrawHistory_1a094ad8ed470541c1d451a13ee5634d6d" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DrawHistory_1a6e532f320cbafa9b8e86f68be685b445" kind="function"><name>pushNewLayer</name></member>
+    <member refid="classsk_1_1DrawHistory_1a34b6f91a2fa6eef6aaf8b9304b9dd1c3" kind="function"><name>paintCanvas</name></member>
+    <member refid="classsk_1_1DrawHistory_1a8ec7389e88a659ac4e3eba2ce704266a" kind="function"><name>drawAt</name></member>
+    <member refid="classsk_1_1DrawHistory_1a8bf52adf140dedd2d54867ad8d9ea2ff" kind="function"><name>undo</name></member>
+    <member refid="classsk_1_1DrawHistory_1a20db0d7992e614272f4e53d67d09d6a5" kind="function"><name>redo</name></member>
+  </compound>
+  <compound refid="classsk_1_1DrawMode" kind="class"><name>sk::DrawMode</name>
+    <member refid="classsk_1_1DrawMode_1a465f99f21daff2beeb7aae84f6fcf262" kind="variable"><name>m_defaultWidth</name></member>
+    <member refid="classsk_1_1DrawMode_1a3fc2ab47922625f2f4ea23b3c60edf21" kind="variable"><name>m_defaultColor</name></member>
+    <member refid="classsk_1_1DrawMode_1a767462eaa44c07e5e0d7f049ececf0b8" kind="variable"><name>m_width</name></member>
+    <member refid="classsk_1_1DrawMode_1a72d80f9c11233511773397de6b51fb7c" kind="variable"><name>m_color</name></member>
+    <member refid="classsk_1_1DrawMode_1a17f33e119ba63ec150a6d4f0408201a5" kind="function"><name>DrawMode</name></member>
+    <member refid="classsk_1_1DrawMode_1a7e67c8f0223b600579d64d5b72a39093" kind="function"><name>DrawMode</name></member>
+    <member refid="classsk_1_1DrawMode_1a17774e848afd17f4be4a6b82a3ba200d" kind="function"><name>DrawMode</name></member>
+    <member refid="classsk_1_1DrawMode_1ad2a9e4416144c7b4a2ab5c3b5a33ff5b" kind="function"><name>~DrawMode</name></member>
+    <member refid="classsk_1_1DrawMode_1aed85437d3f6b01b316500910eb779502" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DrawMode_1a27b93ce69da66d1f80c7bc5514a16e7d" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DrawMode_1a68da51d58a71cc51d90b6dc22b0901be" kind="function"><name>draw</name></member>
+    <member refid="classsk_1_1DrawMode_1a8e824aaec9d1a6e68a355f285e07f765" kind="function"><name>getWidth</name></member>
+    <member refid="classsk_1_1DrawMode_1ac0c3ee0c28c5deebdf3dc8b43f30a091" kind="function"><name>setWidth</name></member>
+    <member refid="classsk_1_1DrawMode_1a1835bd114eea7d0ef64c66c2a0192a4d" kind="function"><name>getColor</name></member>
+    <member refid="classsk_1_1DrawMode_1a4b64408319a031ab25e572e7f38e74d3" kind="function"><name>setColor</name></member>
+    <member refid="classsk_1_1DrawMode_1aecc927c328cc254d373d7342ed26b760" kind="function"><name>getDefaultColor</name></member>
+    <member refid="classsk_1_1DrawMode_1add2957ccf11b3ff56ff1980f87f83a87" kind="function"><name>getDefaultWidth</name></member>
+  </compound>
+  <compound refid="classDummy" kind="class"><name>Dummy</name>
+    <member refid="classDummy_1aa60f523706ebbc4683b6218d3a74f8ce" kind="variable"><name>m_num</name></member>
+    <member refid="classDummy_1a0409f0e6c519ab76bc32c03dc3ec80f6" kind="function"><name>Dummy</name></member>
+    <member refid="classDummy_1aac2d3f7036418fbb7a54a0a16abbd534" kind="function"><name>Dummy</name></member>
+    <member refid="classDummy_1a1e4b09aba7c4794262df5c54a89ad63f" kind="function"><name>Dummy</name></member>
+    <member refid="classDummy_1a648d58a933bcb6f631d17fb1bf1b968b" kind="function"><name>~Dummy</name></member>
+    <member refid="classDummy_1ae97c64834c1bc5ca0b3ab55d3d380809" kind="function"><name>Dummy</name></member>
+    <member refid="classDummy_1a1e2ad7252be42c99a865a14e172637de" kind="function"><name>operator=</name></member>
+    <member refid="classDummy_1afcb97615b740821b436ce6718d9449e5" kind="function"><name>operator=</name></member>
+    <member refid="classDummy_1abad9478f0fb1772d7278e9e21afcce2e" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classsk_1_1DummyNetwork" kind="class"><name>sk::DummyNetwork</name>
+    <member refid="classsk_1_1DummyNetwork_1a09ae867375c25632131a2b7708e83b19" kind="function"><name>DummyNetwork</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a858d7f6e659e0d2fd95297d8466def44" kind="function"><name>DummyNetwork</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a9221488b2d5f34713e685423eb975022" kind="function"><name>DummyNetwork</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a9d07f4d6d0617198957124c757a11321" kind="function"><name>~DummyNetwork</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a499259093e0e0826adcdbede89c885c3" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a6d0543c6bc787cea094fcb03f1404e76" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1DummyNetwork_1a4f79df7ffb2c6b259ca37330d5c05f9e" kind="function"><name>getSocket</name></member>
+  </compound>
+  <compound refid="classsk_1_1FCachedResource" kind="class"><name>sk::FCachedResource</name>
+    <member refid="classsk_1_1FCachedResource_1a0168008851b479fb175ba0eba973f572" kind="typedef"><name>ContainerType</name></member>
+    <member refid="classsk_1_1FCachedResource_1a191e2a8e3bb2d88897b6119d4dbb8816" kind="typedef"><name>Iterator</name></member>
+    <member refid="classsk_1_1FCachedResource_1a95aa0c406dd563691ddb437745ed06a3" kind="typedef"><name>Function</name></member>
+    <member refid="classsk_1_1FCachedResource_1a4ec282cdee8d8ee3c59ef53d503f9937" kind="typedef"><name>InitFunction</name></member>
+    <member refid="classsk_1_1FCachedResource_1ab00e790e16137370cfc3459627a03921" kind="variable"><name>m_maxCount</name></member>
+    <member refid="classsk_1_1FCachedResource_1a5bb76f50334b4a6ffc55145429256a0b" kind="variable"><name>m_data</name></member>
+    <member refid="classsk_1_1FCachedResource_1a2332f2906d542ee01648da51e90b6e6f" kind="variable"><name>m_iterator</name></member>
+    <member refid="classsk_1_1FCachedResource_1a77af837f84c0184149230030caa7d25b" kind="variable"><name>m_function</name></member>
+    <member refid="classsk_1_1FCachedResource_1a81d1f6a23ea33f2779f8582044637053" kind="variable"><name>m_initFunction</name></member>
+    <member refid="classsk_1_1FCachedResource_1af08666e5ac7e9d8d9ce86d845f56edc1" kind="variable"><name>m_underUndo</name></member>
+    <member refid="classsk_1_1FCachedResource_1a8ee20793589a2b29da1b2d6b62d2eb4b" kind="function"><name>FCachedResource</name></member>
+    <member refid="classsk_1_1FCachedResource_1a279dd608f258b45b1054aef68c1c314b" kind="function"><name>FCachedResource</name></member>
+    <member refid="classsk_1_1FCachedResource_1a1228f0269d5a4710ebe550db67d00695" kind="function"><name>FCachedResource</name></member>
+    <member refid="classsk_1_1FCachedResource_1a7b4152cc76159ecc90aa82dca1066f58" kind="function"><name>~FCachedResource</name></member>
+    <member refid="classsk_1_1FCachedResource_1a5cd267be7a3fee41909dd17abd3482d3" kind="function"><name>FCachedResource</name></member>
+    <member refid="classsk_1_1FCachedResource_1ae5e278ca023a89ca186232446569c597" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1FCachedResource_1abe4725395f6ad1b696ebca8331a7dc49" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1FCachedResource_1ac1680f7c991b6329e92ed5a608e30dbe" kind="function"><name>emplaceBack</name></member>
+    <member refid="classsk_1_1FCachedResource_1a5714fa78eb1931d57e8ce4c19f19c764" kind="function"><name>underUndo</name></member>
+    <member refid="classsk_1_1FCachedResource_1a3f2ef7b34a9bab77e1c1ff42b6a8cbe8" kind="function"><name>get</name></member>
+    <member refid="classsk_1_1FCachedResource_1a3f171553fbbda4cfbe02272459aa03af" kind="function"><name>get</name></member>
+    <member refid="classsk_1_1FCachedResource_1a8c4774bd55c3010efacb149e160cbf0c" kind="function"><name>undo</name></member>
+    <member refid="classsk_1_1FCachedResource_1ae97770f2bbc6da7181a418574cde12a6" kind="function"><name>redo</name></member>
+    <member refid="classsk_1_1FCachedResource_1ac34c04de7f07866d65b333b2963f5d81" kind="function"><name>getUnderlying</name></member>
+    <member refid="classsk_1_1FCachedResource_1a55c0670690b6db77ec9cb3048f57efc1" kind="function"><name>getUnderlying</name></member>
+  </compound>
+  <compound refid="structsk_1_1FResTraits" kind="struct"><name>sk::FResTraits</name>
+    <member refid="structsk_1_1FResTraits_1ac11c33a2f7ba60c31c4c62a23749fe79" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structsk_1_1FResTraits_1ab22425e1a2656c72e10af2e0339aa780" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="structFTrait2" kind="struct"><name>FTrait2</name>
+    <member refid="structFTrait2_1a0cae4e6857b58d8ee3decf397e2b4729" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structFTrait2_1a50d86d384166d5359ea5d126c3a6d96f" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="structFTraits" kind="struct"><name>FTraits</name>
+    <member refid="structFTraits_1a6c7c7bf761d4218bd5a6128d03099f2f" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structFTraits_1a6c7c7bf761d4218bd5a6128d03099f2f" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structFTraits_1aef06e4d7214b7b61dd157f7537716b1f" kind="variable"><name>cacheGap</name></member>
+    <member refid="structFTraits_1a9204e07e7593d1cf53a48287754afaea" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="structFTraits3" kind="struct"><name>FTraits3</name>
+    <member refid="structFTraits3_1ab9f2b7cd6ab42da18e23fabda3593f3d" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structFTraits3_1a6ba5754bac4fb9edf669e8f67fcf3797" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="classsk_1_1NetworkFactory" kind="class"><name>sk::NetworkFactory</name>
+    <member refid="classsk_1_1NetworkFactory_1a613fdebc68e1b3cfa516b752991e9b61" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="classsk_1_1PenMode" kind="class"><name>sk::PenMode</name>
+    <member refid="classsk_1_1PenMode_1af355aebeb7baed44db1e834d63865ceb" kind="variable"><name>m_pen</name></member>
+    <member refid="classsk_1_1PenMode_1a7bd4704df67a44c7532115c26756dda2" kind="function"><name>PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1a3f9ecf016ced89efd72377495f8c0298" kind="function"><name>PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1af30df0dcf70363a1af6b01afd7c03237" kind="function"><name>PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1aa0d5bd95a7f4d380aacc521e48058fc5" kind="function"><name>~PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1ac35ba53957484d4fa733a37493e34e5f" kind="function"><name>PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1ad4bf622fd5d73b95a7af868b272eebd6" kind="function"><name>PenMode</name></member>
+    <member refid="classsk_1_1PenMode_1a901b7f2a4598c086e0a6a1ab56897d54" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1PenMode_1ad7ccf7fd2acaf0f1e8314553d8287f9d" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1PenMode_1af9ea204940cc286d7f002db81d0e3120" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="structTestBase_1_1Proxy" kind="struct"><name>TestBase::Proxy</name>
+    <member refid="structTestBase_1_1Proxy_1a6091068f84277e80a270486e0e7d38c9" kind="variable"><name>str</name></member>
+    <member refid="structTestBase_1_1Proxy_1ae7fabcf5e8fdf1f3fbf800edc19dbcdf" kind="function"><name>Proxy</name></member>
+    <member refid="structTestBase_1_1Proxy_1a493f47bae4068d9527094ae0eb650d02" kind="function"><name>Proxy</name></member>
+    <member refid="structTestBase_1_1Proxy_1a3c4d14dc511af72cea7a3a7032e44ebd" kind="function"><name>Proxy</name></member>
+    <member refid="structTestBase_1_1Proxy_1ab92e9289c16e9e98155273c8b27da0ef" kind="function"><name>~Proxy</name></member>
+    <member refid="structTestBase_1_1Proxy_1abafd93a7e8d140682ff15bd5a9715583" kind="function"><name>operator=</name></member>
+    <member refid="structTestBase_1_1Proxy_1a69a27db77815070df2016fc4880b0aa3" kind="function"><name>operator=</name></member>
+    <member refid="structTestBase_1_1Proxy_1a563ac8adb45322e24b71a5789d0389ba" kind="function"><name>operator+</name></member>
+    <member refid="structTestBase_1_1Proxy_1ac92d0933c60f2a1c67023dfd84e811fa" kind="function"><name>operator==</name></member>
+    <member refid="structTestBase_1_1Proxy_1a8209b0f0baa660dcfa9b9566ea75e126" kind="function"><name>operator!=</name></member>
+  </compound>
+  <compound refid="structsk_1_1ResourceTraits" kind="struct"><name>sk::ResourceTraits</name>
+    <member refid="structsk_1_1ResourceTraits_1a5f4a7bba31edb91ad2d54b923e19f865" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structsk_1_1ResourceTraits_1ab0cd3188894cd01e397dd72c6142dd5b" kind="variable"><name>cacheGap</name></member>
+    <member refid="structsk_1_1ResourceTraits_1a8bc163da4d6d8eb24f34b87a7494ea6f" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="classsk_1_1Server" kind="class"><name>sk::Server</name>
+    <member refid="classsk_1_1Server_1a7174da6120981168d7e71b39240088a9" kind="variable"><name>m_server</name></member>
+    <member refid="classsk_1_1Server_1a440b2be7b4311fa732d4dbbbf4912020" kind="variable"><name>m_socket</name></member>
+    <member refid="classsk_1_1Server_1a386a7f741876e1e38d644b7a67fe06de" kind="function"><name>Server</name></member>
+    <member refid="classsk_1_1Server_1afa9531f2a56030bc9302fd0750fe43f9" kind="function"><name>Server</name></member>
+    <member refid="classsk_1_1Server_1aee0c8a6a6aff89480b165469c5b314cd" kind="function"><name>Server</name></member>
+    <member refid="classsk_1_1Server_1ad998a389193b57954f24b88b26b3a2c4" kind="function"><name>~Server</name></member>
+    <member refid="classsk_1_1Server_1a4b0f7bab88f6d7f06a50e7eeb466a2d8" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Server_1a7a33573cbe6010e3a0affd151704b3b7" kind="function"><name>operator=</name></member>
+    <member refid="classsk_1_1Server_1a31fdcb2b79ad69c2168f40b7e1f83e0f" kind="function"><name>getSocket</name></member>
+  </compound>
+  <compound refid="classTestBase" kind="class"><name>TestBase</name>
+    <member refid="classTestBase_1af7384b43be046617bc0133fc39c45669" kind="variable"><name>m_output</name></member>
+    <member refid="classTestBase_1a8109265f4a650d0852f0055e0e5619a7" kind="variable"><name>m_name</name></member>
+    <member refid="classTestBase_1a0f6d3426f8bf83159c925ab5a2c60516" kind="variable"><name>m_file</name></member>
+    <member refid="classTestBase_1a69c2a641cc5430fa57b97e767b8f01e2" kind="variable"><name>m_line</name></member>
+    <member refid="classTestBase_1a7ed44a48b1cf96e7c5800fb46895053e" kind="variable"><name>m_testId</name></member>
+    <member refid="classTestBase_1a05be60ac8f44b2bb49d0435349b9e7e3" kind="function"><name>TestBase</name></member>
+    <member refid="classTestBase_1a911c0db2c5f520c3514ed103d9c79d83" kind="function"><name>TestBase</name></member>
+    <member refid="classTestBase_1aa886b27ddd3fd0150ba2f737dc6dd940" kind="function"><name>TestBase</name></member>
+    <member refid="classTestBase_1a09de4aee9a4c89090ee02d2683878642" kind="function"><name>~TestBase</name></member>
+    <member refid="classTestBase_1a4ca3a277a546c37f2656a8ec74499d12" kind="function"><name>TestBase</name></member>
+    <member refid="classTestBase_1ae3aabd6e4d9c32f6797bc3ac5912c19c" kind="function"><name>operator=</name></member>
+    <member refid="classTestBase_1ac591f22fb57870f047577087d15bef31" kind="function"><name>operator=</name></member>
+    <member refid="classTestBase_1a6b426d54599a0cb67d9012e1827a0ee3" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="structTrait2" kind="struct"><name>Trait2</name>
+    <member refid="structTrait2_1ae67e16397013a4c7f1fadb31bb229fa8" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structTrait2_1a1e9b84e2158ea2e15cbf20452078c5c0" kind="variable"><name>cacheGap</name></member>
+    <member refid="structTrait2_1a499050319ff20ad7ff8fde5f9e5aff0e" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="structsk_1_1DrawHistory_1_1Traits" kind="struct"><name>sk::DrawHistory::Traits</name>
+    <member refid="structsk_1_1DrawHistory_1_1Traits_1ab6d7d9fb5b0d9f3c353ecf109fb4daeb" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structsk_1_1DrawHistory_1_1Traits_1a606e1a7c9de4892623b70ece29266561" kind="variable"><name>cacheGap</name></member>
+    <member refid="structsk_1_1DrawHistory_1_1Traits_1a9692e03bbf1b97e63400ac8c76437b6f" kind="variable"><name>maxCount</name></member>
+  </compound>
+  <compound refid="structTraits3" kind="struct"><name>Traits3</name>
+    <member refid="structTraits3_1ae13b6c3e34afa736d480daa23ea6c374" kind="typedef"><name>ContainerType</name></member>
+    <member refid="structTraits3_1ae856835c3590d189b969d4015dbce9af" kind="variable"><name>maxCount</name></member>
+    <member refid="structTraits3_1a0706113acea04759cd31a8c9025c8753" kind="variable"><name>cacheGap</name></member>
+  </compound>
+  <compound refid="namespaceanonymous__namespace_02cached__resource__test_8cpp_03" kind="namespace"><name>anonymous_namespace{cached_resource_test.cpp}</name>
+    <member refid="namespaceanonymous__namespace_02cached__resource__test_8cpp_03_1a5ae035ccec81df2f37b1cdc3123daf51" kind="variable"><name>adder</name></member>
+  </compound>
+  <compound refid="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03" kind="namespace"><name>anonymous_namespace{fcached_resource_test.cpp}</name>
+    <member refid="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03_1a3e03ffa06beaa14b44540a85c55adde5" kind="variable"><name>adder</name></member>
+    <member refid="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03_1a4e96073b80f9d48ac8c091d41018a078" kind="variable"><name>init</name></member>
+  </compound>
+  <compound refid="namespacesk" kind="namespace"><name>sk</name>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277" kind="enum"><name>Operation</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a269940bcad6fddf5c68d3e67f767c3d1" kind="enumvalue"><name>UNDO</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277ac07bf946a7da4553f9f2776656e0d60f" kind="enumvalue"><name>REDO</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277abb36b04d22c1b999b24ffe8947303a63" kind="enumvalue"><name>DRAW_AT</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a0b96d9636a54f6ffb6778795b16ebccd" kind="enumvalue"><name>MOUSE_RELEASED</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a177c75aa6c3b3e151a73944b26155354" kind="enumvalue"><name>CHANGE_COLOR</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a3b175773b6ff70467b99310bbf8414a3" kind="enumvalue"><name>CHANGE_WIDTH</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a532473801e3b41d01f06e2d47aff2a59" kind="enumvalue"><name>TO_BRUSH</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277aec739e1b570cc885ef31646faa2cc345" kind="enumvalue"><name>TO_PEN</name></member>
+    <member refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277ab50339a10e1de285ac99d4c3990b8693" kind="enumvalue"><name>NONE</name></member>
+    <member refid="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5" kind="enum"><name>NetworkModes</name></member>
+    <member refid="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5a4022d5694048774678cd524bdb193393" kind="enumvalue"><name>SINGLE_USER</name></member>
+    <member refid="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5aef10c650df47bffd6399e5e78da2a9b1" kind="enumvalue"><name>CLIENT</name></member>
+    <member refid="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5a3d27c95bfdbea691b250894d96852844" kind="enumvalue"><name>SERVER</name></member>
+    <member refid="namespacesk_1aecb0c2396cb213aabd614eba9596bb9f" kind="variable"><name>port</name></member>
+    <member refid="namespacesk_1afe8d575fe5cc58fd6f8bd9dae86a9b4f" kind="variable"><name>host_ip</name></member>
+    <member refid="namespacesk_1af15aa163accd80a0e7d207e96f89fa2c" kind="variable"><name>networkMode</name></member>
+    <member refid="namespacesk_1a98680b871453a0d40589d01a04add591" kind="function"><name>makeDrawMode</name></member>
+    <member refid="namespacesk_1aa0137362d082bb19075d3e4b6424fab5" kind="function"><name>makeDrawMode</name></member>
+    <member refid="namespacesk_1aec17472c0d70200127533f54e3faa9d3" kind="function"><name>makeDrawMode</name></member>
+    <member refid="namespacesk_1a93720e6e8494b22345e0b608546e5a49" kind="function"><name>makeDrawMode</name></member>
+    <member refid="namespacesk_1ac24556284551fc5837908d88b0bde90f" kind="function"><name>format</name></member>
+    <member refid="namespacesk_1a394ded752b98873b50426ca7352bd013" kind="function"><name>printTo</name></member>
+    <member refid="namespacesk_1a835d1a0292cafe5629ba87c282919405" kind="function"><name>printlnTo</name></member>
+    <member refid="namespacesk_1a971300ad4bbb9164de55428a2dd3d765" kind="function"><name>print</name></member>
+    <member refid="namespacesk_1a6b5f5464fc13e4bf988b0527b810e218" kind="function"><name>println</name></member>
+    <member refid="namespacesk_1afe66dfe3bf457909327a1050e9273c88" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="namespacesk_1_1anonymous__namespace_02abstract__network_8cpp_03" kind="namespace"><name>sk::anonymous_namespace{abstract_network.cpp}</name>
+    <member refid="namespacesk_1_1anonymous__namespace_02abstract__network_8cpp_03_1ad3a3c154bba174cdb2d57b7ce6604984" kind="function"><name>handleWrite</name></member>
+  </compound>
+  <compound refid="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03" kind="namespace"><name>sk::anonymous_namespace{message_parser.cpp}</name>
+    <member refid="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03_1a0d522755d242edd76b7692db630af677" kind="function"><name>split</name></member>
+  </compound>
+  <compound refid="namespacesk_1_1config" kind="namespace"><name>sk::config</name>
+    <member refid="namespacesk_1_1config_1a76c5f1b17ef44c45d7e27be91f82d405" kind="variable"><name>width</name></member>
+    <member refid="namespacesk_1_1config_1ab71a4ee8252d429159787da2017db4b7" kind="variable"><name>height</name></member>
+  </compound>
+  <compound refid="namespacesk_1_1impl" kind="namespace"><name>sk::impl</name>
+  </compound>
+  <compound refid="abstract__network_8cpp" kind="file"><name>abstract_network.cpp</name>
+  </compound>
+  <compound refid="abstract__network_8hpp" kind="file"><name>abstract_network.hpp</name>
+  </compound>
+  <compound refid="cached__resource_8hpp" kind="file"><name>cached_resource.hpp</name>
+  </compound>
+  <compound refid="canvas_8cpp" kind="file"><name>canvas.cpp</name>
+  </compound>
+  <compound refid="canvas_8hpp" kind="file"><name>canvas.hpp</name>
+  </compound>
+  <compound refid="canvas__config_8hpp" kind="file"><name>canvas_config.hpp</name>
+  </compound>
+  <compound refid="client_8cpp" kind="file"><name>client.cpp</name>
+  </compound>
+  <compound refid="client_8hpp" kind="file"><name>client.hpp</name>
+  </compound>
+  <compound refid="src_2CMakeLists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="src_2CMakeLists_8txt_1ae15e918345204abbb4a55d7d5810f78c" kind="function"><name>qt5_add_resources</name></member>
+  </compound>
+  <compound refid="tests_2CMakeLists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="tests_2CMakeLists_8txt_1afb59024b207a0c30fc63192483ad8f8c" kind="function"><name>add_executable</name></member>
+  </compound>
+  <compound refid="draw__history_8cpp" kind="file"><name>draw_history.cpp</name>
+  </compound>
+  <compound refid="draw__history_8hpp" kind="file"><name>draw_history.hpp</name>
+  </compound>
+  <compound refid="draw__mode_8cpp" kind="file"><name>draw_mode.cpp</name>
+  </compound>
+  <compound refid="draw__mode_8hpp" kind="file"><name>draw_mode.hpp</name>
+  </compound>
+  <compound refid="dummy__network_8cpp" kind="file"><name>dummy_network.cpp</name>
+  </compound>
+  <compound refid="dummy__network_8hpp" kind="file"><name>dummy_network.hpp</name>
+  </compound>
+  <compound refid="fixed__cached__resource_8hpp" kind="file"><name>fixed_cached_resource.hpp</name>
+  </compound>
+  <compound refid="format_8hpp" kind="file"><name>format.hpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="message__parser_8cpp" kind="file"><name>message_parser.cpp</name>
+  </compound>
+  <compound refid="message__parser_8hpp" kind="file"><name>message_parser.hpp</name>
+  </compound>
+  <compound refid="network__config_8hpp" kind="file"><name>network_config.hpp</name>
+  </compound>
+  <compound refid="network__factory_8cpp" kind="file"><name>network_factory.cpp</name>
+  </compound>
+  <compound refid="network__factory_8hpp" kind="file"><name>network_factory.hpp</name>
+  </compound>
+  <compound refid="server_8cpp" kind="file"><name>server.cpp</name>
+  </compound>
+  <compound refid="server_8hpp" kind="file"><name>server.hpp</name>
+  </compound>
+  <compound refid="cached__resource__test_8cpp" kind="file"><name>cached_resource_test.cpp</name>
+    <member refid="cached__resource__test_8cpp_1a604426232c1eb90db71cd2c4508aa646" kind="define"><name>MAIN_EXECUTABLE</name></member>
+    <member refid="cached__resource__test_8cpp_1ae56b6e4693a24ceb1b740ea7c20d9a51" kind="function"><name>TEST</name></member>
+    <member refid="cached__resource__test_8cpp_1a8927ddb3f1f5e94bbfc249cda3ad9e76" kind="function"><name>TEST</name></member>
+    <member refid="cached__resource__test_8cpp_1a05f058277b8b190e01a3cf05c3da3c46" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="fcached__resource__test_8cpp" kind="file"><name>fcached_resource_test.cpp</name>
+    <member refid="fcached__resource__test_8cpp_1a671dfc00e92f4b1696112ba37bf48244" kind="function"><name>add</name></member>
+    <member refid="fcached__resource__test_8cpp_1ad72c4f354b1cd4d1bd01d9b327a53805" kind="function"><name>TEST</name></member>
+    <member refid="fcached__resource__test_8cpp_1aca3f6cb83b03423d50db4903273a5693" kind="function"><name>TEST</name></member>
+    <member refid="fcached__resource__test_8cpp_1ae82015ac998293a3f4f175731bccc594" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="format__test_8cpp" kind="file"><name>format_test.cpp</name>
+    <member refid="format__test_8cpp_1a79610dad66e9a48382b54d1dd273372e" kind="function"><name>TEST</name></member>
+    <member refid="format__test_8cpp_1af17787c90d5011b09cda40c313aa0bed" kind="function"><name>TEST</name></member>
+    <member refid="format__test_8cpp_1a7a1b19cb0d444544ed79d3f20ea153c1" kind="function"><name>TEST</name></member>
+    <member refid="format__test_8cpp_1a3df480f01d673fe23ce7c7d6e9f14956" kind="function"><name>TEST</name></member>
+    <member refid="format__test_8cpp_1a6b7adc97f0c365e5c0cac1a7801fd28b" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="test_8hpp" kind="file"><name>test.hpp</name>
+    <member refid="test_8hpp_1ac7cc76e1118b627b608d7a1db630ea81" kind="define"><name>PASTE_2</name></member>
+    <member refid="test_8hpp_1ad9946ca8708e6998e3f2823c36f04f82" kind="define"><name>PASTE_1</name></member>
+    <member refid="test_8hpp_1a188ea780417dce4eb720d161d85f9f44" kind="define"><name>PASTE</name></member>
+    <member refid="test_8hpp_1a839a9222721835f53c5b248241f535f4" kind="define"><name>RAND</name></member>
+    <member refid="test_8hpp_1a872d876ec47e9357e8eff5f619d1ef8f" kind="define"><name>RAND2</name></member>
+    <member refid="test_8hpp_1a821326052e3e2bf1fb2d678e9e9a6004" kind="define"><name>ASSERT</name></member>
+    <member refid="test_8hpp_1a45feb1f37ce559e49baf8655d769ef85" kind="define"><name>TEST</name></member>
+    <member refid="test_8hpp_1a0b5340d318317642755d5f0a494d8331" kind="function"><name>getTestId</name></member>
+    <member refid="test_8hpp_1a31dda219ca288c7010d5a3796d581fc3" kind="function"><name>getTests</name></member>
+  </compound>
+  <compound refid="message__parser__test_8cpp" kind="file"><name>message_parser_test.cpp</name>
+    <member refid="message__parser__test_8cpp_1a2812b5173428183136929ccf04afd3b7" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="message__parser__test_8cpp_1af020075a1e86b24dc03801a9120409c9" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1aeeb93e55e7774cd0ddf61ec411a6c1b8" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a04aa6766075ac0b71208235a9c71255d" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1ade0614fdf1b3f8dbab35e773ce3a5f14" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a1439686ea974ece4cc727f41e13821fa" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a02ece38fd23991035204b2adf8ed7f9a" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a857ea24b067b66415d2e53c2b13d92ce" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a0d77915ff6655c32deeb0b5d94c6b3ea" kind="function"><name>TEST</name></member>
+    <member refid="message__parser__test_8cpp_1a3547f77b97fc2af31bca94998b771592" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="dir_6f4ad88cf3a75e9ee319fbb585935c9c" kind="dir"><name>tests/helper</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir"><name>tests</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

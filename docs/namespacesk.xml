@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesk" kind="namespace" language="C++">
+    <compoundname>sk</compoundname>
+    <innerclass refid="classsk_1_1AbstractNetwork" prot="public">sk::AbstractNetwork</innerclass>
+    <innerclass refid="classsk_1_1BrushMode" prot="public">sk::BrushMode</innerclass>
+    <innerclass refid="classsk_1_1CachedResource" prot="public">sk::CachedResource</innerclass>
+    <innerclass refid="classsk_1_1Canvas" prot="public">sk::Canvas</innerclass>
+    <innerclass refid="classsk_1_1Client" prot="public">sk::Client</innerclass>
+    <innerclass refid="classsk_1_1DrawHistory" prot="public">sk::DrawHistory</innerclass>
+    <innerclass refid="classsk_1_1DrawMode" prot="public">sk::DrawMode</innerclass>
+    <innerclass refid="classsk_1_1DummyNetwork" prot="public">sk::DummyNetwork</innerclass>
+    <innerclass refid="classsk_1_1FCachedResource" prot="public">sk::FCachedResource</innerclass>
+    <innerclass refid="structsk_1_1FResTraits" prot="public">sk::FResTraits</innerclass>
+    <innerclass refid="classsk_1_1NetworkFactory" prot="public">sk::NetworkFactory</innerclass>
+    <innerclass refid="classsk_1_1PenMode" prot="public">sk::PenMode</innerclass>
+    <innerclass refid="structsk_1_1ResourceTraits" prot="public">sk::ResourceTraits</innerclass>
+    <innerclass refid="classsk_1_1Server" prot="public">sk::Server</innerclass>
+    <innernamespace refid="namespacesk_1_1anonymous__namespace_02abstract__network_8cpp_03">sk::anonymous_namespace{abstract_network.cpp}</innernamespace>
+    <innernamespace refid="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03">sk::anonymous_namespace{message_parser.cpp}</innernamespace>
+    <innernamespace refid="namespacesk_1_1config">sk::config</innernamespace>
+    <innernamespace refid="namespacesk_1_1impl">sk::impl</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Operation</name>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a269940bcad6fddf5c68d3e67f767c3d1" prot="public">
+          <name>UNDO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277ac07bf946a7da4553f9f2776656e0d60f" prot="public">
+          <name>REDO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277abb36b04d22c1b999b24ffe8947303a63" prot="public">
+          <name>DRAW_AT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a0b96d9636a54f6ffb6778795b16ebccd" prot="public">
+          <name>MOUSE_RELEASED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a177c75aa6c3b3e151a73944b26155354" prot="public">
+          <name>CHANGE_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a3b175773b6ff70467b99310bbf8414a3" prot="public">
+          <name>CHANGE_WIDTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277a532473801e3b41d01f06e2d47aff2a59" prot="public">
+          <name>TO_BRUSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277aec739e1b570cc885ef31646faa2cc345" prot="public">
+          <name>TO_PEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a8714c7c177d0977c5da2defc6c20f277ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible kinds of messages to be sent over the network. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_parser.hpp" line="18" column="1" bodyfile="src/message_parser.hpp" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>NetworkModes</name>
+        <enumvalue id="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5a4022d5694048774678cd524bdb193393" prot="public">
+          <name>SINGLE_USER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5aef10c650df47bffd6399e5e78da2a9b1" prot="public">
+          <name>CLIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5a3d27c95bfdbea691b250894d96852844" prot="public">
+          <name>SERVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Connection type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/network_config.hpp" line="28" column="1" bodyfile="src/network_config.hpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacesk_1aecb0c2396cb213aabd614eba9596bb9f" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <initializer>= 7654</initializer>
+        <briefdescription>
+<para>Communication port used by Skribble clients/servers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/network_config.hpp" line="16" column="22" bodyfile="src/network_config.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesk_1afe8d575fe5cc58fd6f8bd9dae86a9b4f" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString sk::host_ip</definition>
+        <argsstring></argsstring>
+        <name>host_ip</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Stores the ip to connect to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Used only by clients. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/network_config.hpp" line="22" column="16" bodyfile="src/network_config.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesk_1af15aa163accd80a0e7d207e96f89fa2c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesk_1a62f445226b58bbe08f6ab3c4b24e10c5" kindref="member">NetworkModes</ref></type>
+        <definition>NetworkModes sk::networkMode</definition>
+        <argsstring></argsstring>
+        <name>networkMode</name>
+        <initializer>= NetworkModes::SINGLE_USER</initializer>
+        <briefdescription>
+<para>Stores the connection mode the user has requested. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/network_config.hpp" line="37" column="21" bodyfile="src/network_config.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesk_1a98680b871453a0d40589d01a04add591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::makeDrawMode</definition>
+        <argsstring>(QPen &amp;&amp;pen) -&gt; std::unique_ptr&lt; PenMode &gt;</argsstring>
+        <name>makeDrawMode</name>
+        <param>
+          <type>QPen &amp;&amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="148" column="14" bodyfile="src/draw_mode.hpp" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1aa0137362d082bb19075d3e4b6424fab5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::makeDrawMode</definition>
+        <argsstring>(QBrush &amp;&amp;brush) -&gt; std::unique_ptr&lt; BrushMode &gt;</argsstring>
+        <name>makeDrawMode</name>
+        <param>
+          <type>QBrush &amp;&amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="153" column="14" bodyfile="src/draw_mode.hpp" bodystart="153" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1aec17472c0d70200127533f54e3faa9d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::makeDrawMode</definition>
+        <argsstring>(PenMode &amp;&amp;pen) -&gt; std::unique_ptr&lt; PenMode &gt;</argsstring>
+        <name>makeDrawMode</name>
+        <param>
+          <type><ref refid="classsk_1_1PenMode" kindref="compound">PenMode</ref> &amp;&amp;</type>
+          <declname>pen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="159" column="14" bodyfile="src/draw_mode.hpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1a93720e6e8494b22345e0b608546e5a49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::makeDrawMode</definition>
+        <argsstring>(BrushMode &amp;&amp;brush) -&gt; std::unique_ptr&lt; BrushMode &gt;</argsstring>
+        <name>makeDrawMode</name>
+        <param>
+          <type><ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> &amp;&amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="165" column="14" bodyfile="src/draw_mode.hpp" bodystart="165" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1ac24556284551fc5837908d88b0bde90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::format</definition>
+        <argsstring>(char const (&amp;fmt)[N], Ts &amp;&amp;... args) -&gt; std::string</argsstring>
+        <name>format</name>
+        <param>
+          <type>char const (&amp;)</type>
+          <declname>fmt</declname>
+          <array>[N]</array>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Helper to format strings sanely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inspired by python&apos;s <computeroutput>print(&quot;{} {} {}&quot;, ...)</computeroutput>.</para>
+<para>You can use it like this: <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="namespacesk_1ac24556284551fc5837908d88b0bde90f" kindref="member">sk::format</ref>(</highlight><highlight class="stringliteral">&quot;%1<sp/>%2<sp/>%1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;abra&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;cad&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>returns<sp/>&quot;abracadabra&quot;</highlight></codeline>
+</programlisting></para>
+<para>Being equivalent to: <programlisting filename=".python"><codeline><highlight class="normal">&quot;{0}<sp/>{1}<sp/>{0}&quot;.format(&quot;abra&quot;,<sp/>&quot;cad&quot;)</highlight></codeline>
+</programlisting></para>
+<para>This function is quite an abuse of templates and fold expressions :D </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/format.hpp" line="36" column="6" bodyfile="src/format.hpp" bodystart="36" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1a394ded752b98873b50426ca7352bd013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::printTo</definition>
+        <argsstring>(std::ostream &amp;os, char const (&amp;fmt)[N], Ts &amp;&amp;... args) -&gt; void</argsstring>
+        <name>printTo</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>char const (&amp;)</type>
+          <declname>fmt</declname>
+          <array>[N]</array>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/format.hpp" line="50" column="6" bodyfile="src/format.hpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1a835d1a0292cafe5629ba87c282919405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::printlnTo</definition>
+        <argsstring>(std::ostream &amp;os, char const (&amp;fmt)[N], Ts &amp;&amp;... args) -&gt; void</argsstring>
+        <name>printlnTo</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>char const (&amp;)</type>
+          <declname>fmt</declname>
+          <array>[N]</array>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/format.hpp" line="56" column="6" bodyfile="src/format.hpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1a971300ad4bbb9164de55428a2dd3d765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::print</definition>
+        <argsstring>(char const (&amp;fmt)[N], Ts &amp;&amp;... args) -&gt; void</argsstring>
+        <name>print</name>
+        <param>
+          <type>char const (&amp;)</type>
+          <declname>fmt</declname>
+          <array>[N]</array>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/format.hpp" line="62" column="6" bodyfile="src/format.hpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1a6b5f5464fc13e4bf988b0527b810e218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::println</definition>
+        <argsstring>(char const (&amp;fmt)[N], Ts &amp;&amp;... args) -&gt; void</argsstring>
+        <name>println</name>
+        <param>
+          <type>char const (&amp;)</type>
+          <declname>fmt</declname>
+          <array>[N]</array>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/format.hpp" line="68" column="6" bodyfile="src/format.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesk_1afe66dfe3bf457909327a1050e9273c88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::parse</definition>
+        <argsstring>(std::string const  &amp;msg) -&gt; std::tuple&lt; Operation, int, int, int, int &gt;</argsstring>
+        <name>parse</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Helper to parse messages received over the network. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The structure of a message is <computeroutput>kind a b c d</computeroutput>, where:<itemizedlist>
+<listitem><para><computeroutput>kind</computeroutput> cand be one of &apos;u&apos; - undo, &apos;r&apos; - redo, &apos;d&apos; - draw_at, &apos;m&apos; - mouse released, &apos;c&apos; - change color, &apos;w&apos; - change width, &apos;b&apos; - to brush, &apos;p&apos; - to pen</para>
+</listitem><listitem><para><computeroutput>a</computeroutput> is an integer used by &apos;w&apos;, &apos;d&apos;, &apos;c&apos;</para>
+</listitem><listitem><para><computeroutput>b</computeroutput> is an integer used by &apos;d&apos;, &apos;c&apos;</para>
+</listitem><listitem><para><computeroutput>c</computeroutput> and <computeroutput>d</computeroutput> are only used by &apos;c&apos;</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>{ kind, a, b, c, d } </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_parser.cpp" line="37" column="6" bodyfile="src/message_parser.cpp" bodystart="37" bodyend="80" declfile="src/message_parser.hpp" declline="43" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>All Skribble functionality is implemented in this namespace. </para>
+    </detaileddescription>
+    <location file="src/abstract_network.cpp" line="9" column="12"/>
+  </compounddef>
+</doxygen>

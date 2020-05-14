@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structFTraits3" kind="struct" language="C++" prot="public">
+    <compoundname>FTraits3</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structFTraits3_1ab9f2b7cd6ab42da18e23fabda3593f3d" prot="public" static="no">
+        <type>std::deque&lt; T &gt;</type>
+        <definition>using FTraits3&lt; T &gt;::ContainerType =  std::deque&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ContainerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="131" column="5" bodyfile="tests/fcached_resource_test.cpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structFTraits3_1a6ba5754bac4fb9edf669e8f67fcf3797" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int FTraits3&lt; T &gt;::maxCount</definition>
+        <argsstring></argsstring>
+        <name>maxCount</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="132" column="26" bodyfile="tests/fcached_resource_test.cpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/fcached_resource_test.cpp" line="130" column="1" bodyfile="tests/fcached_resource_test.cpp" bodystart="129" bodyend="133"/>
+    <listofallmembers>
+      <member refid="structFTraits3_1ab9f2b7cd6ab42da18e23fabda3593f3d" prot="public" virt="non-virtual"><scope>FTraits3</scope><name>ContainerType</name></member>
+      <member refid="structFTraits3_1a6ba5754bac4fb9edf669e8f67fcf3797" prot="public" virt="non-virtual"><scope>FTraits3</scope><name>maxCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

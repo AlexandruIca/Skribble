@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceanonymous__namespace_02cached__resource__test_8cpp_03" kind="namespace" language="C++">
+    <compoundname>anonymous_namespace{cached_resource_test.cpp}</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceanonymous__namespace_02cached__resource__test_8cpp_03_1a5ae035ccec81df2f37b1cdc3123daf51" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto anonymous_namespace{cached_resource_test.cpp}::adder</definition>
+        <argsstring></argsstring>
+        <name>adder</name>
+        <initializer>= [](int&amp; dest, int&amp; src) -&gt; void { dest += src; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cached_resource_test.cpp" line="8" column="6" bodyfile="tests/cached_resource_test.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/cached_resource_test.cpp" line="6" column="11"/>
+  </compounddef>
+</doxygen>

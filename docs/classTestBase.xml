@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classTestBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>TestBase</compoundname>
+    <innerclass refid="structTestBase_1_1Proxy" prot="protected">TestBase::Proxy</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classTestBase_1af7384b43be046617bc0133fc39c45669" prot="protected" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream TestBase::m_output</definition>
+        <argsstring></argsstring>
+        <name>m_output</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="25" column="19" bodyfile="tests/helper/test.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTestBase_1a8109265f4a650d0852f0055e0e5619a7" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TestBase::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="26" column="17" bodyfile="tests/helper/test.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTestBase_1a0f6d3426f8bf83159c925ab5a2c60516" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TestBase::m_file</definition>
+        <argsstring></argsstring>
+        <name>m_file</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="27" column="17" bodyfile="tests/helper/test.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTestBase_1a69c2a641cc5430fa57b97e767b8f01e2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestBase::m_line</definition>
+        <argsstring></argsstring>
+        <name>m_line</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="28" column="9" bodyfile="tests/helper/test.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTestBase_1a7ed44a48b1cf96e7c5800fb46895053e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestBase::m_testId</definition>
+        <argsstring></argsstring>
+        <name>m_testId</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="29" column="9" bodyfile="tests/helper/test.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTestBase_1a05be60ac8f44b2bb49d0435349b9e7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestBase::TestBase</definition>
+        <argsstring>()=delete</argsstring>
+        <name>TestBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="70" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1a911c0db2c5f520c3514ed103d9c79d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestBase::TestBase</definition>
+        <argsstring>(TestBase const &amp;)=delete</argsstring>
+        <name>TestBase</name>
+        <param>
+          <type><ref refid="classTestBase" kindref="compound">TestBase</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="71" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1aa886b27ddd3fd0150ba2f737dc6dd940" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>TestBase::TestBase</definition>
+        <argsstring>(TestBase &amp;&amp;) noexcept=default</argsstring>
+        <name>TestBase</name>
+        <param>
+          <type><ref refid="classTestBase" kindref="compound">TestBase</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="72" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1a09de4aee9a4c89090ee02d2683878642" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual TestBase::~TestBase</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~TestBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="73" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1a4ca3a277a546c37f2656a8ec74499d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestBase::TestBase</definition>
+        <argsstring>(std::string testName, std::string file, int const line)</argsstring>
+        <name>TestBase</name>
+        <param>
+          <type>std::string</type>
+          <declname>testName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int const</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="75" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1ae3aabd6e4d9c32f6797bc3ac5912c19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto TestBase::operator=</definition>
+        <argsstring>(TestBase const &amp;) -&gt; TestBase &amp;=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classTestBase" kindref="compound">TestBase</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1ac591f22fb57870f047577087d15bef31" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto TestBase::operator=</definition>
+        <argsstring>(TestBase &amp;&amp;) noexcept -&gt; TestBase &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classTestBase" kindref="compound">TestBase</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classTestBase_1a6b426d54599a0cb67d9012e1827a0ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto TestBase::run</definition>
+        <argsstring>(std::atomic&lt; int &gt; &amp;successful) -&gt; void=0</argsstring>
+        <name>run</name>
+        <param>
+          <type>std::atomic&lt; int &gt; &amp;</type>
+          <declname>successful</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="80" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/helper/test.hpp" line="23" column="1" bodyfile="tests/helper/test.hpp" bodystart="22" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classTestBase_1a0f6d3426f8bf83159c925ab5a2c60516" prot="protected" virt="non-virtual"><scope>TestBase</scope><name>m_file</name></member>
+      <member refid="classTestBase_1a69c2a641cc5430fa57b97e767b8f01e2" prot="protected" virt="non-virtual"><scope>TestBase</scope><name>m_line</name></member>
+      <member refid="classTestBase_1a8109265f4a650d0852f0055e0e5619a7" prot="protected" virt="non-virtual"><scope>TestBase</scope><name>m_name</name></member>
+      <member refid="classTestBase_1af7384b43be046617bc0133fc39c45669" prot="protected" virt="non-virtual"><scope>TestBase</scope><name>m_output</name></member>
+      <member refid="classTestBase_1a7ed44a48b1cf96e7c5800fb46895053e" prot="protected" virt="non-virtual"><scope>TestBase</scope><name>m_testId</name></member>
+      <member refid="classTestBase_1ae3aabd6e4d9c32f6797bc3ac5912c19c" prot="public" virt="non-virtual"><scope>TestBase</scope><name>operator=</name></member>
+      <member refid="classTestBase_1ac591f22fb57870f047577087d15bef31" prot="public" virt="non-virtual"><scope>TestBase</scope><name>operator=</name></member>
+      <member refid="classTestBase_1a6b426d54599a0cb67d9012e1827a0ee3" prot="public" virt="pure-virtual"><scope>TestBase</scope><name>run</name></member>
+      <member refid="classTestBase_1a05be60ac8f44b2bb49d0435349b9e7e3" prot="public" virt="non-virtual"><scope>TestBase</scope><name>TestBase</name></member>
+      <member refid="classTestBase_1a911c0db2c5f520c3514ed103d9c79d83" prot="public" virt="non-virtual"><scope>TestBase</scope><name>TestBase</name></member>
+      <member refid="classTestBase_1aa886b27ddd3fd0150ba2f737dc6dd940" prot="public" virt="non-virtual"><scope>TestBase</scope><name>TestBase</name></member>
+      <member refid="classTestBase_1a4ca3a277a546c37f2656a8ec74499d12" prot="public" virt="non-virtual"><scope>TestBase</scope><name>TestBase</name></member>
+      <member refid="classTestBase_1a09de4aee9a4c89090ee02d2683878642" prot="public" virt="virtual"><scope>TestBase</scope><name>~TestBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="network__factory_8hpp" kind="file" language="C++">
+    <compoundname>network_factory.hpp</compoundname>
+    <includes refid="client_8hpp" local="yes">client.hpp</includes>
+    <includes refid="dummy__network_8hpp" local="yes">dummy_network.hpp</includes>
+    <includes refid="network__config_8hpp" local="yes">network_config.hpp</includes>
+    <includes refid="server_8hpp" local="yes">server.hpp</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="canvas_8cpp" local="yes">src/canvas.cpp</includedby>
+    <includedby refid="network__factory_8cpp" local="yes">src/network_factory.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>QObject</label>
+      </node>
+      <node id="2">
+        <label>client.hpp</label>
+        <link refid="client_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QPoint</label>
+      </node>
+      <node id="11">
+        <label>network_config.hpp</label>
+        <link refid="network__config_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dummy_network.hpp</label>
+        <link refid="dummy__network_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>server.hpp</label>
+        <link refid="server_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QString</label>
+      </node>
+      <node id="4">
+        <label>QColor</label>
+      </node>
+      <node id="3">
+        <label>abstract_network.hpp</label>
+        <link refid="abstract__network_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/network_factory.hpp</label>
+        <link refid="network__factory_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QTcpSocket</label>
+      </node>
+      <node id="13">
+        <label>QTcpServer</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/network_factory.cpp</label>
+        <link refid="network__factory_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>src/network_factory.hpp</label>
+        <link refid="network__factory_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsk_1_1NetworkFactory" prot="public">sk::NetworkFactory</innerclass>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/network_factory.hpp"/>
+  </compounddef>
+</doxygen>

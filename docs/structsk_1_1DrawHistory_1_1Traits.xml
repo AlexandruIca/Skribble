@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsk_1_1DrawHistory_1_1Traits" kind="struct" language="C++" prot="private">
+    <compoundname>sk::DrawHistory::Traits</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structsk_1_1DrawHistory_1_1Traits_1ab6d7d9fb5b0d9f3c353ecf109fb4daeb" prot="public" static="no">
+        <type>std::deque&lt; <ref refid="classsk_1_1impl_1_1CachedLayers" kindref="compound">impl::CachedLayers</ref> &gt;</type>
+        <definition>using sk::DrawHistory::Traits::ContainerType =  std::deque&lt;impl::CachedLayers&gt;</definition>
+        <argsstring></argsstring>
+        <name>ContainerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="100" column="9" bodyfile="src/draw_history.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structsk_1_1DrawHistory_1_1Traits_1a606e1a7c9de4892623b70ece29266561" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::DrawHistory::Traits::cacheGap</definition>
+        <argsstring></argsstring>
+        <name>cacheGap</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="101" column="30" bodyfile="src/draw_history.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsk_1_1DrawHistory_1_1Traits_1a9692e03bbf1b97e63400ac8c76437b6f" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::DrawHistory::Traits::maxCount</definition>
+        <argsstring></argsstring>
+        <name>maxCount</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="102" column="30" bodyfile="src/draw_history.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/draw_history.hpp" line="99" column="1" bodyfile="src/draw_history.hpp" bodystart="98" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structsk_1_1DrawHistory_1_1Traits_1a606e1a7c9de4892623b70ece29266561" prot="public" virt="non-virtual"><scope>sk::DrawHistory::Traits</scope><name>cacheGap</name></member>
+      <member refid="structsk_1_1DrawHistory_1_1Traits_1ab6d7d9fb5b0d9f3c353ecf109fb4daeb" prot="public" virt="non-virtual"><scope>sk::DrawHistory::Traits</scope><name>ContainerType</name></member>
+      <member refid="structsk_1_1DrawHistory_1_1Traits_1a9692e03bbf1b97e63400ac8c76437b6f" prot="public" virt="non-virtual"><scope>sk::DrawHistory::Traits</scope><name>maxCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

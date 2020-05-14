@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1DrawMode" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sk::DrawMode</compoundname>
+    <derivedcompoundref refid="classsk_1_1BrushMode" prot="public" virt="non-virtual">sk::BrushMode</derivedcompoundref>
+    <derivedcompoundref refid="classsk_1_1PenMode" prot="public" virt="non-virtual">sk::PenMode</derivedcompoundref>
+    <includes refid="draw__mode_8hpp" local="no">draw_mode.hpp</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classsk_1_1DrawMode_1a465f99f21daff2beeb7aae84f6fcf262" prot="protected" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::DrawMode::m_defaultWidth</definition>
+        <argsstring></argsstring>
+        <name>m_defaultWidth</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="29" column="26" bodyfile="src/draw_mode.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawMode_1a3fc2ab47922625f2f4ea23b3c60edf21" prot="protected" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr QColor</type>
+        <definition>constexpr QColor sk::DrawMode::m_defaultColor</definition>
+        <argsstring></argsstring>
+        <name>m_defaultColor</name>
+        <initializer>{ 0, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="30" column="29" bodyfile="src/draw_mode.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawMode_1a767462eaa44c07e5e0d7f049ececf0b8" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int sk::DrawMode::m_width</definition>
+        <argsstring></argsstring>
+        <name>m_width</name>
+        <initializer>= DrawMode::m_defaultWidth</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="32" column="16" bodyfile="src/draw_mode.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawMode_1a72d80f9c11233511773397de6b51fb7c" prot="protected" static="yes" mutable="no">
+        <type>QColor</type>
+        <definition>QColor sk::DrawMode::m_color</definition>
+        <argsstring></argsstring>
+        <name>m_color</name>
+        <initializer>= DrawMode::m_defaultColor</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="33" column="19" bodyfile="src/draw_mode.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a17f33e119ba63ec150a6d4f0408201a5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawMode::DrawMode</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>DrawMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a7e67c8f0223b600579d64d5b72a39093" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawMode::DrawMode</definition>
+        <argsstring>(DrawMode const &amp;) noexcept=default</argsstring>
+        <name>DrawMode</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a17774e848afd17f4be4a6b82a3ba200d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawMode::DrawMode</definition>
+        <argsstring>(DrawMode &amp;&amp;) noexcept=default</argsstring>
+        <name>DrawMode</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1ad2a9e4416144c7b4a2ab5c3b5a33ff5b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type></type>
+        <definition>virtual sk::DrawMode::~DrawMode</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~DrawMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="39" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1aed85437d3f6b01b316500910eb779502" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::operator=</definition>
+        <argsstring>(DrawMode const &amp;) noexcept -&gt; DrawMode &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="41" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a27b93ce69da66d1f80c7bc5514a16e7d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::operator=</definition>
+        <argsstring>(DrawMode &amp;&amp;) noexcept -&gt; DrawMode &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a68da51d58a71cc51d90b6dc22b0901be" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto sk::DrawMode::draw</definition>
+        <argsstring>(QPainter &amp;painter, QPoint const &amp;pos, std::optional&lt; QPoint &gt; const &amp;lastPoint) -&gt; void=0</argsstring>
+        <name>draw</name>
+        <reimplementedby refid="classsk_1_1PenMode_1af9ea204940cc286d7f002db81d0e3120">draw</reimplementedby>
+        <reimplementedby refid="classsk_1_1BrushMode_1a49538a9124750deedd0cbea36ba8cc76">draw</reimplementedby>
+        <param>
+          <type>QPainter &amp;</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; QPoint &gt; const &amp;</type>
+          <declname>lastPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="44" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a8e824aaec9d1a6e68a355f285e07f765" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::getWidth</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+<para>Gets size of tool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="51" column="18" bodyfile="src/draw_mode.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1ac0c3ee0c28c5deebdf3dc8b43f30a091" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::setWidth</definition>
+        <argsstring>(int const width) noexcept -&gt; void</argsstring>
+        <name>setWidth</name>
+        <param>
+          <type>int const</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Changes size of tool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="58" column="17" bodyfile="src/draw_mode.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a1835bd114eea7d0ef64c66c2a0192a4d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::getColor</definition>
+        <argsstring>() const noexcept -&gt; QColor</argsstring>
+        <name>getColor</name>
+        <briefdescription>
+<para>Gets color of tool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="66" column="18" bodyfile="src/draw_mode.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1a4b64408319a031ab25e572e7f38e74d3" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawMode::setColor</definition>
+        <argsstring>(QColor const &amp;color) noexcept -&gt; void</argsstring>
+        <name>setColor</name>
+        <param>
+          <type>QColor const &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Sets color of tool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="73" column="17" bodyfile="src/draw_mode.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classsk_1_1DrawMode_1aecc927c328cc254d373d7342ed26b760" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>static constexpr auto sk::DrawMode::getDefaultColor</definition>
+        <argsstring>() noexcept -&gt; QColor</argsstring>
+        <name>getDefaultColor</name>
+        <briefdescription>
+<para>Tools start out with this color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="81" column="28" bodyfile="src/draw_mode.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawMode_1add2957ccf11b3ff56ff1980f87f83a87" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>static constexpr auto sk::DrawMode::getDefaultWidth</definition>
+        <argsstring>() noexcept -&gt; int</argsstring>
+        <name>getDefaultWidth</name>
+        <briefdescription>
+<para>Tools start out with this size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="88" column="28" bodyfile="src/draw_mode.hpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines methods for drawing with different instruments. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Currently: <ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> and <ref refid="classsk_1_1PenMode" kindref="compound">PenMode</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>sk::DrawMode</label>
+        <link refid="classsk_1_1DrawMode"/>
+      </node>
+      <node id="2">
+        <label>sk::BrushMode</label>
+        <link refid="classsk_1_1BrushMode"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sk::PenMode</label>
+        <link refid="classsk_1_1PenMode"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/draw_mode.hpp" line="27" column="1" bodyfile="src/draw_mode.hpp" bodystart="26" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classsk_1_1DrawMode_1a68da51d58a71cc51d90b6dc22b0901be" prot="public" virt="pure-virtual"><scope>sk::DrawMode</scope><name>draw</name></member>
+      <member refid="classsk_1_1DrawMode_1a17f33e119ba63ec150a6d4f0408201a5" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a7e67c8f0223b600579d64d5b72a39093" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a17774e848afd17f4be4a6b82a3ba200d" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a1835bd114eea7d0ef64c66c2a0192a4d" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>getColor</name></member>
+      <member refid="classsk_1_1DrawMode_1aecc927c328cc254d373d7342ed26b760" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>getDefaultColor</name></member>
+      <member refid="classsk_1_1DrawMode_1add2957ccf11b3ff56ff1980f87f83a87" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>getDefaultWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1a8e824aaec9d1a6e68a355f285e07f765" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>getWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1a72d80f9c11233511773397de6b51fb7c" prot="protected" virt="non-virtual"><scope>sk::DrawMode</scope><name>m_color</name></member>
+      <member refid="classsk_1_1DrawMode_1a3fc2ab47922625f2f4ea23b3c60edf21" prot="protected" virt="non-virtual"><scope>sk::DrawMode</scope><name>m_defaultColor</name></member>
+      <member refid="classsk_1_1DrawMode_1a465f99f21daff2beeb7aae84f6fcf262" prot="protected" virt="non-virtual"><scope>sk::DrawMode</scope><name>m_defaultWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1a767462eaa44c07e5e0d7f049ececf0b8" prot="protected" virt="non-virtual"><scope>sk::DrawMode</scope><name>m_width</name></member>
+      <member refid="classsk_1_1DrawMode_1aed85437d3f6b01b316500910eb779502" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawMode_1a27b93ce69da66d1f80c7bc5514a16e7d" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawMode_1a4b64408319a031ab25e572e7f38e74d3" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>setColor</name></member>
+      <member refid="classsk_1_1DrawMode_1ac0c3ee0c28c5deebdf3dc8b43f30a091" prot="public" virt="non-virtual"><scope>sk::DrawMode</scope><name>setWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1ad2a9e4416144c7b4a2ab5c3b5a33ff5b" prot="public" virt="virtual"><scope>sk::DrawMode</scope><name>~DrawMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

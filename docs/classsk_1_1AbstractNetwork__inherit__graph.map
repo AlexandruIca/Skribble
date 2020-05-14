@@ -1,7 +1,0 @@
-<map id="sk::AbstractNetwork" name="sk::AbstractNetwork">
-<area shape="rect" id="node1" title=" " alt="" coords="111,80,265,107"/>
-<area shape="rect" id="node3" href="$classsk_1_1Client.html" title=" " alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node4" href="$classsk_1_1DummyNetwork.html" title=" " alt="" coords="112,155,264,181"/>
-<area shape="rect" id="node5" href="$classsk_1_1Server.html" title=" " alt="" coords="289,155,375,181"/>
-<area shape="rect" id="node2" title=" " alt="" coords="151,5,225,32"/>
-</map>

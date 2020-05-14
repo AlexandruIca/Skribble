@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="draw__history_8hpp" kind="file" language="C++">
+    <compoundname>draw_history.hpp</compoundname>
+    <includes refid="cached__resource_8hpp" local="yes">cached_resource.hpp</includes>
+    <includes refid="canvas__config_8hpp" local="yes">canvas_config.hpp</includes>
+    <includes refid="draw__mode_8hpp" local="yes">draw_mode.hpp</includes>
+    <includes refid="fixed__cached__resource_8hpp" local="yes">fixed_cached_resource.hpp</includes>
+    <includes local="no">QColor</includes>
+    <includes local="no">QPainter</includes>
+    <includes local="no">QPixmap</includes>
+    <includes local="no">QPoint</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">optional</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="canvas_8hpp" local="yes">src/canvas.hpp</includedby>
+    <includedby refid="draw__history_8cpp" local="yes">src/draw_history.cpp</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>list</label>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>limits</label>
+      </node>
+      <node id="6">
+        <label>iterator</label>
+      </node>
+      <node id="11">
+        <label>QBrush</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>QPoint</label>
+      </node>
+      <node id="9">
+        <label>canvas_config.hpp</label>
+        <link refid="canvas__config_8hpp"/>
+      </node>
+      <node id="2">
+        <label>cached_resource.hpp</label>
+        <link refid="cached__resource_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>QPainter</label>
+      </node>
+      <node id="18">
+        <label>format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/draw_history.hpp</label>
+        <link refid="draw__history_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>optional</label>
+      </node>
+      <node id="28">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="22">
+        <label>sstream</label>
+      </node>
+      <node id="19">
+        <label>QString</label>
+      </node>
+      <node id="12">
+        <label>QColor</label>
+      </node>
+      <node id="17">
+        <label>fixed_cached_resource.hpp</label>
+        <link refid="fixed__cached__resource_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>iostream</label>
+      </node>
+      <node id="20">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>deque</label>
+      </node>
+      <node id="16">
+        <label>QToolBar</label>
+      </node>
+      <node id="14">
+        <label>QPen</label>
+      </node>
+      <node id="25">
+        <label>QPixmap</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>draw_mode.hpp</label>
+        <link refid="draw__mode_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/canvas.hpp</label>
+        <link refid="canvas_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>src/draw_history.hpp</label>
+        <link refid="draw__history_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/draw_history.cpp</label>
+        <link refid="draw__history_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsk_1_1impl_1_1CachedLayers" prot="public">sk::impl::CachedLayers</innerclass>
+    <innerclass refid="classsk_1_1DrawHistory" prot="public">sk::DrawHistory</innerclass>
+    <innerclass refid="structsk_1_1DrawHistory_1_1Traits" prot="private">sk::DrawHistory::Traits</innerclass>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <innernamespace refid="namespacesk_1_1impl">sk::impl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/draw_history.hpp"/>
+  </compounddef>
+</doxygen>

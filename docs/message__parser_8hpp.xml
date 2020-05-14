@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="message__parser_8hpp" kind="file" language="C++">
+    <compoundname>message_parser.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">tuple</includes>
+    <includedby refid="canvas_8cpp" local="yes">src/canvas.cpp</includedby>
+    <includedby refid="message__parser_8cpp" local="yes">src/message_parser.cpp</includedby>
+    <includedby refid="message__parser__test_8cpp" local="yes">tests/message_parser_test.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/message_parser.hpp</label>
+        <link refid="message__parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>tuple</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/message_parser.hpp</label>
+        <link refid="message__parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>tests/message_parser_test.cpp</label>
+        <link refid="message__parser__test_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>src/message_parser.cpp</label>
+        <link refid="message__parser_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/message_parser.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="canvas__config_8hpp" kind="file" language="C++">
+    <compoundname>canvas_config.hpp</compoundname>
+    <includedby refid="draw__history_8hpp" local="yes">src/draw_history.hpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/canvas_config.hpp</label>
+        <link refid="canvas__config_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/canvas.hpp</label>
+        <link refid="canvas_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>src/draw_history.hpp</label>
+        <link refid="draw__history_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/draw_history.cpp</label>
+        <link refid="draw__history_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <innernamespace refid="namespacesk_1_1config">sk::config</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/canvas_config.hpp"/>
+  </compounddef>
+</doxygen>

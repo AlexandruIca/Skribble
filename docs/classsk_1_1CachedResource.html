@@ -1,208 +1,221 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skribble: sk::CachedResource&lt; T, Traits &gt; Class Template Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>sk::CachedResource class | Skribble  - Collaborative app made with Qt</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Skribble
-   </div>
-   <div id="projectbrief">Collaborative app made with Qt</div>
-  </td>
- </tr>
- </tbody>
-</table>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Skribble <span class="m-thin"> - Collaborative app made with Qt</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-template">template&lt;typename T, typename Traits = <a href="structsk_1_1ResourceTraits.html" class="m-doc">ResourceTraits</a>&lt;T&gt;&gt;</div>
+          <span class="m-breadcrumb"><a href="namespacesk.html">sk</a>::<wbr/></span>CachedResource <span class="m-thin">class</span>
+        </h1>
+        <p>Another utility that can manage undo/redo.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>This was actually supposed to be <a href="classsk_1_1FCachedResource.html" class="m-doc">FCachedResource</a>. It turned out we were overcomplicating ourselves with the <code>store cache after n layers</code>. It was incredibly tedious to implement(address sanitizer found some iterator invalidations) and didn&#x27;t provide much benefit. This is only used when multiple users are connected to store local cache for each of them.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename... Ts&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a81f632bf40246d318768ec69ab8c0a6c" class="m-doc">emplaceBack</a>(</span><span class="m-doc-wrap">Ts &amp;&amp; ... ts) -&gt; T &amp; -&gt; auto</span>
+            </dt>
+            <dd></dd>
+            <dt id="a89be36063bb52640f13bd096a4d84ebf">
+              <span class="m-doc-wrap-bumper">auto <a href="#a89be36063bb52640f13bd096a4d84ebf" class="m-doc-self">getLastCache</a>(</span><span class="m-doc-wrap">) noexcept -&gt; T * -&gt; auto</span>
+            </dt>
+            <dd>Get tha last stored cache or nullptr if no cache was built yet.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a74181ebe4f5770e72646b24ef2f2d933" class="m-doc">reduceTo</a>(</span><span class="m-doc-wrap">T&amp; value) -&gt; void -&gt; auto</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename F2&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae2d763374a5220487f0239a270180086" class="m-doc">reduceTo</a>(</span><span class="m-doc-wrap">F2 f) -&gt; void -&gt; auto</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa5b247105403d3d0cfdd637ab28f7a8b" class="m-doc">underUndo</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; bool -&gt; auto <span class="m-label m-flat m-primary">constexpr</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5170bedab3b28e24b51b6ac9092006d7" class="m-doc">undo</a>(</span><span class="m-doc-wrap">) -&gt; bool -&gt; auto</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa0d083c1c8dead354f6d6576f533d84f" class="m-doc">redo</a>(</span><span class="m-doc-wrap">) -&gt; bool -&gt; auto</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a81f632bf40246d318768ec69ab8c0a6c"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+                template&lt;typename... Ts&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a81f632bf40246d318768ec69ab8c0a6c" class="m-doc-self">emplaceBack</a>(</span><span class="m-doc-wrap">Ts &amp;&amp; ... ts) -&gt; T &amp;</span></span>
+            </h3>
+<p>Similar to <a href="classsk_1_1FCachedResource.html#ac1680f7c991b6329e92ed5a608e30dbe" class="m-doc">FCachedResource::<wbr />emplaceBack</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a74181ebe4f5770e72646b24ef2f2d933"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a74181ebe4f5770e72646b24ef2f2d933" class="m-doc-self">reduceTo</a>(</span><span class="m-doc-wrap">T&amp; value) -&gt; void</span></span>
+            </h3>
+<p>Called for the last built cache + all remaining layers.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae2d763374a5220487f0239a270180086"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+                template&lt;typename F2&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae2d763374a5220487f0239a270180086" class="m-doc-self">reduceTo</a>(</span><span class="m-doc-wrap">F2 f) -&gt; void</span></span>
+            </h3>
+<p>Same as <a href="classsk_1_1CachedResource.html#a74181ebe4f5770e72646b24ef2f2d933" class="m-doc">reduceTo</a> but can take a callback to know what to do.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa5b247105403d3d0cfdd637ab28f7a8b"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa5b247105403d3d0cfdd637ab28f7a8b" class="m-doc-self">underUndo</a>(</span><span class="m-doc-wrap">) const noexcept -&gt; bool <span class="m-label m-primary">constexpr</span></span></span>
+            </h3>
+<p>Similar to <a href="classsk_1_1FCachedResource.html#a5714fa78eb1931d57e8ce4c19f19c764" class="m-doc">FCachedResource::<wbr />underUndo</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a5170bedab3b28e24b51b6ac9092006d7"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5170bedab3b28e24b51b6ac9092006d7" class="m-doc-self">undo</a>(</span><span class="m-doc-wrap">) -&gt; bool</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true If undo was successful. false If already at oldest change.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aa0d083c1c8dead354f6d6576f533d84f"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Traits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr />CachedResource&lt;T, Traits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa0d083c1c8dead354f6d6576f533d84f" class="m-doc-self">redo</a>(</span><span class="m-doc-wrap">) -&gt; bool</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true If redo can be done still. false If got to the newest change.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end header part -->
-<!-- Generated by Doxygen 1.8.17 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>sk</b></li><li class="navelem"><a class="el" href="classsk_1_1CachedResource.html">CachedResource</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classsk_1_1CachedResource-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">sk::CachedResource&lt; T, Traits &gt; Class Template Reference</div>  </div>
-</div><!--header-->
-<div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a2430b11f2b9ac24128551ea59b4a705c"><td class="memItemLeft" align="right" valign="top"><a id="a2430b11f2b9ac24128551ea59b4a705c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CachedResource</b> (Function f)</td></tr>
-<tr class="separator:a2430b11f2b9ac24128551ea59b4a705c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111885f2d267c4726ff351afb5e2884e"><td class="memItemLeft" align="right" valign="top"><a id="a111885f2d267c4726ff351afb5e2884e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CachedResource</b> (<a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> const &amp;)=default</td></tr>
-<tr class="separator:a111885f2d267c4726ff351afb5e2884e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd6c8fbd3e7dd370ac6d176f136098e"><td class="memItemLeft" align="right" valign="top"><a id="a7cd6c8fbd3e7dd370ac6d176f136098e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CachedResource</b> (<a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> &amp;&amp;) noexcept=default</td></tr>
-<tr class="separator:a7cd6c8fbd3e7dd370ac6d176f136098e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a344a3e93f4fc48689d4ac185ef4851a6"><td class="memItemLeft" align="right" valign="top"><a id="a344a3e93f4fc48689d4ac185ef4851a6"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> const &amp;) -&gt; <a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> &amp;=default</td></tr>
-<tr class="separator:a344a3e93f4fc48689d4ac185ef4851a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4dcda7a57a25e326f5d3508203747b2"><td class="memItemLeft" align="right" valign="top"><a id="af4dcda7a57a25e326f5d3508203747b2"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> &amp;&amp;) noexcept -&gt; <a class="el" href="classsk_1_1CachedResource.html">CachedResource</a> &amp;=default</td></tr>
-<tr class="separator:af4dcda7a57a25e326f5d3508203747b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f632bf40246d318768ec69ab8c0a6c"><td class="memTemplParams" colspan="2"><a id="a81f632bf40246d318768ec69ab8c0a6c"></a>
-template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a81f632bf40246d318768ec69ab8c0a6c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplaceBack</b> (Ts &amp;&amp;... ts) -&gt; T &amp;</td></tr>
-<tr class="separator:a81f632bf40246d318768ec69ab8c0a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89be36063bb52640f13bd096a4d84ebf"><td class="memItemLeft" align="right" valign="top"><a id="a89be36063bb52640f13bd096a4d84ebf"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getLastCache</b> () noexcept -&gt; T *</td></tr>
-<tr class="separator:a89be36063bb52640f13bd096a4d84ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74181ebe4f5770e72646b24ef2f2d933"><td class="memItemLeft" align="right" valign="top"><a id="a74181ebe4f5770e72646b24ef2f2d933"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>reduceTo</b> (T &amp;value) -&gt; void</td></tr>
-<tr class="separator:a74181ebe4f5770e72646b24ef2f2d933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d763374a5220487f0239a270180086"><td class="memTemplParams" colspan="2"><a id="ae2d763374a5220487f0239a270180086"></a>
-template&lt;typename F2 &gt; </td></tr>
-<tr class="memitem:ae2d763374a5220487f0239a270180086"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>reduceTo</b> (F2 f) -&gt; void</td></tr>
-<tr class="separator:ae2d763374a5220487f0239a270180086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa76066cfbb8542a1f688e266ccfb1a5"><td class="memItemLeft" align="right" valign="top"><a id="afa76066cfbb8542a1f688e266ccfb1a5"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getLast</b> () noexcept -&gt; T &amp;</td></tr>
-<tr class="separator:afa76066cfbb8542a1f688e266ccfb1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb861bc28a45531e75473db674a33904"><td class="memItemLeft" align="right" valign="top"><a id="aeb861bc28a45531e75473db674a33904"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getLast</b> () const noexcept -&gt; T const &amp;</td></tr>
-<tr class="separator:aeb861bc28a45531e75473db674a33904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b247105403d3d0cfdd637ab28f7a8b"><td class="memItemLeft" align="right" valign="top"><a id="aa5b247105403d3d0cfdd637ab28f7a8b"></a>
-constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>underUndo</b> () const noexcept -&gt; bool</td></tr>
-<tr class="separator:aa5b247105403d3d0cfdd637ab28f7a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5170bedab3b28e24b51b6ac9092006d7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsk_1_1CachedResource.html#a5170bedab3b28e24b51b6ac9092006d7">undo</a> () -&gt; bool</td></tr>
-<tr class="separator:a5170bedab3b28e24b51b6ac9092006d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d083c1c8dead354f6d6576f533d84f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsk_1_1CachedResource.html#aa0d083c1c8dead354f6d6576f533d84f">redo</a> () -&gt; bool</td></tr>
-<tr class="separator:aa0d083c1c8dead354f6d6576f533d84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3146da90cdf856918f57da88de4127a6"><td class="memItemLeft" align="right" valign="top"><a id="a3146da90cdf856918f57da88de4127a6"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getUnderlying</b> () noexcept -&gt; ContainerType &amp;</td></tr>
-<tr class="separator:a3146da90cdf856918f57da88de4127a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21562dbc6684b2d3509bdf5153cf6a6f"><td class="memItemLeft" align="right" valign="top"><a id="a21562dbc6684b2d3509bdf5153cf6a6f"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getUnderlying</b> () const noexcept -&gt; ContainerType const &amp;</td></tr>
-<tr class="separator:a21562dbc6684b2d3509bdf5153cf6a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename Traits = ResourceTraits&lt;T&gt;&gt;<br />
-class sk::CachedResource&lt; T, Traits &gt;</h3>
-
-
-<p class="definition">Definition at line <a class="el" href="cached__resource_8hpp_source.html#l00023">23</a> of file <a class="el" href="cached__resource_8hpp_source.html">cached_resource.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa0d083c1c8dead354f6d6576f533d84f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0d083c1c8dead354f6d6576f533d84f">&#9670;&nbsp;</a></span>redo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Traits  = ResourceTraits&lt;T&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classsk_1_1CachedResource.html">sk::CachedResource</a>&lt; T, Traits &gt;::redo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>true If redo can be done still. false If got to the newest change. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="cached__resource_8hpp_source.html#l00247">247</a> of file <a class="el" href="cached__resource_8hpp_source.html">cached_resource.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a5170bedab3b28e24b51b6ac9092006d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5170bedab3b28e24b51b6ac9092006d7">&#9670;&nbsp;</a></span>undo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Traits  = ResourceTraits&lt;T&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="classsk_1_1CachedResource.html">sk::CachedResource</a>&lt; T, Traits &gt;::undo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; bool
-    </td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>true If undo was successful. false If already at oldest change. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="cached__resource_8hpp_source.html#l00224">224</a> of file <a class="el" href="cached__resource_8hpp_source.html">cached_resource.hpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="cached__resource_8hpp_source.html">cached_resource.hpp</a></li>
-</ul>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Skribble  - Collaborative app made with Qt. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>

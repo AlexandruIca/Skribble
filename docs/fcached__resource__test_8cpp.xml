@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="fcached__resource__test_8cpp" kind="file" language="C++">
+    <compoundname>fcached_resource_test.cpp</compoundname>
+    <includes refid="test_8hpp" local="yes">test.hpp</includes>
+    <includes refid="fixed__cached__resource_8hpp" local="yes">fixed_cached_resource.hpp</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>list</label>
+      </node>
+      <node id="10">
+        <label>atomic</label>
+      </node>
+      <node id="17">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>test.hpp</label>
+        <link refid="test_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+      <node id="15">
+        <label>fixed_cached_resource.hpp</label>
+        <link refid="fixed__cached__resource_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="16">
+        <label>deque</label>
+      </node>
+      <node id="13">
+        <label>type_traits</label>
+      </node>
+      <node id="1">
+        <label>tests/fcached_resource_test.cpp</label>
+        <link refid="fcached__resource__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structFTraits" prot="public">FTraits</innerclass>
+    <innerclass refid="structFTrait2" prot="public">FTrait2</innerclass>
+    <innerclass refid="structFTraits3" prot="public">FTraits3</innerclass>
+    <innernamespace refid="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03">anonymous_namespace{fcached_resource_test.cpp}</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fcached__resource__test_8cpp_1a671dfc00e92f4b1696112ba37bf48244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto add</definition>
+        <argsstring>(int &amp;dest, int const &amp;src) -&gt; void</argsstring>
+        <name>add</name>
+        <param>
+          <type>int &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>int const &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="5" column="6" bodyfile="tests/fcached_resource_test.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="fcached__resource__test_8cpp_1ad72c4f354b1cd4d1bd01d9b327a53805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[FCachedResource] Undo/Redo&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Undo/Redo&quot;</type>
+          <array>[FCachedResource]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="24" column="1" bodyfile="tests/fcached_resource_test.cpp" bodystart="24" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="fcached__resource__test_8cpp_1aca3f6cb83b03423d50db4903273a5693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[FCachedResource] emplaceBack&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; emplaceBack&quot;</type>
+          <array>[FCachedResource]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="88" column="1" bodyfile="tests/fcached_resource_test.cpp" bodystart="88" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="fcached__resource__test_8cpp_1ae82015ac998293a3f4f175731bccc594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[FCachedResource] maxCount&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; maxCount&quot;</type>
+          <array>[FCachedResource]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="135" column="1" bodyfile="tests/fcached_resource_test.cpp" bodystart="135" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/fcached_resource_test.cpp"/>
+  </compounddef>
+</doxygen>

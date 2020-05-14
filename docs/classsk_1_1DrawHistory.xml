@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1DrawHistory" kind="class" language="C++" prot="public">
+    <compoundname>sk::DrawHistory</compoundname>
+    <includes refid="draw__history_8hpp" local="no">draw_history.hpp</includes>
+    <innerclass refid="structsk_1_1DrawHistory_1_1Traits" prot="private">sk::DrawHistory::Traits</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1a32ab68fe4146dd1cfd31e35cb46afe1f" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="classsk_1_1impl_1_1CachedLayers" kindref="compound">impl::CachedLayers</ref> &gt;</type>
+        <definition>std::list&lt;impl::CachedLayers&gt; sk::DrawHistory::m_layers</definition>
+        <argsstring></argsstring>
+        <name>m_layers</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="105" column="15" bodyfile="src/draw_history.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1a97ac1bdb08b892abc4d80eb87a3f8336" prot="private" static="no" mutable="no">
+        <type><ref refid="classsk_1_1CachedResource" kindref="compound">sk::CachedResource</ref>&lt; <ref refid="classsk_1_1impl_1_1CachedLayers" kindref="compound">impl::CachedLayers</ref> &gt;</type>
+        <definition>sk::CachedResource&lt;impl::CachedLayers&gt; sk::DrawHistory::m_cache</definition>
+        <argsstring></argsstring>
+        <name>m_cache</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="106" column="24" bodyfile="src/draw_history.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1ac141a1cb2b4637147dc6de6c6f2270d0" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; QPoint &gt;</type>
+        <definition>std::optional&lt;QPoint&gt; sk::DrawHistory::m_lastPoint</definition>
+        <argsstring></argsstring>
+        <name>m_lastPoint</name>
+        <initializer>{ std::nullopt }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="108" column="19" bodyfile="src/draw_history.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1a96fd40e682571596ab8a7253088a4ccc" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; QPoint &gt;</type>
+        <definition>std::optional&lt;QPoint&gt; sk::DrawHistory::m_lastExternalPoint</definition>
+        <argsstring></argsstring>
+        <name>m_lastExternalPoint</name>
+        <initializer>{ std::nullopt }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="109" column="19" bodyfile="src/draw_history.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1a01a92c3b5b3c6a7bed969b2ada1d7ac7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sk::DrawHistory::m_drawingLocally</definition>
+        <argsstring></argsstring>
+        <name>m_drawingLocally</name>
+        <initializer>{ false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="111" column="10" bodyfile="src/draw_history.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1DrawHistory_1a9aab8af514582d077d8a8a580f45e343" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sk::DrawHistory::m_drawingExternally</definition>
+        <argsstring></argsstring>
+        <name>m_drawingExternally</name>
+        <initializer>{ false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="112" column="10" bodyfile="src/draw_history.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a565a303d118d4e3cd1a51efe4b5e5ed5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::CachedDrawer</definition>
+        <argsstring>(impl::CachedLayers &amp;dest, impl::CachedLayers &amp;src) -&gt; void</argsstring>
+        <name>CachedDrawer</name>
+        <param>
+          <type><ref refid="classsk_1_1impl_1_1CachedLayers" kindref="compound">impl::CachedLayers</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="classsk_1_1impl_1_1CachedLayers" kindref="compound">impl::CachedLayers</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="95" column="17" bodyfile="src/draw_history.cpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1aab1a1f4a478cee842c331bb4b704bf03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::handleExternal</definition>
+        <argsstring>(QPoint const &amp;pos, DrawMode &amp;mode) -&gt; void</argsstring>
+        <name>handleExternal</name>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="114" column="10" bodyfile="src/draw_history.cpp" bodystart="122" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a8b5d449724cde47038db2301b04fd33a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::handleLocal</definition>
+        <argsstring>(QPoint const &amp;pos, DrawMode &amp;mode) -&gt; void</argsstring>
+        <name>handleLocal</name>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="115" column="10" bodyfile="src/draw_history.cpp" bodystart="154" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1ac71e88fac74aa0e60af956a77d8f3efd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::popFirst</definition>
+        <argsstring>(bool const foreign) -&gt; void</argsstring>
+        <name>popFirst</name>
+        <param>
+          <type>bool const</type>
+          <declname>foreign</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="116" column="10" bodyfile="src/draw_history.cpp" bodystart="105" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a16c5be246d23d66301e398c10bf23571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawHistory::DrawHistory</definition>
+        <argsstring>()</argsstring>
+        <name>DrawHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="119" column="5" bodyfile="src/draw_history.cpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a82e227f23c1087f6e63b658c71dbd3fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawHistory::DrawHistory</definition>
+        <argsstring>(DrawHistory const &amp;)=delete</argsstring>
+        <name>DrawHistory</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawHistory" kindref="compound">DrawHistory</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="120" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a8ad19a5dbaa7df219819ac5844ea9809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawHistory::DrawHistory</definition>
+        <argsstring>(DrawHistory &amp;&amp;)=default</argsstring>
+        <name>DrawHistory</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawHistory" kindref="compound">DrawHistory</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="121" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1afc5b9056006c0558d41019de33738d60" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::DrawHistory::~DrawHistory</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~DrawHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="122" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a554b2b529c2026dfa5b5e5bd2ae2e78f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::operator=</definition>
+        <argsstring>(DrawHistory const &amp;) -&gt; DrawHistory &amp;=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawHistory" kindref="compound">DrawHistory</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a094ad8ed470541c1d451a13ee5634d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::operator=</definition>
+        <argsstring>(DrawHistory &amp;&amp;) -&gt; DrawHistory &amp;=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1DrawHistory" kindref="compound">DrawHistory</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="125" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a6e532f320cbafa9b8e86f68be685b445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::pushNewLayer</definition>
+        <argsstring>(bool const foreign=false) -&gt; void</argsstring>
+        <name>pushNewLayer</name>
+        <param>
+          <type>bool const</type>
+          <declname>foreign</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new layer that copies the image of the previous one, being able to draw over it next time. This is how history tracking works.</para>
+<para>When multiple users are drawing, there is at most one CachedLayers for each one, limiting the history on frequent alternative drawings, but works well with many consecutive modifications made by one user. This is a tradeoff we&apos;ve taken since keeping two drawings in sync over the network proved to be way out of our league. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="137" column="10" bodyfile="src/draw_history.cpp" bodystart="77" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a34b6f91a2fa6eef6aaf8b9304b9dd1c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::paintCanvas</definition>
+        <argsstring>(QPainter *const painter) -&gt; void</argsstring>
+        <name>paintCanvas</name>
+        <param>
+          <type>QPainter *const</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+<para>Draws the last layer for each user. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="141" column="10" bodyfile="src/draw_history.cpp" bodystart="95" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a8ec7389e88a659ac4e3eba2ce704266a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::drawAt</definition>
+        <argsstring>(QPoint const &amp;pos, DrawMode &amp;mode, bool const foreign=false) -&gt; void</argsstring>
+        <name>drawAt</name>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classsk_1_1DrawMode" kindref="compound">DrawMode</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>bool const</type>
+          <declname>foreign</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Just draws with current pen/brush on the canvas on given position. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="146" column="10" bodyfile="src/draw_history.cpp" bodystart="188" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a8bf52adf140dedd2d54867ad8d9ea2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::undo</definition>
+        <argsstring>(bool const foreign=false) -&gt; void</argsstring>
+        <name>undo</name>
+        <param>
+          <type>bool const</type>
+          <declname>foreign</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="148" column="10" bodyfile="src/draw_history.cpp" bodystart="199" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1DrawHistory_1a20db0d7992e614272f4e53d67d09d6a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::DrawHistory::redo</definition>
+        <argsstring>(bool const foreign=false) -&gt; void</argsstring>
+        <name>redo</name>
+        <param>
+          <type>bool const</type>
+          <declname>foreign</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_history.hpp" line="149" column="10" bodyfile="src/draw_history.cpp" bodystart="209" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A manager that correctly stores history about modifications to a canvas, even if multiple users are drawing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/draw_history.hpp" line="93" column="1" bodyfile="src/draw_history.hpp" bodystart="92" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classsk_1_1DrawHistory_1a565a303d118d4e3cd1a51efe4b5e5ed5" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>CachedDrawer</name></member>
+      <member refid="classsk_1_1DrawHistory_1a8ec7389e88a659ac4e3eba2ce704266a" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>drawAt</name></member>
+      <member refid="classsk_1_1DrawHistory_1a16c5be246d23d66301e398c10bf23571" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>DrawHistory</name></member>
+      <member refid="classsk_1_1DrawHistory_1a82e227f23c1087f6e63b658c71dbd3fe" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>DrawHistory</name></member>
+      <member refid="classsk_1_1DrawHistory_1a8ad19a5dbaa7df219819ac5844ea9809" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>DrawHistory</name></member>
+      <member refid="classsk_1_1DrawHistory_1aab1a1f4a478cee842c331bb4b704bf03" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>handleExternal</name></member>
+      <member refid="classsk_1_1DrawHistory_1a8b5d449724cde47038db2301b04fd33a" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>handleLocal</name></member>
+      <member refid="classsk_1_1DrawHistory_1a97ac1bdb08b892abc4d80eb87a3f8336" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_cache</name></member>
+      <member refid="classsk_1_1DrawHistory_1a9aab8af514582d077d8a8a580f45e343" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_drawingExternally</name></member>
+      <member refid="classsk_1_1DrawHistory_1a01a92c3b5b3c6a7bed969b2ada1d7ac7" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_drawingLocally</name></member>
+      <member refid="classsk_1_1DrawHistory_1a96fd40e682571596ab8a7253088a4ccc" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_lastExternalPoint</name></member>
+      <member refid="classsk_1_1DrawHistory_1ac141a1cb2b4637147dc6de6c6f2270d0" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_lastPoint</name></member>
+      <member refid="classsk_1_1DrawHistory_1a32ab68fe4146dd1cfd31e35cb46afe1f" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>m_layers</name></member>
+      <member refid="classsk_1_1DrawHistory_1a554b2b529c2026dfa5b5e5bd2ae2e78f" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawHistory_1a094ad8ed470541c1d451a13ee5634d6d" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawHistory_1a34b6f91a2fa6eef6aaf8b9304b9dd1c3" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>paintCanvas</name></member>
+      <member refid="classsk_1_1DrawHistory_1ac71e88fac74aa0e60af956a77d8f3efd" prot="private" virt="non-virtual"><scope>sk::DrawHistory</scope><name>popFirst</name></member>
+      <member refid="classsk_1_1DrawHistory_1a6e532f320cbafa9b8e86f68be685b445" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>pushNewLayer</name></member>
+      <member refid="classsk_1_1DrawHistory_1a20db0d7992e614272f4e53d67d09d6a5" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>redo</name></member>
+      <member refid="classsk_1_1DrawHistory_1a8bf52adf140dedd2d54867ad8d9ea2ff" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>undo</name></member>
+      <member refid="classsk_1_1DrawHistory_1afc5b9056006c0558d41019de33738d60" prot="public" virt="non-virtual"><scope>sk::DrawHistory</scope><name>~DrawHistory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

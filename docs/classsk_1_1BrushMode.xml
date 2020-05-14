@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1BrushMode" kind="class" language="C++" prot="public">
+    <compoundname>sk::BrushMode</compoundname>
+    <basecompoundref refid="classsk_1_1DrawMode" prot="public" virt="non-virtual">sk::DrawMode</basecompoundref>
+    <includes refid="draw__mode_8hpp" local="no">draw_mode.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsk_1_1BrushMode_1a14b1ee85a38672df8207aa676fdcf3ff" prot="private" static="no" mutable="no">
+        <type>QBrush</type>
+        <definition>QBrush sk::BrushMode::m_brush</definition>
+        <argsstring></argsstring>
+        <name>m_brush</name>
+        <initializer>{ QColor{ &quot;black&quot; }, Qt::BrushStyle::SolidPattern }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="129" column="12" bodyfile="src/draw_mode.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1BrushMode_1ae0c02044a3c95903013bcd16aba0e4ca" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::BrushMode</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>BrushMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="132" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1a1afaba181c1d51b2ff6fd067e7f99090" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::BrushMode</definition>
+        <argsstring>(BrushMode const &amp;) noexcept=default</argsstring>
+        <name>BrushMode</name>
+        <param>
+          <type><ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="133" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1ac5437682aa1ae30b48e36048994b8ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::BrushMode</definition>
+        <argsstring>(BrushMode &amp;&amp;)=default</argsstring>
+        <name>BrushMode</name>
+        <param>
+          <type><ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="134" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1a274ac1dc0f366b18add4d423571ce33d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::~BrushMode</definition>
+        <argsstring>() noexcept override=default</argsstring>
+        <name>~BrushMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="135" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1a460098a735002d1bd5f411ebb653849d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::BrushMode</definition>
+        <argsstring>(QBrush const &amp;brush)</argsstring>
+        <name>BrushMode</name>
+        <param>
+          <type>QBrush const &amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="137" column="14" bodyfile="src/draw_mode.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1a9941ed6565e6992dd029784eb2cf0a7f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::BrushMode::BrushMode</definition>
+        <argsstring>(QBrush &amp;&amp;brush)</argsstring>
+        <name>BrushMode</name>
+        <param>
+          <type>QBrush &amp;&amp;</type>
+          <declname>brush</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="138" column="14" bodyfile="src/draw_mode.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1ac5fa1f881647da5c8a73e2bc925d59fa" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::BrushMode::operator=</definition>
+        <argsstring>(BrushMode const &amp;) noexcept -&gt; BrushMode &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1abbd05488a0502f742f1fa2d8da29b411" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::BrushMode::operator=</definition>
+        <argsstring>(BrushMode &amp;&amp;) noexcept -&gt; BrushMode &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1BrushMode" kindref="compound">BrushMode</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1BrushMode_1a49538a9124750deedd0cbea36ba8cc76" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>auto</type>
+        <definition>auto sk::BrushMode::draw</definition>
+        <argsstring>(QPainter &amp;painter, QPoint const &amp;pos, std::optional&lt; QPoint &gt; const &amp;lastPos) -&gt; void override</argsstring>
+        <name>draw</name>
+        <reimplements refid="classsk_1_1DrawMode_1a68da51d58a71cc51d90b6dc22b0901be">draw</reimplements>
+        <param>
+          <type>QPainter &amp;</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; QPoint &gt; const &amp;</type>
+          <declname>lastPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/draw_mode.hpp" line="143" column="10" bodyfile="src/draw_mode.cpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements drawing with a brush. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>sk::DrawMode</label>
+        <link refid="classsk_1_1DrawMode"/>
+      </node>
+      <node id="1">
+        <label>sk::BrushMode</label>
+        <link refid="classsk_1_1BrushMode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>sk::DrawMode</label>
+        <link refid="classsk_1_1DrawMode"/>
+      </node>
+      <node id="1">
+        <label>sk::BrushMode</label>
+        <link refid="classsk_1_1BrushMode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/draw_mode.hpp" line="127" column="1" bodyfile="src/draw_mode.hpp" bodystart="126" bodyend="146"/>
+    <listofallmembers>
+      <member refid="classsk_1_1BrushMode_1ae0c02044a3c95903013bcd16aba0e4ca" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>BrushMode</name></member>
+      <member refid="classsk_1_1BrushMode_1a1afaba181c1d51b2ff6fd067e7f99090" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>BrushMode</name></member>
+      <member refid="classsk_1_1BrushMode_1ac5437682aa1ae30b48e36048994b8ef0" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>BrushMode</name></member>
+      <member refid="classsk_1_1BrushMode_1a460098a735002d1bd5f411ebb653849d" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>BrushMode</name></member>
+      <member refid="classsk_1_1BrushMode_1a9941ed6565e6992dd029784eb2cf0a7f" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>BrushMode</name></member>
+      <member refid="classsk_1_1BrushMode_1a49538a9124750deedd0cbea36ba8cc76" prot="public" virt="virtual"><scope>sk::BrushMode</scope><name>draw</name></member>
+      <member refid="classsk_1_1DrawMode_1a17f33e119ba63ec150a6d4f0408201a5" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a7e67c8f0223b600579d64d5b72a39093" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a17774e848afd17f4be4a6b82a3ba200d" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>DrawMode</name></member>
+      <member refid="classsk_1_1DrawMode_1a1835bd114eea7d0ef64c66c2a0192a4d" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>getColor</name></member>
+      <member refid="classsk_1_1DrawMode_1aecc927c328cc254d373d7342ed26b760" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>getDefaultColor</name></member>
+      <member refid="classsk_1_1DrawMode_1add2957ccf11b3ff56ff1980f87f83a87" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>getDefaultWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1a8e824aaec9d1a6e68a355f285e07f765" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>getWidth</name></member>
+      <member refid="classsk_1_1BrushMode_1a14b1ee85a38672df8207aa676fdcf3ff" prot="private" virt="non-virtual"><scope>sk::BrushMode</scope><name>m_brush</name></member>
+      <member refid="classsk_1_1DrawMode_1a72d80f9c11233511773397de6b51fb7c" prot="protected" virt="non-virtual"><scope>sk::BrushMode</scope><name>m_color</name></member>
+      <member refid="classsk_1_1DrawMode_1a3fc2ab47922625f2f4ea23b3c60edf21" prot="protected" virt="non-virtual"><scope>sk::BrushMode</scope><name>m_defaultColor</name></member>
+      <member refid="classsk_1_1DrawMode_1a465f99f21daff2beeb7aae84f6fcf262" prot="protected" virt="non-virtual"><scope>sk::BrushMode</scope><name>m_defaultWidth</name></member>
+      <member refid="classsk_1_1DrawMode_1a767462eaa44c07e5e0d7f049ececf0b8" prot="protected" virt="non-virtual"><scope>sk::BrushMode</scope><name>m_width</name></member>
+      <member refid="classsk_1_1BrushMode_1ac5fa1f881647da5c8a73e2bc925d59fa" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1BrushMode_1abbd05488a0502f742f1fa2d8da29b411" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawMode_1aed85437d3f6b01b316500910eb779502" prot="public" virt="non-virtual" ambiguityscope="sk::DrawMode::"><scope>sk::BrushMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawMode_1a27b93ce69da66d1f80c7bc5514a16e7d" prot="public" virt="non-virtual" ambiguityscope="sk::DrawMode::"><scope>sk::BrushMode</scope><name>operator=</name></member>
+      <member refid="classsk_1_1DrawMode_1a4b64408319a031ab25e572e7f38e74d3" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>setColor</name></member>
+      <member refid="classsk_1_1DrawMode_1ac0c3ee0c28c5deebdf3dc8b43f30a091" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>setWidth</name></member>
+      <member refid="classsk_1_1BrushMode_1a274ac1dc0f366b18add4d423571ce33d" prot="public" virt="non-virtual"><scope>sk::BrushMode</scope><name>~BrushMode</name></member>
+      <member refid="classsk_1_1DrawMode_1ad2a9e4416144c7b4a2ab5c3b5a33ff5b" prot="public" virt="virtual"><scope>sk::BrushMode</scope><name>~DrawMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

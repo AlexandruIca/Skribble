@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classDummy" kind="class" language="C++" prot="public">
+    <compoundname>Dummy</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDummy_1aa60f523706ebbc4683b6218d3a74f8ce" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Dummy::m_num</definition>
+        <argsstring></argsstring>
+        <name>m_num</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="38" column="9" bodyfile="tests/format_test.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDummy_1a0409f0e6c519ab76bc32c03dc3ec80f6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dummy::Dummy</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>Dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1aac2d3f7036418fbb7a54a0a16abbd534" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dummy::Dummy</definition>
+        <argsstring>(Dummy const &amp;) noexcept=default</argsstring>
+        <name>Dummy</name>
+        <param>
+          <type><ref refid="classDummy" kindref="compound">Dummy</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1a1e4b09aba7c4794262df5c54a89ad63f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dummy::Dummy</definition>
+        <argsstring>(Dummy &amp;&amp;) noexcept=default</argsstring>
+        <name>Dummy</name>
+        <param>
+          <type><ref refid="classDummy" kindref="compound">Dummy</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1a648d58a933bcb6f631d17fb1bf1b968b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dummy::~Dummy</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~Dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1ae97c64834c1bc5ca0b3ab55d3d380809" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dummy::Dummy</definition>
+        <argsstring>(int const num)</argsstring>
+        <name>Dummy</name>
+        <param>
+          <type>int const</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="46" column="14" bodyfile="tests/format_test.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1a1e2ad7252be42c99a865a14e172637de" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto Dummy::operator=</definition>
+        <argsstring>(Dummy const &amp;) noexcept -&gt; Dummy &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classDummy" kindref="compound">Dummy</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="51" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDummy_1afcb97615b740821b436ce6718d9449e5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto Dummy::operator=</definition>
+        <argsstring>(Dummy &amp;&amp;) noexcept -&gt; Dummy &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classDummy" kindref="compound">Dummy</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="52" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classDummy_1abad9478f0fb1772d7278e9e21afcce2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend auto</type>
+        <definition>auto operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, Dummy const &amp;d) -&gt; std::ostream &amp;</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classDummy" kindref="compound">Dummy</ref> const &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="54" column="12" bodyfile="tests/format_test.cpp" bodystart="54" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/format_test.cpp" line="36" column="1" bodyfile="tests/format_test.cpp" bodystart="35" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classDummy_1a0409f0e6c519ab76bc32c03dc3ec80f6" prot="public" virt="non-virtual"><scope>Dummy</scope><name>Dummy</name></member>
+      <member refid="classDummy_1aac2d3f7036418fbb7a54a0a16abbd534" prot="public" virt="non-virtual"><scope>Dummy</scope><name>Dummy</name></member>
+      <member refid="classDummy_1a1e4b09aba7c4794262df5c54a89ad63f" prot="public" virt="non-virtual"><scope>Dummy</scope><name>Dummy</name></member>
+      <member refid="classDummy_1ae97c64834c1bc5ca0b3ab55d3d380809" prot="public" virt="non-virtual"><scope>Dummy</scope><name>Dummy</name></member>
+      <member refid="classDummy_1aa60f523706ebbc4683b6218d3a74f8ce" prot="private" virt="non-virtual"><scope>Dummy</scope><name>m_num</name></member>
+      <member refid="classDummy_1abad9478f0fb1772d7278e9e21afcce2e" prot="public" virt="non-virtual"><scope>Dummy</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classDummy_1a1e2ad7252be42c99a865a14e172637de" prot="public" virt="non-virtual"><scope>Dummy</scope><name>operator=</name></member>
+      <member refid="classDummy_1afcb97615b740821b436ce6718d9449e5" prot="public" virt="non-virtual"><scope>Dummy</scope><name>operator=</name></member>
+      <member refid="classDummy_1a648d58a933bcb6f631d17fb1bf1b968b" prot="public" virt="non-virtual"><scope>Dummy</scope><name>~Dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

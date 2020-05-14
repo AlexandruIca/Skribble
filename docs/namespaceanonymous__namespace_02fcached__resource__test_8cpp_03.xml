@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03" kind="namespace" language="C++">
+    <compoundname>anonymous_namespace{fcached_resource_test.cpp}</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03_1a3e03ffa06beaa14b44540a85c55adde5" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto anonymous_namespace{fcached_resource_test.cpp}::adder</definition>
+        <argsstring></argsstring>
+        <name>adder</name>
+        <initializer>= [](int&amp; dest, int&amp; src) -&gt; void { dest += src; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="12" column="6" bodyfile="tests/fcached_resource_test.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceanonymous__namespace_02fcached__resource__test_8cpp_03_1a4e96073b80f9d48ac8c091d41018a078" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto anonymous_namespace{fcached_resource_test.cpp}::init</definition>
+        <argsstring></argsstring>
+        <name>init</name>
+        <initializer>= [](int&amp; num) -&gt; void { num = 0; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fcached_resource_test.cpp" line="13" column="6" bodyfile="tests/fcached_resource_test.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/fcached_resource_test.cpp" line="10" column="11"/>
+  </compounddef>
+</doxygen>

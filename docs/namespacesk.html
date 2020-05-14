@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>sk namespace | Skribble  - Collaborative app made with Qt</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Skribble <span class="m-thin"> - Collaborative app made with Qt</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          sk <span class="m-thin">namespace</span>
+        </h1>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#namespaces">Namespaces</a></li>
+                <li><a href="#nested-classes">Classes</a></li>
+                <li><a href="#enum-members">Enums</a></li>
+                <li><a href="#func-members">Functions</a></li>
+                <li><a href="#var-members">Variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>All Skribble functionality is implemented in this namespace.</p>
+        <section id="namespaces">
+          <h2><a href="#namespaces">Namespaces</a></h2>
+          <dl class="m-doc">
+            <dt>namespace <a href="namespacesk_1_1config.html" class="m-doc">config</a></dt>
+            <dd>All configuration for the canvas is here.</dd>
+            <dt>namespace <a href="namespacesk_1_1impl.html" class="m-doc">impl</a></dt>
+            <dd>Implementation details in this namespace.</dd>
+          </dl>
+        </section>
+        <section id="nested-classes">
+          <h2><a href="#nested-classes">Classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              class <a href="classsk_1_1AbstractNetwork.html" class="m-doc">AbstractNetwork</a>
+            </dt>
+            <dd>Contains all common events for a client/server.</dd>
+            <dt>
+              class <a href="classsk_1_1BrushMode.html" class="m-doc">BrushMode</a>
+            </dt>
+            <dd>Implements drawing with a brush.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename T, typename Traits = <a href="structsk_1_1ResourceTraits.html" class="m-doc">ResourceTraits</a>&lt;T&gt;&gt;</div>
+              class <a href="classsk_1_1CachedResource.html" class="m-doc">CachedResource</a>
+            </dt>
+            <dd>Another utility that can manage undo/redo.</dd>
+            <dt>
+              class <a href="classsk_1_1Canvas.html" class="m-doc">Canvas</a>
+            </dt>
+            <dd>The class where all the magic happens.</dd>
+            <dt>
+              class <a href="classsk_1_1Client.html" class="m-doc">Client</a>
+            </dt>
+            <dd>Implements <a href="classsk_1_1AbstractNetwork.html" class="m-doc">AbstractNetwork</a> for a client.</dd>
+            <dt>
+              class <a href="classsk_1_1DrawHistory.html" class="m-doc">DrawHistory</a>
+            </dt>
+            <dd>A manager that correctly stores history about modifications to a canvas, even if multiple users are drawing.</dd>
+            <dt>
+              class <a href="classsk_1_1DrawMode.html" class="m-doc">DrawMode</a>
+            </dt>
+            <dd>Defines methods for drawing with different instruments.</dd>
+            <dt>
+              class <a href="classsk_1_1DummyNetwork.html" class="m-doc">DummyNetwork</a>
+            </dt>
+            <dd>Implement <a href="classsk_1_1AbstractNetwork.html" class="m-doc">AbstractNetwork</a> for single-user mode.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename T, typename Traits = <a href="structsk_1_1FResTraits.html" class="m-doc">FResTraits</a>&lt;T&gt;&gt;</div>
+              class <a href="classsk_1_1FCachedResource.html" class="m-doc">FCachedResource</a>
+            </dt>
+            <dd>Class that manages undo/redo.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              struct <a href="structsk_1_1FResTraits.html" class="m-doc">FResTraits</a>
+            </dt>
+            <dd>Parameters for <a href="classsk_1_1FCachedResource.html" class="m-doc">FCachedResource</a>.</dd>
+            <dt>
+              class <a href="classsk_1_1NetworkFactory.html" class="m-doc">NetworkFactory</a>
+            </dt>
+            <dd>Helper implementing Factory design pattern.</dd>
+            <dt>
+              class <a href="classsk_1_1PenMode.html" class="m-doc">PenMode</a>
+            </dt>
+            <dd>Implements drawing with a pen.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              struct <a href="structsk_1_1ResourceTraits.html" class="m-doc">ResourceTraits</a>
+            </dt>
+            <dd>Parameters for <a href="classsk_1_1CachedResource.html" class="m-doc">CachedResource</a>.</dd>
+            <dt>
+              class <a href="classsk_1_1Server.html" class="m-doc">Server</a>
+            </dt>
+            <dd>Implements <a href="classsk_1_1AbstractNetwork.html" class="m-doc">AbstractNetwork</a> for a server.</dd>
+          </dl>
+        </section>
+        <section id="enum-members">
+          <h2><a href="#enum-members">Enums</a></h2>
+          <dl class="m-doc">
+            <dt id="a8714c7c177d0977c5da2defc6c20f277">
+              <span class="m-doc-wrap-bumper">enum class <a href="#a8714c7c177d0977c5da2defc6c20f277" class="m-doc-self">Operation</a> { </span><span class="m-doc-wrap"><a href="#a8714c7c177d0977c5da2defc6c20f277a269940bcad6fddf5c68d3e67f767c3d1" class="m-doc">UNDO</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277ac07bf946a7da4553f9f2776656e0d60f" class="m-doc">REDO</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277abb36b04d22c1b999b24ffe8947303a63" class="m-doc">DRAW_AT</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277a0b96d9636a54f6ffb6778795b16ebccd" class="m-doc">MOUSE_RELEASED</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277a177c75aa6c3b3e151a73944b26155354" class="m-doc">CHANGE_COLOR</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277a3b175773b6ff70467b99310bbf8414a3" class="m-doc">CHANGE_WIDTH</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277a532473801e3b41d01f06e2d47aff2a59" class="m-doc">TO_BRUSH</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277aec739e1b570cc885ef31646faa2cc345" class="m-doc">TO_PEN</a>,
+              <a href="#a8714c7c177d0977c5da2defc6c20f277ab50339a10e1de285ac99d4c3990b8693" class="m-doc">NONE</a> }</span>
+            </dt>
+            <dd>Possible kinds of messages to be sent over the network.</dd>
+            <dt id="a62f445226b58bbe08f6ab3c4b24e10c5">
+              <span class="m-doc-wrap-bumper">enum class <a href="#a62f445226b58bbe08f6ab3c4b24e10c5" class="m-doc-self">NetworkModes</a> { </span><span class="m-doc-wrap"><a href="#a62f445226b58bbe08f6ab3c4b24e10c5a4022d5694048774678cd524bdb193393" class="m-doc">SINGLE_USER</a>,
+              <a href="#a62f445226b58bbe08f6ab3c4b24e10c5aef10c650df47bffd6399e5e78da2a9b1" class="m-doc">CLIENT</a>,
+              <a href="#a62f445226b58bbe08f6ab3c4b24e10c5a3d27c95bfdbea691b250894d96852844" class="m-doc">SERVER</a> }</span>
+            </dt>
+            <dd>Connection type.</dd>
+          </dl>
+        </section>
+        <section id="func-members">
+          <h2><a href="#func-members">Functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;std::size_t N, typename... Ts&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac24556284551fc5837908d88b0bde90f" class="m-doc">format</a>(</span><span class="m-doc-wrap">char const (&amp;fmt)[N],
+              Ts &amp;&amp; ... args) -&gt; std::string -&gt; auto</span>
+            </dt>
+            <dd>Helper to format strings sanely.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#afe66dfe3bf457909327a1050e9273c88" class="m-doc">parse</a>(</span><span class="m-doc-wrap">std::string const&amp; msg) -&gt; std::tuple&lt; Operation, int, int, int, int &gt; -&gt; auto</span>
+            </dt>
+            <dd>Helper to parse messages received over the network.</dd>
+          </dl>
+        </section>
+        <section id="var-members">
+          <h2><a href="#var-members">Variables</a></h2>
+          <dl class="m-doc">
+            <dt id="aecb0c2396cb213aabd614eba9596bb9f">
+              int <a href="#aecb0c2396cb213aabd614eba9596bb9f" class="m-doc-self">port</a> <span class="m-label m-flat m-primary">constexpr</span>
+            </dt>
+            <dd>Communication port used by Skribble clients/servers.</dd>
+            <dt>
+              QString <a href="#afe8d575fe5cc58fd6f8bd9dae86a9b4f" class="m-doc">host_ip</a>
+            </dt>
+            <dd>Stores the ip to connect to.</dd>
+            <dt id="af15aa163accd80a0e7d207e96f89fa2c">
+              <a href="namespacesk.html#a62f445226b58bbe08f6ab3c4b24e10c5" class="m-doc">NetworkModes</a> <a href="#af15aa163accd80a0e7d207e96f89fa2c" class="m-doc-self">networkMode</a>
+            </dt>
+            <dd>Stores the connection mode the user has requested.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ac24556284551fc5837908d88b0bde90f"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;std::size_t N, typename... Ts&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac24556284551fc5837908d88b0bde90f" class="m-doc-self">format</a>(</span><span class="m-doc-wrap">char const (&amp;fmt)[N],
+              Ts &amp;&amp; ... args) -&gt; std::string</span></span>
+            </h3>
+            <p>Helper to format strings sanely.</p>
+<p>Inspired by python&#x27;s <code>print(&quot;{} {} {}&quot;, ...)</code>.</p><p>You can use it like this: <code class="m-code"><span class="n">sk</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;%1 %2 %1&quot;</span><span class="p">,</span> <span class="s">&quot;abra&quot;</span><span class="p">,</span> <span class="s">&quot;cad&quot;</span><span class="p">);</span> <span class="c1">// returns &quot;abracadabra&quot;</span></code></p><p>Being equivalent to: <code class="m-code">&quot;{0} {1} {0}&quot;.format(&quot;abra&quot;, &quot;cad&quot;)</code></p><p>This function is quite an abuse of templates and fold expressions :D</p>
+          </div></section>
+          <section class="m-doc-details" id="afe66dfe3bf457909327a1050e9273c88"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">auto sk::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afe66dfe3bf457909327a1050e9273c88" class="m-doc-self">parse</a>(</span><span class="m-doc-wrap">std::string const&amp; msg) -&gt; std::tuple&lt; Operation, int, int, int, int &gt;</span></span>
+            </h3>
+            <p>Helper to parse messages received over the network.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>{ kind, a, b, c, d }</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The structure of a message is <code>kind a b c d</code>, where:</p><ul><li><code>kind</code> cand be one of &#x27;u&#x27; - undo, &#x27;r&#x27; - redo, &#x27;d&#x27; - draw_at, &#x27;m&#x27; - mouse released, &#x27;c&#x27; - change color, &#x27;w&#x27; - change width, &#x27;b&#x27; - to brush, &#x27;p&#x27; - to pen</li><li><code>a</code> is an integer used by &#x27;w&#x27;, &#x27;d&#x27;, &#x27;c&#x27;</li><li><code>b</code> is an integer used by &#x27;d&#x27;, &#x27;c&#x27;</li><li><code>c</code> and <code>d</code> are only used by &#x27;c&#x27;</li></ul>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="afe8d575fe5cc58fd6f8bd9dae86a9b4f"><div>
+            <h3>
+              QString sk::<wbr /><a href="#afe8d575fe5cc58fd6f8bd9dae86a9b4f" class="m-doc-self">host_ip</a>
+            </h3>
+            <p>Stores the ip to connect to.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>Used only by clients.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Skribble  - Collaborative app made with Qt. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

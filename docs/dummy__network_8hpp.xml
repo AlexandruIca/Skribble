@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dummy__network_8hpp" kind="file" language="C++">
+    <compoundname>dummy_network.hpp</compoundname>
+    <includes refid="abstract__network_8hpp" local="yes">abstract_network.hpp</includes>
+    <includes local="no">QTcpSocket</includes>
+    <includedby refid="canvas_8cpp" local="yes">src/canvas.cpp</includedby>
+    <includedby refid="network__factory_8hpp" local="yes">src/network_factory.hpp</includedby>
+    <includedby refid="dummy__network_8cpp" local="yes">src/dummy_network.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>QObject</label>
+      </node>
+      <node id="5">
+        <label>QPoint</label>
+      </node>
+      <node id="1">
+        <label>src/dummy_network.hpp</label>
+        <link refid="dummy__network_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QString</label>
+      </node>
+      <node id="3">
+        <label>QColor</label>
+      </node>
+      <node id="2">
+        <label>abstract_network.hpp</label>
+        <link refid="abstract__network_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QTcpSocket</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>src/network_factory.cpp</label>
+        <link refid="network__factory_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>src/dummy_network.hpp</label>
+        <link refid="dummy__network_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/network_factory.hpp</label>
+        <link refid="network__factory_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/dummy_network.cpp</label>
+        <link refid="dummy__network_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsk_1_1DummyNetwork" prot="public">sk::DummyNetwork</innerclass>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dummy_network.hpp"/>
+  </compounddef>
+</doxygen>

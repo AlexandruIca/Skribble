@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1CachedResource" kind="class" language="C++" prot="public">
+    <compoundname>sk::CachedResource</compoundname>
+    <includes refid="cached__resource_8hpp" local="no">cached_resource.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Traits</type>
+        <defval><ref refid="structsk_1_1ResourceTraits" kindref="compound">ResourceTraits</ref>&lt;T&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classsk_1_1CachedResource_1a2366faed8f9c76f1bdae0e0eb705df37" prot="private" static="no">
+        <type>typename Traits::ContainerType</type>
+        <definition>using sk::CachedResource&lt; T, Traits &gt;::ContainerType =  typename Traits::ContainerType</definition>
+        <argsstring></argsstring>
+        <name>ContainerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="48" column="5" bodyfile="src/cached_resource.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsk_1_1CachedResource_1a780a2a7a70e86be3cf15e5e64cbc868d" prot="private" static="no">
+        <type>typename ContainerType::iterator</type>
+        <definition>using sk::CachedResource&lt; T, Traits &gt;::Iterator =  typename ContainerType::iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="49" column="5" bodyfile="src/cached_resource.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsk_1_1CachedResource_1aa840465aaea64d5a1c4e968079a9d04d" prot="private" static="no">
+        <type>void(*)(T &amp;, T &amp;)</type>
+        <definition>using sk::CachedResource&lt; T, Traits &gt;::Function =  void (*)(T&amp;, T&amp;)</definition>
+        <argsstring></argsstring>
+        <name>Function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="65" column="5" bodyfile="src/cached_resource.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1aa12b0804515a9199dd38105f75e981ed" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto sk::CachedResource&lt; T, Traits &gt;::m_cacheGap</definition>
+        <argsstring></argsstring>
+        <name>m_cacheGap</name>
+        <initializer>= Traits::cacheGap</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="51" column="27" bodyfile="src/cached_resource.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a09a351093efdd8546d18959bd3148e79" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto sk::CachedResource&lt; T, Traits &gt;::m_maxCount</definition>
+        <argsstring></argsstring>
+        <name>m_maxCount</name>
+        <initializer>= Traits::maxCount</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="52" column="27" bodyfile="src/cached_resource.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a7736471b4b4efb332ffa8a825f8febe4" prot="private" static="no" mutable="no">
+        <type>ContainerType</type>
+        <definition>ContainerType sk::CachedResource&lt; T, Traits &gt;::m_data</definition>
+        <argsstring></argsstring>
+        <name>m_data</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="57" column="19" bodyfile="src/cached_resource.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a53aab879ca5d7672f1b14c62ec397372" prot="private" static="no" mutable="no">
+        <type>ContainerType</type>
+        <definition>ContainerType sk::CachedResource&lt; T, Traits &gt;::m_cache</definition>
+        <argsstring></argsstring>
+        <name>m_cache</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="58" column="19" bodyfile="src/cached_resource.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a82d785c32cf731673d134f19c5b3703c" prot="private" static="no" mutable="no">
+        <type>Iterator</type>
+        <definition>Iterator sk::CachedResource&lt; T, Traits &gt;::m_dataLimit</definition>
+        <argsstring></argsstring>
+        <name>m_dataLimit</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="60" column="14" bodyfile="src/cached_resource.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a745ff001cb1cc3e48a957e74b9fab313" prot="private" static="no" mutable="no">
+        <type>Iterator</type>
+        <definition>Iterator sk::CachedResource&lt; T, Traits &gt;::m_cacheLimit</definition>
+        <argsstring></argsstring>
+        <name>m_cacheLimit</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="61" column="14" bodyfile="src/cached_resource.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1a1d5b01c901a25fd1583776bff9090b2c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sk::CachedResource&lt; T, Traits &gt;::m_underUndo</definition>
+        <argsstring></argsstring>
+        <name>m_underUndo</name>
+        <initializer>{ false }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="63" column="10" bodyfile="src/cached_resource.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsk_1_1CachedResource_1aad258248f1941ba84f08bde1ad95a9a2" prot="private" static="no" mutable="no">
+        <type>Function</type>
+        <definition>Function sk::CachedResource&lt; T, Traits &gt;::m_function</definition>
+        <argsstring></argsstring>
+        <name>m_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="66" column="14" bodyfile="src/cached_resource.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsk_1_1CachedResource_1acbf38c2b9300f12411c2eb0bb7832465" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::plus</definition>
+        <argsstring>(Iterator it, int const count) const</argsstring>
+        <name>plus</name>
+        <param>
+          <type>Iterator</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>int const</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="68" column="11" bodyfile="src/cached_resource.hpp" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a12cbcdab3752a4c840e81fa2f3446483" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getNumCaches</definition>
+        <argsstring>() noexcept -&gt; int</argsstring>
+        <name>getNumCaches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="74" column="11" bodyfile="src/cached_resource.hpp" bodystart="74" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1ac833270746c19518893ef064ffba3474" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::noCaches</definition>
+        <argsstring>() noexcept -&gt; bool</argsstring>
+        <name>noCaches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="81" column="18" bodyfile="src/cached_resource.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a6d6ceea88e712636972fe502092f3b4c" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getIteratorPastCache</definition>
+        <argsstring>() noexcept -&gt; Iterator</argsstring>
+        <name>getIteratorPastCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="86" column="11" bodyfile="src/cached_resource.hpp" bodystart="86" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a757cc31613870814292627bbe7aae787" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::clearUndo</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>clearUndo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="98" column="10" bodyfile="src/cached_resource.hpp" bodystart="98" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a394a2d82cebbf6fa2d41619df070879f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::CachedResource&lt; T, Traits &gt;::CachedResource</definition>
+        <argsstring>()=default</argsstring>
+        <name>CachedResource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="123" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a2430b11f2b9ac24128551ea59b4a705c" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::CachedResource&lt; T, Traits &gt;::CachedResource</definition>
+        <argsstring>(Function f)</argsstring>
+        <name>CachedResource</name>
+        <param>
+          <type>Function</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="124" column="14" bodyfile="src/cached_resource.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a111885f2d267c4726ff351afb5e2884e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::CachedResource&lt; T, Traits &gt;::CachedResource</definition>
+        <argsstring>(CachedResource const &amp;)=default</argsstring>
+        <name>CachedResource</name>
+        <param>
+          <type><ref refid="classsk_1_1CachedResource" kindref="compound">CachedResource</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="128" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a7cd6c8fbd3e7dd370ac6d176f136098e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::CachedResource&lt; T, Traits &gt;::CachedResource</definition>
+        <argsstring>(CachedResource &amp;&amp;) noexcept=default</argsstring>
+        <name>CachedResource</name>
+        <param>
+          <type><ref refid="classsk_1_1CachedResource" kindref="compound">CachedResource</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="129" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1ac96c07a6eae545f5bac1c1f0545b6239" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::CachedResource&lt; T, Traits &gt;::~CachedResource</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>~CachedResource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="130" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a344a3e93f4fc48689d4ac185ef4851a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::operator=</definition>
+        <argsstring>(CachedResource const &amp;) -&gt; CachedResource &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1CachedResource" kindref="compound">CachedResource</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="132" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1af4dcda7a57a25e326f5d3508203747b2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::operator=</definition>
+        <argsstring>(CachedResource &amp;&amp;) noexcept -&gt; CachedResource &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1CachedResource" kindref="compound">CachedResource</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="133" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a81f632bf40246d318768ec69ab8c0a6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::emplaceBack</definition>
+        <argsstring>(Ts &amp;&amp;... ts) -&gt; T &amp;</argsstring>
+        <name>emplaceBack</name>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="classsk_1_1FCachedResource_1ac1680f7c991b6329e92ed5a608e30dbe" kindref="member">FCachedResource::emplaceBack</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="139" column="10" bodyfile="src/cached_resource.hpp" bodystart="139" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a89be36063bb52640f13bd096a4d84ebf" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getLastCache</definition>
+        <argsstring>() noexcept -&gt; T *</argsstring>
+        <name>getLastCache</name>
+        <briefdescription>
+<para>Get tha last stored cache or nullptr if no cache was built yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="190" column="11" bodyfile="src/cached_resource.hpp" bodystart="190" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a74181ebe4f5770e72646b24ef2f2d933" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::reduceTo</definition>
+        <argsstring>(T &amp;value) -&gt; void</argsstring>
+        <name>reduceTo</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called for the last built cache + all remaining layers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="202" column="10" bodyfile="src/cached_resource.hpp" bodystart="202" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1ae2d763374a5220487f0239a270180086" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F2</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::reduceTo</definition>
+        <argsstring>(F2 f) -&gt; void</argsstring>
+        <name>reduceTo</name>
+        <param>
+          <type>F2</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as <ref refid="classsk_1_1CachedResource_1a74181ebe4f5770e72646b24ef2f2d933" kindref="member">reduceTo</ref> but can take a callback to know what to do. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="223" column="10" bodyfile="src/cached_resource.hpp" bodystart="223" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1afa76066cfbb8542a1f688e266ccfb1a5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getLast</definition>
+        <argsstring>() noexcept -&gt; T &amp;</argsstring>
+        <name>getLast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="240" column="11" bodyfile="src/cached_resource.hpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1aeb861bc28a45531e75473db674a33904" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getLast</definition>
+        <argsstring>() const noexcept -&gt; T const &amp;</argsstring>
+        <name>getLast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="244" column="11" bodyfile="src/cached_resource.hpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1aa5b247105403d3d0cfdd637ab28f7a8b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto sk::CachedResource&lt; T, Traits &gt;::underUndo</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>underUndo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Similar to <ref refid="classsk_1_1FCachedResource_1a5714fa78eb1931d57e8ce4c19f19c764" kindref="member">FCachedResource::underUndo</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="252" column="21" bodyfile="src/cached_resource.hpp" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a5170bedab3b28e24b51b6ac9092006d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::undo</definition>
+        <argsstring>() -&gt; bool</argsstring>
+        <name>undo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true If undo was successful. false If already at oldest change. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="261" column="11" bodyfile="src/cached_resource.hpp" bodystart="261" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1aa0d083c1c8dead354f6d6576f533d84f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::redo</definition>
+        <argsstring>() -&gt; bool</argsstring>
+        <name>redo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true If redo can be done still. false If got to the newest change. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="284" column="11" bodyfile="src/cached_resource.hpp" bodystart="284" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a3146da90cdf856918f57da88de4127a6" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getUnderlying</definition>
+        <argsstring>() noexcept -&gt; ContainerType &amp;</argsstring>
+        <name>getUnderlying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="310" column="11" bodyfile="src/cached_resource.hpp" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1CachedResource_1a21562dbc6684b2d3509bdf5153cf6a6f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::CachedResource&lt; T, Traits &gt;::getUnderlying</definition>
+        <argsstring>() const noexcept -&gt; ContainerType const &amp;</argsstring>
+        <name>getUnderlying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cached_resource.hpp" line="314" column="11" bodyfile="src/cached_resource.hpp" bodystart="314" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Another utility that can manage undo/redo. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This was actually supposed to be <ref refid="classsk_1_1FCachedResource" kindref="compound">FCachedResource</ref>. It turned out we were overcomplicating ourselves with the <computeroutput>store cache after n layers</computeroutput>. It was incredibly tedious to implement(address sanitizer found some iterator invalidations) and didn&apos;t provide much benefit. This is only used when multiple users are connected to store local cache for each of them. </para>
+    </detaileddescription>
+    <location file="src/cached_resource.hpp" line="46" column="1" bodyfile="src/cached_resource.hpp" bodystart="45" bodyend="318"/>
+    <listofallmembers>
+      <member refid="classsk_1_1CachedResource_1a394a2d82cebbf6fa2d41619df070879f" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>CachedResource</name></member>
+      <member refid="classsk_1_1CachedResource_1a2430b11f2b9ac24128551ea59b4a705c" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>CachedResource</name></member>
+      <member refid="classsk_1_1CachedResource_1a111885f2d267c4726ff351afb5e2884e" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>CachedResource</name></member>
+      <member refid="classsk_1_1CachedResource_1a7cd6c8fbd3e7dd370ac6d176f136098e" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>CachedResource</name></member>
+      <member refid="classsk_1_1CachedResource_1a757cc31613870814292627bbe7aae787" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>clearUndo</name></member>
+      <member refid="classsk_1_1CachedResource_1a2366faed8f9c76f1bdae0e0eb705df37" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>ContainerType</name></member>
+      <member refid="classsk_1_1CachedResource_1a81f632bf40246d318768ec69ab8c0a6c" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>emplaceBack</name></member>
+      <member refid="classsk_1_1CachedResource_1aa840465aaea64d5a1c4e968079a9d04d" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>Function</name></member>
+      <member refid="classsk_1_1CachedResource_1a6d6ceea88e712636972fe502092f3b4c" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>getIteratorPastCache</name></member>
+      <member refid="classsk_1_1CachedResource_1afa76066cfbb8542a1f688e266ccfb1a5" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>getLast</name></member>
+      <member refid="classsk_1_1CachedResource_1aeb861bc28a45531e75473db674a33904" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>getLast</name></member>
+      <member refid="classsk_1_1CachedResource_1a89be36063bb52640f13bd096a4d84ebf" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>getLastCache</name></member>
+      <member refid="classsk_1_1CachedResource_1a12cbcdab3752a4c840e81fa2f3446483" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>getNumCaches</name></member>
+      <member refid="classsk_1_1CachedResource_1a3146da90cdf856918f57da88de4127a6" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>getUnderlying</name></member>
+      <member refid="classsk_1_1CachedResource_1a21562dbc6684b2d3509bdf5153cf6a6f" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>getUnderlying</name></member>
+      <member refid="classsk_1_1CachedResource_1a780a2a7a70e86be3cf15e5e64cbc868d" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>Iterator</name></member>
+      <member refid="classsk_1_1CachedResource_1a53aab879ca5d7672f1b14c62ec397372" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_cache</name></member>
+      <member refid="classsk_1_1CachedResource_1aa12b0804515a9199dd38105f75e981ed" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_cacheGap</name></member>
+      <member refid="classsk_1_1CachedResource_1a745ff001cb1cc3e48a957e74b9fab313" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_cacheLimit</name></member>
+      <member refid="classsk_1_1CachedResource_1a7736471b4b4efb332ffa8a825f8febe4" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_data</name></member>
+      <member refid="classsk_1_1CachedResource_1a82d785c32cf731673d134f19c5b3703c" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_dataLimit</name></member>
+      <member refid="classsk_1_1CachedResource_1aad258248f1941ba84f08bde1ad95a9a2" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_function</name></member>
+      <member refid="classsk_1_1CachedResource_1a09a351093efdd8546d18959bd3148e79" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_maxCount</name></member>
+      <member refid="classsk_1_1CachedResource_1a1d5b01c901a25fd1583776bff9090b2c" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>m_underUndo</name></member>
+      <member refid="classsk_1_1CachedResource_1ac833270746c19518893ef064ffba3474" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>noCaches</name></member>
+      <member refid="classsk_1_1CachedResource_1a344a3e93f4fc48689d4ac185ef4851a6" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>operator=</name></member>
+      <member refid="classsk_1_1CachedResource_1af4dcda7a57a25e326f5d3508203747b2" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>operator=</name></member>
+      <member refid="classsk_1_1CachedResource_1acbf38c2b9300f12411c2eb0bb7832465" prot="private" virt="non-virtual"><scope>sk::CachedResource</scope><name>plus</name></member>
+      <member refid="classsk_1_1CachedResource_1aa0d083c1c8dead354f6d6576f533d84f" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>redo</name></member>
+      <member refid="classsk_1_1CachedResource_1a74181ebe4f5770e72646b24ef2f2d933" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>reduceTo</name></member>
+      <member refid="classsk_1_1CachedResource_1ae2d763374a5220487f0239a270180086" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>reduceTo</name></member>
+      <member refid="classsk_1_1CachedResource_1aa5b247105403d3d0cfdd637ab28f7a8b" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>underUndo</name></member>
+      <member refid="classsk_1_1CachedResource_1a5170bedab3b28e24b51b6ac9092006d7" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>undo</name></member>
+      <member refid="classsk_1_1CachedResource_1ac96c07a6eae545f5bac1c1f0545b6239" prot="public" virt="non-virtual"><scope>sk::CachedResource</scope><name>~CachedResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

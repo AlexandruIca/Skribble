@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="format__test_8cpp" kind="file" language="C++">
+    <compoundname>format_test.cpp</compoundname>
+    <includes refid="format_8hpp" local="yes">format.hpp</includes>
+    <includes refid="test_8hpp" local="yes">test.hpp</includes>
+    <includes local="no">thread</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>atomic</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="9">
+        <label>test.hpp</label>
+        <link refid="test_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/format_test.cpp</label>
+        <link refid="format__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>QString</label>
+      </node>
+      <node id="11">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="15">
+        <label>thread</label>
+      </node>
+      <node id="13">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classDummy" prot="public">Dummy</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="format__test_8cpp_1a79610dad66e9a48382b54d1dd273372e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[Format] Empty&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Empty&quot;</type>
+          <array>[Format]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="6" column="1" bodyfile="tests/format_test.cpp" bodystart="6" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="format__test_8cpp_1af17787c90d5011b09cda40c313aa0bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[Format] No args&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; No args&quot;</type>
+          <array>[Format]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="18" column="1" bodyfile="tests/format_test.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="format__test_8cpp_1a7a1b19cb0d444544ed79d3f20ea153c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[Format] Basic&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Basic&quot;</type>
+          <array>[Format]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="24" column="1" bodyfile="tests/format_test.cpp" bodystart="24" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="format__test_8cpp_1a3df480f01d673fe23ce7c7d6e9f14956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[Format] Custom type&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Custom type&quot;</type>
+          <array>[Format]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="61" column="1" bodyfile="tests/format_test.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="format__test_8cpp_1a6b7adc97f0c365e5c0cac1a7801fd28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[Format] Different threads&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Different threads&quot;</type>
+          <array>[Format]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/format_test.cpp" line="67" column="1" bodyfile="tests/format_test.cpp" bodystart="67" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/format_test.cpp"/>
+  </compounddef>
+</doxygen>

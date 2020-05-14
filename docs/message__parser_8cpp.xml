@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="message__parser_8cpp" kind="file" language="C++">
+    <compoundname>message_parser.cpp</compoundname>
+    <includes refid="message__parser_8hpp" local="yes">message_parser.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>message_parser.hpp</label>
+        <link refid="message__parser_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>tuple</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>src/message_parser.cpp</label>
+        <link refid="message__parser_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <innernamespace refid="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03">sk::anonymous_namespace{message_parser.cpp}</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/message_parser.cpp"/>
+  </compounddef>
+</doxygen>

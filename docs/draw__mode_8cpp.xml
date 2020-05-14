@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="draw__mode_8cpp" kind="file" language="C++">
+    <compoundname>draw_mode.cpp</compoundname>
+    <includes refid="draw__mode_8hpp" local="yes">draw_mode.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/draw_mode.cpp</label>
+        <link refid="draw__mode_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QBrush</label>
+      </node>
+      <node id="5">
+        <label>QPainter</label>
+      </node>
+      <node id="7">
+        <label>optional</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="4">
+        <label>QColor</label>
+      </node>
+      <node id="9">
+        <label>QToolBar</label>
+      </node>
+      <node id="6">
+        <label>QPen</label>
+      </node>
+      <node id="2">
+        <label>draw_mode.hpp</label>
+        <link refid="draw__mode_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/draw_mode.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsk_1_1FResTraits" kind="struct" language="C++" prot="public">
+    <compoundname>sk::FResTraits</compoundname>
+    <includes refid="fixed__cached__resource_8hpp" local="no">fixed_cached_resource.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structsk_1_1FResTraits_1ac11c33a2f7ba60c31c4c62a23749fe79" prot="public" static="no">
+        <type>std::list&lt; T &gt;</type>
+        <definition>using sk::FResTraits&lt; T &gt;::ContainerType =  std::list&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ContainerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>With what to store the layers with, by default <computeroutput>std::list</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/fixed_cached_resource.hpp" line="27" column="5" bodyfile="src/fixed_cached_resource.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structsk_1_1FResTraits_1ab22425e1a2656c72e10af2e0339aa780" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::FResTraits&lt; T &gt;::maxCount</definition>
+        <argsstring></argsstring>
+        <name>maxCount</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>History limit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/fixed_cached_resource.hpp" line="31" column="26" bodyfile="src/fixed_cached_resource.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Parameters for <ref refid="classsk_1_1FCachedResource" kindref="compound">FCachedResource</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/fixed_cached_resource.hpp" line="23" column="1" bodyfile="src/fixed_cached_resource.hpp" bodystart="22" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structsk_1_1FResTraits_1ac11c33a2f7ba60c31c4c62a23749fe79" prot="public" virt="non-virtual"><scope>sk::FResTraits</scope><name>ContainerType</name></member>
+      <member refid="structsk_1_1FResTraits_1ab22425e1a2656c72e10af2e0339aa780" prot="public" virt="non-virtual"><scope>sk::FResTraits</scope><name>maxCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

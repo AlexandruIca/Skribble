@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesk_1_1config" kind="namespace" language="C++">
+    <compoundname>sk::config</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacesk_1_1config_1a76c5f1b17ef44c45d7e27be91f82d405" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::config::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 400</initializer>
+        <briefdescription>
+<para>Width of the canvas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/canvas_config.hpp" line="17" column="22" bodyfile="src/canvas_config.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesk_1_1config_1ab71a4ee8252d429159787da2017db4b7" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int sk::config::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 600</initializer>
+        <briefdescription>
+<para>Height of the canvas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/canvas_config.hpp" line="21" column="22" bodyfile="src/canvas_config.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>All configuration for the canvas is here. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/canvas_config.hpp" line="12" column="20"/>
+  </compounddef>
+</doxygen>

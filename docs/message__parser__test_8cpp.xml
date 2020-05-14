@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="message__parser__test_8cpp" kind="file" language="C++">
+    <compoundname>message_parser_test.cpp</compoundname>
+    <includes refid="message__parser_8hpp" local="yes">message_parser.hpp</includes>
+    <includes local="no">ostream</includes>
+    <includes refid="test_8hpp" local="yes">test.hpp</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>atomic</label>
+      </node>
+      <node id="2">
+        <label>message_parser.hpp</label>
+        <link refid="message__parser_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>test.hpp</label>
+        <link refid="test_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ostream</label>
+      </node>
+      <node id="7">
+        <label>format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tuple</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>tests/message_parser_test.cpp</label>
+        <link refid="message__parser__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>QString</label>
+      </node>
+      <node id="14">
+        <label>cstdlib</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>cstddef</label>
+      </node>
+      <node id="16">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="message__parser__test_8cpp_1a2812b5173428183136929ccf04afd3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, sk::Operation const op) -&gt; std::ostream &amp;</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesk_1a8714c7c177d0977c5da2defc6c20f277" kindref="member">sk::Operation</ref> const</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="5" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="5" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1af020075a1e86b24dc03801a9120409c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] Undo&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Undo&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="40" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="40" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1aeeb93e55e7774cd0ddf61ec411a6c1b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] Redo&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Redo&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="52" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a04aa6766075ac0b71208235a9c71255d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] DrawAt&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; DrawAt&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="64" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="64" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1ade0614fdf1b3f8dbab35e773ce3a5f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] MouseReleased&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; MouseReleased&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="98" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="98" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a1439686ea974ece4cc727f41e13821fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] ChangeColor&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; ChangeColor&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="110" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="110" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a02ece38fd23991035204b2adf8ed7f9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] ChangeWidth&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; ChangeWidth&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="132" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="132" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a857ea24b067b66415d2e53c2b13d92ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] ToPen&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; ToPen&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="144" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="144" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a0d77915ff6655c32deeb0b5d94c6b3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] ToBrush&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; ToBrush&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="156" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="156" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="message__parser__test_8cpp_1a3547f77b97fc2af31bca94998b771592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(&quot;[MessageParser] Junk&quot;)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>&quot; Junk&quot;</type>
+          <array>[MessageParser]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/message_parser_test.cpp" line="168" column="1" bodyfile="tests/message_parser_test.cpp" bodystart="168" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/message_parser_test.cpp"/>
+  </compounddef>
+</doxygen>

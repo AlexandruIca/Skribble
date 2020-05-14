@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir">
+    <compoundname>tests</compoundname>
+    <innerdir refid="dir_6f4ad88cf3a75e9ee319fbb585935c9c">tests/helper</innerdir>
+    <innerfile refid="cached__resource__test_8cpp">cached_resource_test.cpp</innerfile>
+    <innerfile refid="fcached__resource__test_8cpp">fcached_resource_test.cpp</innerfile>
+    <innerfile refid="format__test_8cpp">format_test.cpp</innerfile>
+    <innerfile refid="message__parser__test_8cpp">message_parser_test.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/"/>
+  </compounddef>
+</doxygen>

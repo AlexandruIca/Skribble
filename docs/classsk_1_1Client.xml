@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1Client" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>sk::Client</compoundname>
+    <basecompoundref refid="classsk_1_1AbstractNetwork" prot="public" virt="non-virtual">sk::AbstractNetwork</basecompoundref>
+    <includes refid="client_8hpp" local="no">client.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsk_1_1Client_1a7ca4c7076aa22c3b60f0419336b1d6a7" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; QTcpSocket &gt;</type>
+        <definition>std::unique_ptr&lt;QTcpSocket&gt; sk::Client::m_server</definition>
+        <argsstring></argsstring>
+        <name>m_server</name>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="24" column="21" bodyfile="src/client.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1Client_1adb0a0f76f0173fe2e9d19ee204d264c9" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::Client::Client</definition>
+        <argsstring>(QString const &amp;ip)</argsstring>
+        <name>Client</name>
+        <param>
+          <type>QString const &amp;</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="27" column="14" bodyfile="src/client.cpp" bodystart="11" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1afceb1c6a7a4b2957f4a93d9dd8f38bc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::Client::Client</definition>
+        <argsstring>(Client const &amp;)=delete</argsstring>
+        <name>Client</name>
+        <param>
+          <type><ref refid="classsk_1_1Client" kindref="compound">Client</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1ac6be291e6b4ee6cfea72d8877a9993d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::Client::Client</definition>
+        <argsstring>(Client &amp;&amp;)=delete</argsstring>
+        <name>Client</name>
+        <param>
+          <type><ref refid="classsk_1_1Client" kindref="compound">Client</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1ae4ec49e2086f3c7517591c405924bf2c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::Client::~Client</definition>
+        <argsstring>() noexcept override</argsstring>
+        <name>~Client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="30" column="5" bodyfile="src/client.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1ac1bf36e13ca33b8285ec7ba9dfaf9dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::Client::operator=</definition>
+        <argsstring>(Client const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1Client" kindref="compound">Client</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1aa2185a8bf11f9163e05ab4430183fe1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::Client::operator=</definition>
+        <argsstring>(Client &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1Client" kindref="compound">Client</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1Client_1ad918acd96507948c410d12494144c24e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>auto</type>
+        <definition>auto sk::Client::getSocket</definition>
+        <argsstring>() -&gt; QTcpSocket *override</argsstring>
+        <name>getSocket</name>
+        <reimplements refid="classsk_1_1AbstractNetwork_1acbe68d2bf6f60867debb0a88b52f86f2">getSocket</reimplements>
+        <briefdescription>
+<para>Helper to get current connection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the app was started as a server, this returns the client &apos;connection&apos;, If the app was started as a client, this &apos;returns&apos; the server, otherwise it simply returns nullptr. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client.hpp" line="35" column="10" bodyfile="src/client.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements <ref refid="classsk_1_1AbstractNetwork" kindref="compound">AbstractNetwork</ref> for a client. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="2">
+        <label>sk::AbstractNetwork</label>
+        <link refid="classsk_1_1AbstractNetwork"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sk::Client</label>
+        <link refid="classsk_1_1Client"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>QObject</label>
+      </node>
+      <node id="2">
+        <label>sk::AbstractNetwork</label>
+        <link refid="classsk_1_1AbstractNetwork"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sk::Client</label>
+        <link refid="classsk_1_1Client"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/client.hpp" line="22" column="1" bodyfile="src/client.hpp" bodystart="21" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classsk_1_1AbstractNetwork_1a06590ab1a7ac31342053470779950fc3" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1af6084afe4ec81c032314ed535ec1d278" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1ab47775aaf5b658bfab4b21c82027eb65" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1Client_1adb0a0f76f0173fe2e9d19ee204d264c9" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>Client</name></member>
+      <member refid="classsk_1_1Client_1afceb1c6a7a4b2957f4a93d9dd8f38bc9" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>Client</name></member>
+      <member refid="classsk_1_1Client_1ac6be291e6b4ee6cfea72d8877a9993d5" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>Client</name></member>
+      <member refid="classsk_1_1Client_1ad918acd96507948c410d12494144c24e" prot="public" virt="virtual"><scope>sk::Client</scope><name>getSocket</name></member>
+      <member refid="classsk_1_1Client_1a7ca4c7076aa22c3b60f0419336b1d6a7" prot="private" virt="non-virtual"><scope>sk::Client</scope><name>m_server</name></member>
+      <member refid="classsk_1_1Client_1ac1bf36e13ca33b8285ec7ba9dfaf9dff" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>operator=</name></member>
+      <member refid="classsk_1_1Client_1aa2185a8bf11f9163e05ab4430183fe1d" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>operator=</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a3c0471fe9960cd1f17fe97545e83e37b" prot="public" virt="non-virtual" ambiguityscope="sk::AbstractNetwork::"><scope>sk::Client</scope><name>operator=</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1abe3063c7d02d0b7effcbd5bd9636623e" prot="public" virt="non-virtual" ambiguityscope="sk::AbstractNetwork::"><scope>sk::Client</scope><name>operator=</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1aa67072651a63d579edfb7dd37ed7706e" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>receivedMessage</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a08724481a31f19c2a0d9a3f2b6f28949" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendChangeColor</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1acc252fcb7296f122996aabfcc65e4f08" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendChangeWidth</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a564a4e0b753e90a611ad0eb1fc4f2183" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendDrawAt</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1afb343f19c09e59903a94227bcc3633b9" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendMouseReleased</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a10dd052c2fc4a9f2186e61564f7ab96b" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendRedo</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a6ace5669328450589d8599eaf65fe3a6" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendToBrush</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1ace7f8649f35152cbd614d5726c6a65b1" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendToPen</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a9fb587a700c2c0a984371b980b1a4c85" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>sendUndo</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1aaa2948b36b6294ba458599e8e16c25be" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>~AbstractNetwork</name></member>
+      <member refid="classsk_1_1Client_1ae4ec49e2086f3c7517591c405924bf2c" prot="public" virt="non-virtual"><scope>sk::Client</scope><name>~Client</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

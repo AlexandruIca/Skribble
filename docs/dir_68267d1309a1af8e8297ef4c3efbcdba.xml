@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="abstract__network_8cpp">abstract_network.cpp</innerfile>
+    <innerfile refid="abstract__network_8hpp">abstract_network.hpp</innerfile>
+    <innerfile refid="cached__resource_8hpp">cached_resource.hpp</innerfile>
+    <innerfile refid="canvas_8cpp">canvas.cpp</innerfile>
+    <innerfile refid="canvas_8hpp">canvas.hpp</innerfile>
+    <innerfile refid="canvas__config_8hpp">canvas_config.hpp</innerfile>
+    <innerfile refid="client_8cpp">client.cpp</innerfile>
+    <innerfile refid="client_8hpp">client.hpp</innerfile>
+    <innerfile refid="draw__history_8cpp">draw_history.cpp</innerfile>
+    <innerfile refid="draw__history_8hpp">draw_history.hpp</innerfile>
+    <innerfile refid="draw__mode_8cpp">draw_mode.cpp</innerfile>
+    <innerfile refid="draw__mode_8hpp">draw_mode.hpp</innerfile>
+    <innerfile refid="dummy__network_8cpp">dummy_network.cpp</innerfile>
+    <innerfile refid="dummy__network_8hpp">dummy_network.hpp</innerfile>
+    <innerfile refid="fixed__cached__resource_8hpp">fixed_cached_resource.hpp</innerfile>
+    <innerfile refid="format_8hpp">format.hpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="message__parser_8cpp">message_parser.cpp</innerfile>
+    <innerfile refid="message__parser_8hpp">message_parser.hpp</innerfile>
+    <innerfile refid="network__config_8hpp">network_config.hpp</innerfile>
+    <innerfile refid="network__factory_8cpp">network_factory.cpp</innerfile>
+    <innerfile refid="network__factory_8hpp">network_factory.hpp</innerfile>
+    <innerfile refid="server_8cpp">server.cpp</innerfile>
+    <innerfile refid="server_8hpp">server.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

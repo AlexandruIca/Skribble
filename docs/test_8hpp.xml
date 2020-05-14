@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="test_8hpp" kind="file" language="C++">
+    <compoundname>test.hpp</compoundname>
+    <includes refid="format_8hpp" local="yes">format.hpp</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="cached__resource__test_8cpp" local="yes">tests/cached_resource_test.cpp</includedby>
+    <includedby refid="fcached__resource__test_8cpp" local="yes">tests/fcached_resource_test.cpp</includedby>
+    <includedby refid="format__test_8cpp" local="yes">tests/format_test.cpp</includedby>
+    <includedby refid="message__parser__test_8cpp" local="yes">tests/message_parser_test.cpp</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>atomic</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
+      </node>
+      <node id="1">
+        <label>tests/helper/test.hpp</label>
+        <link refid="test_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>format.hpp</label>
+        <link refid="format_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>QString</label>
+      </node>
+      <node id="10">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="12">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>tests/helper/test.hpp</label>
+        <link refid="test_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tests/format_test.cpp</label>
+        <link refid="format__test_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>tests/message_parser_test.cpp</label>
+        <link refid="message__parser__test_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>tests/cached_resource_test.cpp</label>
+        <link refid="cached__resource__test_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>tests/fcached_resource_test.cpp</label>
+        <link refid="fcached__resource__test_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classTestBase" prot="public">TestBase</innerclass>
+    <innerclass refid="structTestBase_1_1Proxy" prot="protected">TestBase::Proxy</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="test_8hpp_1ac7cc76e1118b627b608d7a1db630ea81" prot="public" static="no">
+        <name>PASTE_2</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>a##b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="5" column="9" bodyfile="tests/helper/test.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1ad9946ca8708e6998e3f2823c36f04f82" prot="public" static="no">
+        <name>PASTE_1</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>PASTE_2(a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="6" column="9" bodyfile="tests/helper/test.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1a188ea780417dce4eb720d161d85f9f44" prot="public" static="no">
+        <name>PASTE</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>PASTE_1(a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="7" column="9" bodyfile="tests/helper/test.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1a839a9222721835f53c5b248241f535f4" prot="public" static="no">
+        <name>RAND</name>
+        <initializer>PASTE(tmp_class_name___, __LINE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="8" column="9" bodyfile="tests/helper/test.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1a872d876ec47e9357e8eff5f619d1ef8f" prot="public" static="no">
+        <name>RAND2</name>
+        <initializer>PASTE(tmp_var_name___, __LINE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="9" column="9" bodyfile="tests/helper/test.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1a821326052e3e2bf1fb2d678e9e9a6004" prot="public" static="no">
+        <name>ASSERT</name>
+        <param><defname>...</defname></param>
+        <initializer>    do {                                                                       \
+        if(!(__VA_ARGS__)) {                                                   \
+            sk::printlnTo(                                                     \
+                m_output,                                                      \
+                &quot;Assertion failed in %1[%2]:\n\t\t%3\n\tExpanded to:\n\t\t%4&quot;, \
+                __FILE__,                                                      \
+                __LINE__,                                                      \
+                #__VA_ARGS__,                                                  \
+                (Proxy{} + __VA_ARGS__).str);                                  \
+            successful.store(EXIT_FAILURE);                                    \
+            return;                                                            \
+        }                                                                      \
+    } while(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="83" column="9" bodyfile="tests/helper/test.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test_8hpp_1a45feb1f37ce559e49baf8655d769ef85" prot="public" static="no">
+        <name>TEST</name>
+        <param><defname>name</defname></param>
+        <initializer>    namespace {                                                                \
+    class RAND : public <ref refid="classTestBase" kindref="compound">TestBase</ref>                                               \
+    {                                                                          \
+    public:                                                                    \
+        RAND()                                                                 \
+            : <ref refid="classTestBase" kindref="compound">TestBase</ref>{ name, __FILE__, __LINE__ }                             \
+        {                                                                      \
+        }                                                                      \
+        RAND(RAND const&amp;) = delete;                                            \
+        RAND(RAND&amp;&amp;) = delete;                                                 \
+        ~RAND() noexcept override = default;                                   \
+                                                                               \
+        auto operator=(RAND const&amp;) -&gt; RAND&amp; = delete;                         \
+        auto operator=(RAND &amp;&amp;) -&gt; RAND&amp; = delete;                             \
+                                                                               \
+        auto run(std::atomic&lt;int&gt;&amp; successful) -&gt; void override;               \
+    };                                                                         \
+                                                                               \
+    static RAND RAND2;                                                         \
+    }                                                                          \
+                                                                               \
+    auto RAND::run(std::atomic&lt;int&gt;&amp; successful)-&gt;void</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="98" column="9" bodyfile="tests/helper/test.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test_8hpp_1a0b5340d318317642755d5f0a494d8331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto getTestId</definition>
+        <argsstring>() -&gt; int</argsstring>
+        <name>getTestId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="20" column="6" declfile="tests/helper/test.hpp" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="test_8hpp_1a31dda219ca288c7010d5a3796d581fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto getTests</definition>
+        <argsstring>() -&gt; std::vector&lt; TestBase * &gt; &amp;</argsstring>
+        <name>getTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/helper/test.hpp" line="122" column="6" declfile="tests/helper/test.hpp" declline="122" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/helper/test.hpp"/>
+  </compounddef>
+</doxygen>

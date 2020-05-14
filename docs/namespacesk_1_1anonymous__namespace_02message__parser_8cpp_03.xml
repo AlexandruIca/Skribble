@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03" kind="namespace" language="C++">
+    <compoundname>sk::anonymous_namespace{message_parser.cpp}</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesk_1_1anonymous__namespace_02message__parser_8cpp_03_1a0d522755d242edd76b7692db630af677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::anonymous_namespace{message_parser.cpp}::split</definition>
+        <argsstring>(std::string const &amp;str, std::string const &amp;pattern) -&gt; std::vector&lt; std::string &gt;</argsstring>
+        <name>split</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/message_parser.cpp" line="10" column="6" bodyfile="src/message_parser.cpp" bodystart="10" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/message_parser.cpp" line="8" column="11"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="cached__resource_8hpp" kind="file" language="C++">
+    <compoundname>cached_resource.hpp</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="draw__history_8hpp" local="yes">src/draw_history.hpp</includedby>
+    <includedby refid="cached__resource__test_8cpp" local="yes">tests/cached_resource_test.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>iterator</label>
+      </node>
+      <node id="1">
+        <label>src/cached_resource.hpp</label>
+        <link refid="cached__resource_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>deque</label>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/canvas.hpp</label>
+        <link refid="canvas_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/cached_resource.hpp</label>
+        <link refid="cached__resource_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/canvas.cpp</label>
+        <link refid="canvas_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>src/draw_history.hpp</label>
+        <link refid="draw__history_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tests/cached_resource_test.cpp</label>
+        <link refid="cached__resource__test_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>src/draw_history.cpp</label>
+        <link refid="draw__history_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsk_1_1ResourceTraits" prot="public">sk::ResourceTraits</innerclass>
+    <innerclass refid="classsk_1_1CachedResource" prot="public">sk::CachedResource</innerclass>
+    <innernamespace refid="namespacesk">sk</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/cached_resource.hpp"/>
+  </compounddef>
+</doxygen>

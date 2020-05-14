@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Skribble</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1sec_about">
+<title>What is it?</title>
+<para>Skribble tries to be a collaborative app made with Qt. At most two users can draw on the same canvas. It was made as part of an assignment at our University.</para>
+</sect1>
+<sect1 id="index_1sec_download">
+<title>Download</title>
+<para>There is a binary release available for Windows <ulink url="https://github.com/AlexandruIca/Skribble/releases">here</ulink>.</para>
+</sect1>
+<sect1 id="index_1sec_usage">
+<title>Usage</title>
+<para>Starting <computeroutput>./Skribble</computeroutput> gives you the single user mode of the app, a normal painting app as you expect.</para>
+<para>Starting <computeroutput>./Skribble -s</computeroutput> starts the app and the server, which clients can connect to with <computeroutput>./Skribble -c &lt;ip&gt;</computeroutput> where ip is, in theory, one&apos;s public IP. In practice, there is no way to connect over the network if the IP is dynamic or for other reasons we don&apos;t know. For sure is, to test the app in collaborative mode you can do <computeroutput>./Skribble -s</computeroutput> from one terminal and <computeroutput>./Skribble -c 127.0.0.1</computeroutput> from another terminal which connects to the local host, thus emulating a two user scenario.</para>
+</sect1>
+<sect1 id="index_1sec_building">
+<title>Build</title>
+<para>The straightforward way: <programlisting filename=".sh"><codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-DCMAKE_PREFIX_PATH=/path/to/Qt/5.x.x/lib/cmake<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-DCMAKE_BUILD_TYPE=Release<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>..</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>.</highlight></codeline>
+</programlisting></para>
+<para>For development: <programlisting filename=".sh"><codeline><highlight class="normal">#<sp/>Other<sp/>than<sp/>above<sp/>parameters</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>-DENABLE_SANITIZER_ADDRESS=ON<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-DENABLE_SANITIZER_UNDEFINED=ON<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-DBUILD_TESTS=ON<sp/>\</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>..</highlight></codeline>
+</programlisting></para>
+<para>Obviously Qt5 needs to be installed.</para>
+<para>To run the tests go in the build folder and run: <programlisting><codeline><highlight class="normal">ctest<sp/>-V</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

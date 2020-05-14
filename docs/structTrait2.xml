@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structTrait2" kind="struct" language="C++" prot="public">
+    <compoundname>Trait2</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structTrait2_1ae67e16397013a4c7f1fadb31bb229fa8" prot="public" static="no">
+        <type>std::deque&lt; T &gt;</type>
+        <definition>using Trait2&lt; T &gt;::ContainerType =  std::deque&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ContainerType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cached_resource_test.cpp" line="100" column="5" bodyfile="tests/cached_resource_test.cpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structTrait2_1a1e9b84e2158ea2e15cbf20452078c5c0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Trait2&lt; T &gt;::cacheGap</definition>
+        <argsstring></argsstring>
+        <name>cacheGap</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cached_resource_test.cpp" line="101" column="26" bodyfile="tests/cached_resource_test.cpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTrait2_1a499050319ff20ad7ff8fde5f9e5aff0e" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Trait2&lt; T &gt;::maxCount</definition>
+        <argsstring></argsstring>
+        <name>maxCount</name>
+        <initializer>= <ref refid="structsk_1_1ResourceTraits" kindref="compound">sk::ResourceTraits</ref>&lt;T&gt;::maxCount</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cached_resource_test.cpp" line="102" column="26" bodyfile="tests/cached_resource_test.cpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/cached_resource_test.cpp" line="99" column="1" bodyfile="tests/cached_resource_test.cpp" bodystart="98" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structTrait2_1a1e9b84e2158ea2e15cbf20452078c5c0" prot="public" virt="non-virtual"><scope>Trait2</scope><name>cacheGap</name></member>
+      <member refid="structTrait2_1ae67e16397013a4c7f1fadb31bb229fa8" prot="public" virt="non-virtual"><scope>Trait2</scope><name>ContainerType</name></member>
+      <member refid="structTrait2_1a499050319ff20ad7ff8fde5f9e5aff0e" prot="public" virt="non-virtual"><scope>Trait2</scope><name>maxCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

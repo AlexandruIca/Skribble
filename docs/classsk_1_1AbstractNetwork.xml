@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsk_1_1AbstractNetwork" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sk::AbstractNetwork</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <derivedcompoundref refid="classsk_1_1Client" prot="public" virt="non-virtual">sk::Client</derivedcompoundref>
+    <derivedcompoundref refid="classsk_1_1DummyNetwork" prot="public" virt="non-virtual">sk::DummyNetwork</derivedcompoundref>
+    <derivedcompoundref refid="classsk_1_1Server" prot="public" virt="non-virtual">sk::Server</derivedcompoundref>
+    <includes refid="abstract__network_8hpp" local="no">abstract_network.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a06590ab1a7ac31342053470779950fc3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::AbstractNetwork::AbstractNetwork</definition>
+        <argsstring>(QObject *parent=nullptr)</argsstring>
+        <name>AbstractNetwork</name>
+        <param>
+          <type>QObject *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="25" column="14" bodyfile="src/abstract_network.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1af6084afe4ec81c032314ed535ec1d278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sk::AbstractNetwork::AbstractNetwork</definition>
+        <argsstring>(AbstractNetwork const &amp;)=delete</argsstring>
+        <name>AbstractNetwork</name>
+        <param>
+          <type><ref refid="classsk_1_1AbstractNetwork" kindref="compound">AbstractNetwork</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1ab47775aaf5b658bfab4b21c82027eb65" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::AbstractNetwork::AbstractNetwork</definition>
+        <argsstring>(AbstractNetwork &amp;&amp;) noexcept=delete</argsstring>
+        <name>AbstractNetwork</name>
+        <param>
+          <type><ref refid="classsk_1_1AbstractNetwork" kindref="compound">AbstractNetwork</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1aaa2948b36b6294ba458599e8e16c25be" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>sk::AbstractNetwork::~AbstractNetwork</definition>
+        <argsstring>() noexcept override=default</argsstring>
+        <name>~AbstractNetwork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a3c0471fe9960cd1f17fe97545e83e37b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::operator=</definition>
+        <argsstring>(AbstractNetwork const &amp;) -&gt; AbstractNetwork &amp;=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1AbstractNetwork" kindref="compound">AbstractNetwork</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1abe3063c7d02d0b7effcbd5bd9636623e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::operator=</definition>
+        <argsstring>(AbstractNetwork &amp;&amp;) noexcept -&gt; AbstractNetwork &amp;=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classsk_1_1AbstractNetwork" kindref="compound">AbstractNetwork</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="31" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1acbe68d2bf6f60867debb0a88b52f86f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto sk::AbstractNetwork::getSocket</definition>
+        <argsstring>() -&gt; QTcpSocket *=0</argsstring>
+        <name>getSocket</name>
+        <reimplementedby refid="classsk_1_1DummyNetwork_1a4f79df7ffb2c6b259ca37330d5c05f9e">getSocket</reimplementedby>
+        <reimplementedby refid="classsk_1_1Client_1ad918acd96507948c410d12494144c24e">getSocket</reimplementedby>
+        <reimplementedby refid="classsk_1_1Server_1a31fdcb2b79ad69c2168f40b7e1f83e0f">getSocket</reimplementedby>
+        <briefdescription>
+<para>Helper to get current connection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the app was started as a server, this returns the client &apos;connection&apos;, If the app was started as a client, this &apos;returns&apos; the server, otherwise it simply returns nullptr. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="40" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a564a4e0b753e90a611ad0eb1fc4f2183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendDrawAt</definition>
+        <argsstring>(QPoint const &amp;pos) -&gt; void</argsstring>
+        <name>sendDrawAt</name>
+        <param>
+          <type>QPoint const &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="42" column="10" bodyfile="src/abstract_network.cpp" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1afb343f19c09e59903a94227bcc3633b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendMouseReleased</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>sendMouseReleased</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="43" column="10" bodyfile="src/abstract_network.cpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a9fb587a700c2c0a984371b980b1a4c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendUndo</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>sendUndo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="44" column="10" bodyfile="src/abstract_network.cpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a10dd052c2fc4a9f2186e61564f7ab96b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendRedo</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>sendRedo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="45" column="10" bodyfile="src/abstract_network.cpp" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a08724481a31f19c2a0d9a3f2b6f28949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendChangeColor</definition>
+        <argsstring>(QColor const &amp;color) -&gt; void</argsstring>
+        <name>sendChangeColor</name>
+        <param>
+          <type>QColor const &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="46" column="10" bodyfile="src/abstract_network.cpp" bodystart="60" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1acc252fcb7296f122996aabfcc65e4f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendChangeWidth</definition>
+        <argsstring>(int const width) -&gt; void</argsstring>
+        <name>sendChangeWidth</name>
+        <param>
+          <type>int const</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="47" column="10" bodyfile="src/abstract_network.cpp" bodystart="73" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1ace7f8649f35152cbd614d5726c6a65b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendToPen</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>sendToPen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="48" column="10" bodyfile="src/abstract_network.cpp" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classsk_1_1AbstractNetwork_1a6ace5669328450589d8599eaf65fe3a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto sk::AbstractNetwork::sendToBrush</definition>
+        <argsstring>() -&gt; void</argsstring>
+        <name>sendToBrush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="49" column="10" bodyfile="src/abstract_network.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="classsk_1_1AbstractNetwork_1aa67072651a63d579edfb7dd37ed7706e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sk::AbstractNetwork::receivedMessage</definition>
+        <argsstring>(QString const &amp;msg)</argsstring>
+        <name>receivedMessage</name>
+        <param>
+          <type>QString const &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Called when the other user does something that changes appearance on canvas. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/abstract_network.hpp" line="56" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains all common events for a client/server. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="5">
+        <label>sk::Server</label>
+        <link refid="classsk_1_1Server"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>sk::DummyNetwork</label>
+        <link refid="classsk_1_1DummyNetwork"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sk::AbstractNetwork</label>
+        <link refid="classsk_1_1AbstractNetwork"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sk::Client</label>
+        <link refid="classsk_1_1Client"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>sk::AbstractNetwork</label>
+        <link refid="classsk_1_1AbstractNetwork"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/abstract_network.hpp" line="21" column="1" bodyfile="src/abstract_network.hpp" bodystart="20" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classsk_1_1AbstractNetwork_1a06590ab1a7ac31342053470779950fc3" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1af6084afe4ec81c032314ed535ec1d278" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1ab47775aaf5b658bfab4b21c82027eb65" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>AbstractNetwork</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1acbe68d2bf6f60867debb0a88b52f86f2" prot="public" virt="pure-virtual"><scope>sk::AbstractNetwork</scope><name>getSocket</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a3c0471fe9960cd1f17fe97545e83e37b" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>operator=</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1abe3063c7d02d0b7effcbd5bd9636623e" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>operator=</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1aa67072651a63d579edfb7dd37ed7706e" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>receivedMessage</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a08724481a31f19c2a0d9a3f2b6f28949" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendChangeColor</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1acc252fcb7296f122996aabfcc65e4f08" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendChangeWidth</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a564a4e0b753e90a611ad0eb1fc4f2183" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendDrawAt</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1afb343f19c09e59903a94227bcc3633b9" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendMouseReleased</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a10dd052c2fc4a9f2186e61564f7ab96b" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendRedo</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a6ace5669328450589d8599eaf65fe3a6" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendToBrush</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1ace7f8649f35152cbd614d5726c6a65b1" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendToPen</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1a9fb587a700c2c0a984371b980b1a4c85" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>sendUndo</name></member>
+      <member refid="classsk_1_1AbstractNetwork_1aaa2948b36b6294ba458599e8e16c25be" prot="public" virt="non-virtual"><scope>sk::AbstractNetwork</scope><name>~AbstractNetwork</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

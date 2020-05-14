@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesk_1_1impl" kind="namespace" language="C++">
+    <compoundname>sk::impl</compoundname>
+    <innerclass refid="classsk_1_1impl_1_1CachedLayers" prot="public">sk::impl::CachedLayers</innerclass>
+    <briefdescription>
+<para>Implementation details in this namespace. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/draw_history.cpp" line="10" column="18"/>
+  </compounddef>
+</doxygen>
