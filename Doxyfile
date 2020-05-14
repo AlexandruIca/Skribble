@@ -5,7 +5,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Skribble"
 PROJECT_NUMBER         =
-PROJECT_BRIEF          = "Collaborative app made with Qt"
+PROJECT_BRIEF          = " - Collaborative app made with Qt"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = ./docs/
 CREATE_SUBDIRS         = NO
@@ -325,7 +325,7 @@ MAN_LINKS              = NO
 #---------------------------------------------------------------------------
 
 GENERATE_XML           = NO
-XML_OUTPUT             = ./docs/xml/
+XML_OUTPUT             = ./
 XML_PROGRAMLISTING     = YES
 XML_NS_MEMB_FILE_SCOPE = NO
 
