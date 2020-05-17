@@ -75,7 +75,7 @@ ApplicationWindow {
 
             MenuItem {
                 text: qsTr("About")
-                onTriggered: Qt.openUrlExternally("https://github.com/AlexandruIca/Skribble");
+                onTriggered: Qt.openUrlExternally("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
             }
         }
     }
